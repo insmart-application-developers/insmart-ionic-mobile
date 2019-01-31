@@ -31,7 +31,16 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
     hospitalName:"",
     dateTime:"",
   };
-  renderStyle:number=0;
+
+  currentUser;
+  eventSource;
+  viewTitle;
+
+  isToday:boolean;
+  calendar = {
+      mode: 'month',
+      currentDate: new Date()
+  };
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -99,24 +108,11 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
     
     if(status == 0){
       setTimeout(() => {
-        for(let i:number=200;i>=0;i--){
-          setTimeout(() => {
-            this.renderStyle = i;
-          }, 0);
-        }
-        setTimeout(() => {
-          this.showListSymptom = false;
-          this.symptoms = this.symptomList;
-        }, 200);
+        this.showListSymptom = false;
+        this.symptoms = this.symptomList;
       }, 10);
     }else if(status == 1){
       this.showListSymptom = true;
-      for(let i:number=0;i<=200;i++){
-        setTimeout(() => {
-          this.renderStyle = i;
-          console.log("So pixel se Renderer: "+this.renderStyle);
-        }, 0);
-      }
     }
     
   }

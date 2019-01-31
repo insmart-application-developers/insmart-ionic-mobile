@@ -12,7 +12,7 @@
       placeholder="Triệu chứng của bạn...">
     </ion-searchbar>
     <div class="containerSymptom" *ngIf="showListSymptom">
-      <ion-scroll class="listSymptom" [ngStyle]="{'height.px' : renderStyle}">
+      <ion-scroll class="listSymptom">
         <ion-list>
           <ion-item *ngFor="let symptom of symptoms;let i = index" (click)="btnSelectSymptom(symptom);">
             {{symptom.name}}
@@ -62,8 +62,13 @@
       </div>
 
       <ion-item>
-        <ion-label floating color="primary">Date/Time</ion-label>
-        <ion-datetime pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" name="dateTime" [(ngModel)]="booknew.mdDateTime"></ion-datetime>
+        <!-- <ion-label floating color="primary">Date/Time</ion-label>
+        <ion-datetime pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" name="dateTime" [(ngModel)]="booknew.mdDateTime"></ion-datetime> -->
+        <calendar [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        step="30">
+      </calendar>
       </ion-item>
     </ion-list>
     <button type="submit" class="btnBooking">Đặt ngay!</button>

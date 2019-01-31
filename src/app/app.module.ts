@@ -24,6 +24,7 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { File } from '@ionic-native/file';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { NgCalendarModule  } from 'ionic2-calendar';
 
 import { LoginPage } from '../pages/login/login';
 import { MyApp } from './app.component';
@@ -134,6 +135,7 @@ export function createTranslateLoader(http: HttpClient) {
     IonicStorageModule.forRoot(),
     NgxQRCodeModule,
     HttpClientModule,
+    NgCalendarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
