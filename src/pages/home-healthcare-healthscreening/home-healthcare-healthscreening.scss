@@ -1,0 +1,18 @@
+page-home-healthcare-healthscreening {
+    #control-label{
+        font-weight: bold;
+        color: #154897;
+    }
+    .child-item{
+        margin-top: 2%;
+    }
+    .inactive {
+        background: #e8e7e6;
+        color: #000;
+        margin-bottom: 4px;
+    }
+    .active {
+        background: #cdcccb;
+        color: #000;
+    }
+}

@@ -1,0 +1,21 @@
+<!--
+  Generated template for the HomeHealthcareMedicalconciergePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_HEALTHCARE.MEDICALCONCIERGE.NAME' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-tabs #tabBooking mode="md" (ionChange)="transition($event)">
+    <ion-tab tabTitle="Các cuộc hẹn" tabIcon="checkbox" [root]="appointments"></ion-tab>
+    <ion-tab tabTitle="Đặt Mới" tabIcon="heart" [root]="booknew" [rootParams]="paramsId"></ion-tab>
+    <ion-tab tabTitle="Giới Thiệu" tabIcon="people" [root]="about" tabBadge="2" tabBadgeStyle="danger"></ion-tab>
+  </ion-tabs>
+</ion-content>

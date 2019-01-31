@@ -1,0 +1,39 @@
+<!--
+  Generated template for the HomeInsuranceDirectbillingDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_INSURANCE.DIRECTBILLING.DIRECTBILLING_DETAIL.NAME' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-image:url(./assets/imgs/background-blue.jpg);background-size: 100% 100%;width: 100%;height: 100%;">
+  <div class="headerDetails">
+    <p class="titleName">{{itemHospital.name}}</p>
+    <img class="iconLocation" src="./assets/imgs/location-icon.png">
+  </div>
+  <div style="margin-left:2%;margin-right:2%;width: 96%;">
+      <div id="blockContainer">
+        <p><b>Địa chỉ :</b></p>
+        <p>{{itemHospital.address}}</p>
+      </div>
+
+      <div id="distanceContainer">
+        <p class="inline"><b>Quãng đường từ chỗ bạn :</b></p>
+        <p class="inline">{{totalDist}}</p>
+      </div>
+      <div id="timeContainer">
+        <p class="inline"><b>Thời gian di chuyển dự kiến :</b></p>
+        <p class="inline">{{totalTime}}</p>
+      </div>
+  </div>
+</ion-content>
+<ion-footer style="width: 100%; height: 40%;">
+  <div #map id="map"></div>
+</ion-footer>

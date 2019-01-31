@@ -1,0 +1,28 @@
+[
+    { "id": 276311,
+      "ndbh": "Nguyễn Thị Vân Anh",
+      "cmnd": "13341101", 
+      "thgqbt": "1",
+      "lbt":"Bồi thường ngoại trú",
+      "csyt":"Bệnh viện Đa khoa Quốc tế Vinmec - Hai Bà Trưng, TP Hà Nội",
+      "ptbt":"Trường hợp hoàn trả",
+      "cdb":"Sốt Lassa - Sốt(A96.2) - Theo dõi viêm phế quản cấp, Viêm phế quản cấp(J20) - Mày đay cấp, Mày đay(L50) - Hồng cầu nhỏ chưa rõ nguyên nhân, Thiếu máu do thiếu sắt(D50)",
+      "stps":"5,636,800",
+      "sttt":"3,786,800",
+      "sttc":"1,850,000",
+      "ldkbt":"Không thuộc quyền lợi của đơn bảo hiểm",
+      "nnhs":"27/03/2015",
+      "nbshs":"27/03/2015",
+      "ntb":"03/04/2015"
+    },
+    { "id": 2, 
+      "ndbh": "10.788921, 106.677838",
+      "cmnd": "Số 94, Đường  Trần Quang Diệu, Phường 14, Quận 3, TP. Hồ Chí MinhCM.", 
+      "thgqbt": "2"
+    },
+    { "id": 3,
+      "ndbh": "10.732718, 106.718546", 
+      "cmnd": "06 Nguyễn Lương Bằng, Phường tân Phong, Quận 7, TP. Hồ Chí Minh", 
+      "thgqbt": "3"
+    }
+]

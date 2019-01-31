@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Scan QRcode</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="col">
+    <button class="btnScan" ion-button color="danger" (click)="btnScan()">Scan QRCode</button>
+  </div>
+
+  <ion-list *ngIf="memberInfo">
+    <ion-list-header text-wrap>{{memberInfo.titleinsured}}</ion-list-header>
+      <ion-item text-wrap>
+        <p><b>ID:</b> {{memberInfo.id}}</p>
+        <p><b>Card no.:</b> {{memberInfo.cardno}}</p>
+        <p><b>Status:</b> {{memberInfo.status}}</p>
+        <p><b>Name of insured:</b> {{memberInfo.nameofinsured}}</p>
+      </ion-item>
+    <ion-list-header text-wrap>{{memberInfo.titlepolicy}}</ion-list-header>
+      <ion-item text-wrap>
+        <p><b>Policyholder:</b> {{memberInfo.policyholder}}</p>
+        <p><b>Insurer/Payor:</b> {{memberInfo.insurer}}</p>
+        <p><b>Policy No:</b> {{memberInfo.policyno}}</p>
+        <p><b>Effective date:</b> {{memberInfo.effectivedate}}</p>
+        <p><b>Cease Date:</b> {{memberInfo.ceasedate}}</p>
+        <p><b>Cover Period:</b> {{memberInfo.coverperiod}}</p>
+      </ion-item>
+    <ion-list-header text-wrap>{{memberInfo.titleperson}}</ion-list-header>
+      <ion-item text-wrap>
+        <p><b>ID 1:</b> {{memberInfo.id1}}</p>
+        <p><b>Date of birth:</b> {{memberInfo.dateofbirth}}</p>
+        <p><b>Age:</b> {{memberInfo.age}}</p>
+      </ion-item>
+  </ion-list>
+  
+</ion-content>

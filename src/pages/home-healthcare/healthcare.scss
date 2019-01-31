@@ -1,0 +1,35 @@
+page-healthcare {
+    .containerHome{
+      height: 80%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+    .rowHome{
+      font-size: 0px; /*Remove extra margins!*/
+      width:100%;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .halfrowHome{
+        display:inline-block;
+        width:48%;
+        margin:1%;
+        text-align: center;
+    }
+    .iconInsurance{
+      width: 50%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .textHomeName{
+      color: white;
+      width: 100%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+}

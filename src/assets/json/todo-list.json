@@ -1,0 +1,14 @@
+[
+      { "id": 1,
+        "ld": "Hóa đơn thiếu dấu hay gì đó tương tự",
+        "nycbs": "25/12/2017"
+      },
+      { "id": 2,
+        "ld": "Chữ ký sai",
+        "nycbs": "17/12/2015" 
+      },
+      { "id": 3,
+        "ld": "Thông tin sai",
+        "nycbs": "15/12/2017"
+      }
+]

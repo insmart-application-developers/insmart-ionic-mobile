@@ -1,0 +1,61 @@
+<!--
+  Generated template for the HomeInsuranceBenefitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_INSURANCE.BENEFIT.NAME' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <!-- <div class="row titleBenefit">
+        <div class="col" style="font-weight: bold;text-align: center">Quyền lợi</div>
+        <div class="col">
+          <select class="selectBenefit" [(ngModel)]="mdChangeColumn">
+            <option *ngFor="let headerstable of headerstables; let i = index" [value]="i">
+              {{headerstable}}
+            </option>
+          </select>
+        </div>
+    </div> -->
+
+    <div class="row titleBenefit">
+      <div class="col titilBe">Display Option</div>
+      <div class="col">
+        <select class="selectBenefit" [(ngModel)]="mdChangeColumn">
+          <option *ngFor="let headerstable of headerstables" [ngValue]="headerstable.ResCode">
+             {{headerstable.ResDsc}} 
+          </option>
+        </select>
+      </div>
+  </div>
+  
+    <div *ngFor="let inpatient of inpatients">
+
+      <button class="showContent" (click)="toggleGroup(inpatient)" [ngClass]="{ active: isGroupShown(inpatient) }" icon-right>
+        &nbsp; {{inpatient.MainBenefitCode}}
+        <ion-icon style="float: right" [name]="isGroupShown(inpatient) ? 'arrow-up' : 'arrow-down'"></ion-icon>
+      </button>
+      
+      <ng-container *ngIf="isGroupShown(inpatient)">
+      <div class="row content" *ngFor="let dataRowIn of inpatient.subBenefitList">
+        <div class="col" >{{dataRowIn.BenefitName}}</div>
+        <div class="col" [ngSwitch]="mdChangeColumn">
+          <div class="animate-switch" *ngSwitchCase="'MOAMBDISOPTBC'">{{dataRowIn.BenefitLimitTypeDsc}}</div>
+          <div class="animate-switch" *ngSwitchCase="'MOAMBDISOPTAC'">{{dataRowIn.BenefitApprovedLimit}}</div>
+          <div class="animate-switch" *ngSwitchCase="'MOAMBDISOPTBL'">{{dataRowIn.BenefitBalanceLimit}}</div>
+
+           <!-- <div class="animate-switch" *ngSwitchCase=0>{{dataRowIn.baohiemgioihan}}</div>
+          <div class="animate-switch" *ngSwitchCase=1>{{dataRowIn.boithuongluyke}}</div>
+          <div class="animate-switch" *ngSwitchCase=2>{{dataRowIn.hanmucbaohiemconlai}}</div>  -->
+
+        </div>
+      </div>
+      </ng-container>
+    </div>
+</ion-content>

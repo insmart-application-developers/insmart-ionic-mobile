@@ -1,0 +1,72 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>FINANCIAL DOCUMENTS</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding >
+    <ion-grid>
+      <ion-row class="childDocument">
+        <ion-col>
+          <ion-row>
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <span>
+              Chứng từ Tài Chính 1
+            </span>
+          </ion-row>
+          <ion-row>
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <span>
+              Chứng từ Tài Chính 2
+            </span>
+          </ion-row>
+          <ion-row>
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <span>
+              Chứng từ Tài Chính 3
+            </span>
+          </ion-row>
+          <ion-row>
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <span>
+              Chứng từ Tài Chính 4
+            </span>
+          </ion-row>
+          <ion-row>
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <span>
+              Chứng từ Tài Chính 5
+            </span>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="showImage">
+      <ion-row align-items-center *ngIf="userSelect">
+        <ion-col align-self-center col-3 *ngFor="let imag of userSelect;let i=index">
+          <div class="square"
+          [ngStyle]="{
+            'background-image':'url(' + imag.url + ')'
+          }">
+          </div>
+        </ion-col>
+        <ion-col align-self-center col-3 (click)="goCapture()">
+          <div class="square">
+            <ion-icon class="icon-camera" name="image"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-row *ngIf="userSelect.length>0" align-items-center class="rowNext">
+      <ion-col align-self-center>
+        <button class="btnNext" (click)="btnNext()">
+          NEXT
+        </button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-content>
+  

@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_HEALTHCARE.HEALTHSCREENING.NAME' | translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="btnChart()">
+        <ion-icon name="trending-up">
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list >
+    <div *ngFor="let healthscreening of healthscreenings">
+      <ion-item (click)="toggleGroup(healthscreening)" 
+                [ngClass]="{ active: isGroupShown(healthscreening) }">
+          
+        <ion-icon item-right [name]="isGroupShown(healthscreening) ? 'arrow-up' : 'arrow-down'"></ion-icon>
+          &nbsp;Case Number {{healthscreening.HthScnNo}}
+      </ion-item>
+  
+      <ion-item text-wrap class="item-accordion" *ngIf="isGroupShown(healthscreening)">
+        <div class="child-item">
+          <h6 id="control-label">Screening Package:</h6>
+          <h6>{{healthscreening.HthScnPckDsc}}</h6>
+        </div>
+          <div class="form-group">
+            <h6 id="control-label">Screening Date:</h6>
+            <h6>{{healthscreening.HthScnDate}}</h6>
+          </div>
+          <div class="form-group">
+            <h6 id="control-label">Provider Name:</h6>
+            <h6>{{healthscreening.ProviderName}}</h6>
+          </div>
+          <div class="form-group">
+            <h6 id="control-label">Screening Status:</h6>
+            <h6>{{healthscreening.HthScnRptStDesc}}</h6>
+          </div>
+          <div class="form-group">
+            <h6 id="control-label">Screening Result:</h6>
+            <h6>{{healthscreening.HthScnRsltNote}}</h6>
+        </div>
+        <div class="form-group">
+          <h6 id="control-label">Follow up:</h6>
+          <h6>{{healthscreening.HthScnRcmFlwNote}}</h6>
+      </div>
+    </ion-item>
+    </div>
+  </ion-list>
+
+  
+
+</ion-content>
+

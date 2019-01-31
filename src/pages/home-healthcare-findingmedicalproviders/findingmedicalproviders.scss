@@ -1,0 +1,40 @@
+page-findingmedicalproviders {
+     
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+    #btnGetCurrent{
+        background-color: transparent;
+        margin-right: 5%;
+        margin-bottom: 10%;
+        width: 35px;
+        height: 35px;
+    }
+
+    #btnBooking{
+        background-color: #154897;
+        width: 40%;
+        height: 30px;
+        color: white;
+        border: 2px solid #fc5555;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    //Disable click Logo
+    .gm-style a[href^="https://maps.google.com/maps"] {
+        pointer-events: none;
+        cursor: default;
+    }
+    .gmnoprint a, .gmnoprint span{
+        display: none;
+    }
+    .gmnoprint div {
+        background:none !important;
+    }
+    .gm-style-cc{
+        display: none !important;
+    }
+}

@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_HEALTHCARE.MEDICALHISTORY.NAME' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div *ngFor="let medicalhistory of medicalhistorys">
+      <ion-item (click)="toggleGroup(medicalhistory)"
+        [ngClass]="{ active: isGroupShown(medicalhistory) }">
+        
+        <ion-icon item-right [name]="isGroupShown(medicalhistory) ? 'arrow-up' : 'arrow-down'"></ion-icon>
+        &nbsp; Case Number {{medicalhistory.CaseNo}}
+      </ion-item>
+  
+      <ion-item text-wrap *ngIf="isGroupShown(medicalhistory)">
+        <div class="child-item">
+          <h5 id="control-label">Tên cơ sở y tế:</h5>
+          <h5>{{medicalhistory.MedProviderName}}</h5>
+        </div>
+        <div class="child-item">
+          <h5 id="control-label">Ngày vào:</h5>
+          <h5>{{medicalhistory.CaseStartDate}}</h5>
+        </div>
+        <div class="child-item">
+          <h5 id="control-label">Ngày ra:</h5>
+          <h5>{{medicalhistory.DischargeDate}}</h5>
+        </div>
+        <div class="child-item">
+          <h5 id="control-label">Chuẩn đoán bệnh:</h5>
+          <h5>{{medicalhistory.Diagnosis}}</h5>
+        </div>
+        <div class="child-item">
+          <h5 id="control-label">Đơn thuốc:</h5>
+          <h5>{{medicalhistory.DrugList}}</h5>
+        </div>
+        <div class="child-item">
+          <h5 id="control-label">Medical record no:</h5>
+          <h5>{{medicalhistory.PrvPatMRN}}</h5>
+        </div>
+      </ion-item>
+  </div>
+  </ion-list>
+
+  <button class="col" ion-button style="color: white">Xu hướng sức khỏe</button>
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-content padding class="containerLogin">
+  <img src="assets/imgs/login.png" style="width: 100%">
+  <form (ngSubmit)="doLogin()">
+    <ion-item>
+      <ion-input autocapitalize="none" type="text" [(ngModel)]="loginData.username" name="username" placeholder="User Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="{{!showPassword?'password':'text'}}" [(ngModel)]="loginData.password" name="password" placeholder="Password"></ion-input>
+      <button ion-button item-right type="button" class="btnShowPassword" (click)="showPassword =! showPassword">
+        <ion-icon *ngIf="!showPassword" name="eye"></ion-icon>
+        <span *ngIf="showPassword">hide</span>
+      </button>
+    </ion-item>
+
+    <button [disabled]="checkDisabled()" style="text-transform: none;" ion-button block type="submit">Login</button>
+    
+  </form>      
+</ion-content>

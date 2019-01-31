@@ -1,0 +1,44 @@
+{   
+    "SIDE_MENU":{
+        "HOME":"Home",
+        "NOTIFICATION":"Notification",
+        "INFORMATIOM":"Info",
+        "SCANQRCODE":"Scan QRcode",
+        "HEALTHTIPS":"Health tips",
+        "LOGOUT":"Logout"
+    },
+    "HOME_INSURANCE":{
+        "NAME":"INSURANCE",
+        "CLAIM":{
+            "NAME":"CLAIM",
+            "CASENAME":"CASE NAME",
+            "THEINSUREDPERSON":"The insured person",
+            "IDCARD":"ID card",
+            "HEALTHFACILITIES":"Health facilities",
+            "DIAGNOSIS":"Diagnosis",
+            "THEAMOUNTINCURRED":"The amount incurred",
+            "PAYMENTAMOUNT":"Payment amount",
+            "DENIALAMOUNT":"Denial amount",
+            "THEREASONFORNOTCOMPENSATING":"The reason for not compensating",
+            "DATEOFRECEIPT":"Date of receipt",
+            "NOTICEDATE":"Notice date"
+        },
+        "BENEFIT":{
+            "NAME":"BENEFIT"
+        },
+        "TODOLIST":{"NAME":"TO DO LIST"},
+        "DIRECTBILLING":{
+            "NAME":"DIRECT BILLING",
+            "DIRECTBILLING_DETAIL":{"NAME":"DETAIL"}
+        },
+        "SUBMITCLAIM":{"NAME":"SUBMIT CLAIM"}
+    }
+    ,"HOME_HEALTHCARE":{
+        "MEDICALHISTORY":{"NAME":"MEDICAL HISTORY"},
+        "HEALTHSCREENING":{"NAME":"HEALTH SCREENING"},
+        "MEDICALSECONDOPINION":{"NAME":"MEDICAL SECOND OPINION"},
+        "FINDINGMEDICALPROVIDERS":{"NAME":"FINDING MEDICAL PROVIDERS"},
+        "MEDICALCONCIERGE":{"NAME":"MEDICAL CONCIERGE"},
+        "MEDICALASSISTANCE":{"NAME":"MEDICAL ASSISTANCE"}
+    }
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img src= "./assets/imgs/LogoInsmart.png">
+  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce style="background-image:url(./assets/imgs/background-blue.jpg);background-size: 100% 100%;height: 100%">
+    <ion-row class="animated bounceInLeft">
+      <ion-col>
+        <img class="insurance" src="./assets/imgs/insurance.png" (click)="showInsurance()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="animated bounceInRight">
+      <ion-col>
+        <img class="healthcare" src="./assets/imgs/healthcare.png" (click)="showHealthCare()">
+      </ion-col>
+    </ion-row>
+</ion-content>

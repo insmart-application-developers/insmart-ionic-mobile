@@ -1,0 +1,95 @@
+<!--
+  Generated template for the MenuUserinformationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>USER INFORMATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <p style="color: #154897"><b>{{ clock | date:'dd/MM/yyyy HH:mm:ss'}}</b></p>
+  <div class="icard">
+    <div class="row">
+      <div class="col">
+        <img style="height: 30px;float:left" src="assets/imgs/LogoInsmart.png">
+      </div>
+      <div class="col">
+        <img style="height: 30px;float:right;" src="assets/imgs/LogoInsmart.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Name: {{userName}}</p>
+        <p>Policy No: {{userCardNo}}</p>
+        <p>Identity ID: {{MbrIdentityId}}</p>
+        <div class="inline-block">
+          <font>Insurance Period: </font>
+          <p style="margin:0">{{userExpiryDate | date:'dd/MM/yyyy HH:mm a'}}</p>
+        </div>
+        <p>{{MbrProductName}}</p>
+        <p>{{MbrPayorName}}</p>
+      </div>
+      <div class="col">
+        <div style="float: right;background-color: white;height: 110px;width:110px">
+          <ngx-qrcode [qrc-value]="createCode" style="height: 100px;width:100px;margin: auto;">
+          </ngx-qrcode>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="earth"></div>
+
+  <form [formGroup]="formGroup" (ngSubmit)="submitUserInfo()" id="formUserInformation">
+    <div class="inline-block">
+
+      <div class="frameAvatar" (click)="changeAvatar()">
+        <img [src]="userAvatar" alt="Avatar" class="avatar">
+      </div>
+
+      <div style="float:right">
+        <p id="lblUserInformation">ID :</p>
+        <input type="text" id="txtSearch" value={{userCardNo}} formControlName="id" disabled>
+        <p id="lblUserInformation">Name :</p>
+        <input type="text" id="txtSearch" value={{userName}} formControlName="name">
+      </div>
+    </div>
+
+    <div>
+      <p id="lblUserInformation">Address :</p>
+      <input type="text" id="txtSearch" value={{MbrAddr}} formControlName="address">
+    </div>
+    <div>
+      <p id="lblUserInformation">Phone Number :</p>
+      <input type="text" id="txtSearch" value={{MbrContactNo}} formControlName="phonenumber">
+    </div>
+    <div>
+      <p id="lblUserInformation">Birth Date :</p>
+      <input type="date" id="txtSearch" value={{MbrBirthDate}} formControlName="birthday">
+    </div>
+
+    <div id="panelInformationUser">
+      <p id="lblUserInformation">Gender :</p>
+      <div class="flex" id="txtSearch">
+        <div class="flex">
+            <input type="radio" formControlName="gender" value="M" />
+            <label for="rbmale">Male</label>
+        </div>
+        <div class="flex rbfemale">
+            <input type="radio" formControlName="gender" value="F" />
+            <label for="rbfemale">Female</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="height: 5%;margin-top: 53px;">
+        <button type="submit" ion-button style="color: white" [disabled]="!formGroup.valid">Update</button>
+    </div>
+
+  </form>
+</ion-content>

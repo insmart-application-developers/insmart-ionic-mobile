@@ -1,0 +1,52 @@
+page-home-insurance-benefit {
+    .titleBenefit {
+        background-color:#154897;
+        text-align: center;
+        font-weight: bold;
+        color: white
+    }
+    .titilBe{
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .selectBenefit{
+        background-color: rgb(255, 255, 255);
+        font-weight: bold;
+        width: 100%;
+        color: #154897;
+        border: 2px solid #e7e7e7;
+        border-radius: 5px;
+    }
+      
+    .contentHomeBenefit{
+        margin-top: 1%;
+        background-color: lightblue;
+        width: 100%;
+    }
+    .showContent {
+        width: 96%;
+        height: 24px;
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+        border-radius: 5px;
+        text-align: left;
+        margin-top: 3%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 3%;
+        box-shadow: -2px 2px 2px;
+    }
+
+    .col:last-child {
+    color:#154897;
+    }
+    .content:nth-of-type(even){
+    background-color:#f7f7f7;
+    }
+    .content:nth-of-type(odd){
+    background-color:#e7e7e7;
+    }
+}

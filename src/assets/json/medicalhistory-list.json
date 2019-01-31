@@ -1,0 +1,23 @@
+[
+    { "claimnumber": 1,
+      "medicalname": "Bệnh viện Đa khoa Quốc tế Vinmec - Hai Bà Trưng, TP Hà Nội",
+      "datein": "25/06/2019", 
+      "dateout": "26/07/2019",
+      "diagnostic":"Viêm loét dạ dày",
+      "prescription":"Cimetidin,Ranitidine,Nizatidine,Famotidine"
+    },
+    { "claimnumber": 2, 
+      "medicalname": "Bệnh viện Đa khoa Quốc tế Bạch Mai - Hai Bà Trưng, TP Hà Nội",
+      "datein": "22/03/2020", 
+      "dateout": "23/04/2020",
+      "diagnostic":"Viêm đại tràng",
+      "prescription":"Phloroglucinol (Spasfon),Trimebutin (Debridat),Mebeverin (Duspatalin),Buscopan"
+    },
+    { "claimnumber": 3,
+      "medicalname": "Bệnh viện Đa khoa Quốc tế Việt Đức",
+      "datein": "04/04/2020", 
+      "dateout": "14/04/2020",
+      "diagnostic":"Gãy xương chân",
+      "prescription":"Canxi,Canxi,Canxi,Canxi"
+    }
+]

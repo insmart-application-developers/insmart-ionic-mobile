@@ -1,0 +1,45 @@
+page-home {
+    .toolbar-content{
+        height: 66px;
+        ion-title{
+            height: 100%;
+            .toolbar-title{
+                height: 100%;
+                img{
+                    height: 90%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 44px;
+                    margin: auto;
+                }
+            }
+            .toolbar-title-ios{
+                img{
+                    right: 0;
+                }
+            }
+        }
+    }
+    .scroll-content{
+        .row{
+            height: 50%;
+            .col{
+                img{
+                    width: 48%;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                .insurance{
+                    bottom:0;
+                }
+                .healthcare{
+                    top:0;
+                }
+            }
+        }
+    }
+}

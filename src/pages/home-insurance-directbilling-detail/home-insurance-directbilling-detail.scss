@@ -1,0 +1,49 @@
+page-home-insurance-directbilling-detail {
+    .headerDetails{
+        background-color: black;
+        height: 25%;
+        width: 100%;
+    }
+    .titleName{
+        color: white;
+        margin-left: 2%;
+        width: 73%;
+        float: left;
+    }
+    .iconLocation{
+        height: 98%;
+        float: right;
+    }
+    #blockContainer{
+        display: block;
+    }
+    p{
+        color:white;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+    #distanceContainer .inline{
+        display: inline-block;
+    }
+
+    #timeContainer .inline{
+        display: inline-block;
+    }
+
+    .gm-style a[href^="https://maps.google.com/maps"] {
+        pointer-events: none;
+        cursor: default;
+    }
+    .gmnoprint a, .gmnoprint span{
+        display: none;
+    }
+    .gmnoprint div {
+        background:none !important;
+    }
+    .gm-style-cc{
+        display: none !important;
+    }
+}

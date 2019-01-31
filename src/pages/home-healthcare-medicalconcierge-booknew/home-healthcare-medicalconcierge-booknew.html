@@ -1,0 +1,71 @@
+<ion-content padding>
+  <form (ngSubmit)="frmConcierge()">
+    <ion-searchbar
+      #searchSymptom
+      name="searchSymptom"
+      [(ngModel)]="booknew.searchSymptom"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionClear)="showSymptom(0)"
+      (ionBlur)="showSymptom(0)"
+      (ionFocus)="showSymptom(1)"
+      placeholder="Triệu chứng của bạn...">
+    </ion-searchbar>
+    <div class="containerSymptom" *ngIf="showListSymptom">
+      <ion-scroll class="listSymptom" [ngStyle]="{'height.px' : renderStyle}">
+        <ion-list>
+          <ion-item *ngFor="let symptom of symptoms;let i = index" (click)="btnSelectSymptom(symptom);">
+            {{symptom.name}}
+          </ion-item>
+        </ion-list>
+      </ion-scroll>
+      <ion-item class="itemDifference" (click)="showDifferenceItem()">
+        Khác...
+      </ion-item>
+    </div>
+    
+    <ion-item style="padding:0" *ngIf="showDifference">
+      <ion-label stacked color="primary">Reason/symptom</ion-label>
+      <ion-textarea #typeSymptom name="reasonSymptom" rows="3" [(ngModel)]="booknew.mdReasonSymptom"></ion-textarea>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label style="text-align: right;">Chọn bệnh viện tự động</ion-label>
+        <ion-toggle name="selectHosAuto" [(ngModel)]="booknew.selectHosAuto" (ngModelChange)="changeSelectHosAuto()"></ion-toggle>
+      </ion-item>
+      <div *ngIf="!booknew.selectHosAuto">
+        <ion-item>
+          <ion-label floating color="primary">City</ion-label>
+          <ion-select interface="popover" cancelText="Hủy" name="cityName" [(ngModel)]="booknew.cityName" (ionChange)="cityChange()">
+            <ion-option *ngFor="let city of cityFilters;let i=index" [value]="city.id">{{city.city}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label class="labelHospital" floating color="primary">Hospital</ion-label>
+          <ion-select [disabled]="!booknew.cityName" class="selectHospital" interface="action-sheet" name="hospitalName" [(ngModel)]="booknew.hospitalName" (ionChange)="hosChange(hospitalName)">
+            <ion-option style="font-size:12px;background: red" *ngFor="let hospital of hospitalLists" [value]="hospital.id">{{hospital.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div *ngIf="booknew.selectHosAuto">
+        <ion-item>
+          <p>
+            <span>Đang tự động đấy</span><br><br>
+            <span>Tại thành phố: </span><span>{{selectAuto.city}}</span><br>
+            <span>Bệnh viện: </span><span style="font-weight: bold;">{{selectAuto.hosital}}</span><br>
+            <span>Địa chỉ: </span><span>{{selectAuto.address}}</span><br>
+            <span>Khoảng cách: </span><span>{{selectAuto.distance}}</span><br>
+          </p>
+        </ion-item>
+        
+      </div>
+
+      <ion-item>
+        <ion-label floating color="primary">Date/Time</ion-label>
+        <ion-datetime pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" name="dateTime" [(ngModel)]="booknew.mdDateTime"></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <button type="submit" class="btnBooking">Đặt ngay!</button>
+  </form>
+</ion-content>

@@ -1,0 +1,804 @@
+        [{ "title":{"lat":10.791385,"lng":106.678185}, "id": 1,
+          "address": "10 Trần Huy Liệu, Phú Nhuận, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN AN SINH - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.788921,"lng": 106.677838}, "id": 2, 
+          "address": "Số 94, Đường  Trần Quang Diệu, Phường 14, Quận 3, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA D.CASTA - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.732718,"lng": 106.718546}, "id": 3, 
+          "address": "06 Nguyễn Lương Bằng, Phường tân Phong, Quận 7, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN PHÁP VIỆT - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.803254,"lng": 106.694553}, "id": 4, 
+          "address": "01 Nơ Trang Long, Bình Thạnh, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN COLUMBIA ASIA GIA ĐỊNH - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.757261,"lng": 106.680654}, "id": 5, 
+          "address": "135B Trần Bình Trọng, Phường 12, Quận 5, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN MẮT CAO THẮNG - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.828434,"lng": 106.685409}, "id": 6, 
+          "address": "15-16 Phan Van Trị,Phường 7, Gò Vấp, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ VŨ ANH - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.767390,"lng": 106.696872}, "id": 7, 
+          "address": "01-03 Trịnh Văn Cấn, Phường Cầu Kho, Quận 1, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.739510,"lng": 106.616817}, "id": 8, 
+          "address": "425 Kinh Dương Vương, Phường An Lac, Quận Bình Tân , TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN TRIẾU AN - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.832886,"lng": 106.664584}, "id": 9, 
+          "address": "32/2 Thống Nhất , Phường 10, Gò Vấp, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN HỒNG ĐỨC (*) - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.771749,"lng": 106.671373}, "id": 10, 
+          "address": "700 Su Van Hanh, Phường  12, Quận 10, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN VẠN HẠNH - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.768382,"lng": 106.684824}, "id": 11, 
+          "address": "284 Cống Quỳnh, Quận 1, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN TỪ DŨ - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.800154,"lng": 106.684258}, "id": 12, 
+          "address": "60-60A Phan Xích Long, Phường 1, Phú Nhuận,TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN HOÀN MỸ PREMIER ( BỆNH VIỆN ĐA KHOA HOÀN MỸ SÀI GÒN ) - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.747568,"lng": 106.614557}, "id": 13, 
+          "address": "36,Đường số 1B, Phường Bình trị Đông B, Quận Bình Tân, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN QUỐC TẾ MINH ANH (*) - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.767665,"lng": 106.696907}, "id": 14, 
+          "address": "06-08 Trịnh Văn Cấn, Quận 1, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA QUỐC TẾ SÀI GÒN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.771995,"lng": 106.688608}, "id": 15, 
+          "address": "97 Nguyễn Thị Minh Khai, Quận 1,TP. Hồ Chí Minh ", 
+          "name":"PHÒNG KHÁM HẠNH PHÚC - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.779582,"lng": 106.696615}, "id": 16, 
+          "address": "08 Alexandre de Rohdes, Quận 1, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM COLUMBIA ASIA - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.806907,"lng": 106.709412}, "id": 17, 
+          "address": "Chi nhánh 1 : 11 Bis Đinh Bộ Lĩnh, Phường 24 , Bình Thạnh,TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA VÌ DÂN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.803375,"lng": 106.692420}, "id": 18, 
+          "address": "02 Hoàng Hoa Thám, Phường 7, Bình Thạnh,TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA VIỆT MỸ - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.767361,"lng": 106.683799}, "id": 19, 
+          "address": "201 Nguyễn Thị Minh Khai, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA DAISY - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.783177,"lng": 106.704907}, "id": 20, 
+          "address": "21 Nguyễn Trung Ngạn, Quận 1, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM VIGOR - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.780791,"lng": 106.704617}, "id": 21, 
+          "address": "Tầng 3, The Lancaster, 22-22 Bis , Lê Thánh Tôn, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA HOA SEN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.789781,"lng": 106.697032}, "id": 22, 
+          "address": "CS1 :79 Điện Biên Phủ, Quận 1, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM VICTORIA HEALTHCARE MY MY - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.794127,"lng": 106.677565}, "id": 23, 
+          "address": "CS2 : 135A Nguyễn Văn Trỗi, Phú Nhuận, TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM VICTORIA HEALTHCARE MY MY - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.776425,"lng": 106.691268}, "id": 24, 
+          "address": "10,Trương Định, Phường 6, Quận 3,TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM QUỐC TẾ YERSIN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.762276,"lng": 106.656369}, "id": 25, 
+          "address": "20-22 Lãnh Binh Thăng, Phường 13, Quận 11,TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA NGỌC MINH - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.816706,"lng": 106.711338}, "id": 26, 
+          "address": "236 Đinh Bộ Lĩnh, Phường 26, Bình Thạnh, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA ĐÔNG SÀI GÒN - TP. Hồ Chí Minh (*)"    
+        },
+        { "title":{"lat":10.777856,"lng": 106.681144}, "id": 27, 
+          "address": "06, đường 3/2,Phường 12, Quận 10,TP. Hồ Chí Minh", 
+          "name":"NHA KHOA ĐỨC HIỀN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.776381,"lng": 106.680312}, "id": 28, 
+          "address": "74, đường 3/2 St,Phường 2, Quận  3,TP. Hồ Chí Minh", 
+          "name":"NHA KHOA 3/2 - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.781225,"lng": 106.665063}, "id": 29, 
+          "address": "LL8,Ba Vi,Phường 15,Quận 10,TP. Hồ Chí Minh", 
+          "name":"NHA KHOA NAM NHẬT - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.798601,"lng": 106.680721}, "id": 30, 
+          "address": "332,Phan Dinh Phung,Phường 1,  Quận Phú Nhuận , TP. Hồ Chí Minh ", 
+          "name":"NHA KHOA NHẬT NAM–CHI NHÁNH PHAN DINH PHUNG - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.800840,"lng": 106.661235}, "id": 31, 
+          "address": "457 Cong Hoa,Phường 4, Quận Tân Binh, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA NHẬT NAM–CHI NHÁNH HOÀNG VĂN THỤ - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.787669,"lng": 106.678548}, "id": 32, 
+          "address": "364 Lê Văn Sỹ, Phường 14, Quận 3, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA NHẬT NAM–CHI NHÁNH LÊ VĂN SỸ - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.800549,"lng": 106.679630}, "id": 33, 
+          "address": "411,Nguyen Kiem,Phường 9, Quận Phú Nhuận , TP. Hồ Chí Minh", 
+          "name":"NHA KHOA ĐÔNG NAM - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.779970,"lng": 106.677842}, "id": 34, 
+          "address": "329 CMT8,Phường 12, Quận 10, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA LAM ANH SÀI GÒN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.794623,"lng": 106.683717}, "id": 35, 
+          "address": "112 Phan Đình Phùng, Phường 2, Quận Phú Nhuận, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA NỤ CƯỜI - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.730894,"lng": 106.707426}, "id": 36, 
+          "address": "69 Lê Văn Thiêm, Hưng Phước 3, Phú Mỹ Hưng, Quận 7, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA SAKURA - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.783879,"lng": 106.698945}, "id": 37, 
+          "address": "CS1 : 50 Nguyễn Thị Minh Khai, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA XANH PON CS1 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.792995,"lng": 106.707528}, "id": 38, 
+          "address": "CS2 : 33 Xô Viết  Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA XANH PON CS3 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.784692,"lng": 106.624703}, "id": 39, 
+          "address": "17 Phạm Văn, Phú Thọ Hòa , Tân Phú, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA MINH CHÂU - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.792344,"lng": 106.688114}, "id": 40, 
+          "address": "62 Đặng Dung,  Phường Tân Định, Quận 1, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA KỸ THUẬT SỐ - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.757371,"lng": 106.689395}, "id": 41, 
+         "address": "CS1 : 24/4 Nguyễn Cảnh Chân, phường Cầu Kho, Quận 1, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA BẢO NGỌC - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.768104,"lng": 106.684273}, "id": 42, 
+          "address": "199 Nguyễn Thị Minh Khai, Quận 1, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA MINH KHAI - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.850686,"lng": 106.754211}, "id": 43, 
+          "address": "CS1:10 Lam Son, KP3, Phường Linh Tây, Thủ Đức, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA NHẬT TÂN CS 1 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.776676,"lng": 106.680606}, "id": 44, 
+          "address": "54-56-58 3/2 , Phường 12, Quận 10, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA PHƯƠNG ĐÔNG - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.801436,"lng": 106.682543}, "id": 45, 
+          "address": "CS1 :168 Phan Đăng Lưu, Phường 3, Phú Nhuận, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA SONG PHÁT CS 1 - TP. Hồ Chí Minh"
+        },    
+        { "title":{"lat":10.775835,"lng": 106.682775}, "id": 46, 
+          "address": "CS2 :331 Điện Biên phủ, Phường 4, Quận 3, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA SONG PHÁT CS 2 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.798061,"lng": 106.710956}, "id": 47, 
+          "address": "CS3 :198 XVNT, Phường 21, Bình Thạnh,TP. Hồ Chí Minh", 
+          "name":"NHA KHOA SONG PHÁT CS 3 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.753436,"lng": 106.593129}, "id": 48, 
+          "address": "104- 110 Đường số 54 KDC Tân Tạo, Phường Tân Tạo, Bình Tân,TP. Hồ Chí Minh", 
+          "name":"BV QUỐC ÁNH - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.770379,"lng": 106.673443}, "id": 49, 
+          "address": "678 Lê Hồng Phong, Phường 10, Quận 10, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA VENUS - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.741526,"lng": 106.609523}, "id": 50, 
+          "address": "Số 3, Đường 17A, Phường Bình Trị Đông B, Quận Bình Tân, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN QUỐC TẾ THÀNH ĐÔ - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.804785,"lng": 106.732400}, "id": 51, 
+          "address": "17A Lê Văn Miến, Thảo Điền , Quận 2, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA CHÂU ÂU - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.783177,"lng": 106.704907}, "id": 52, 
+          "address": "21 Nguyễn Trung Ngạn, Quận 1, TP. Hồ Chí Minh ", 
+          "name":"NHA KHOA KOSEIKAI - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.793195,"lng": 106.677797}, "id": 53, 
+          "address": "99 Trần Huy Liệu, Phường 12, Phú Nhuận, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA SAIDO - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.831737,"lng": 106.621842}, "id": 54, 
+          "address": "171/3 Trường Chinh. Phường Tân Thới Nhất. Qua65n. TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN ĐA KHOA TÂM TRÍ SÀI GÒN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.771567,"lng": 106.669879}, "id": 55, 
+          "address": "722 Sư Vạn Hạnh Phường 12. Quận 10. TP.TP. Hồ Chí Minh", 
+          "name": "PHÒNG KHÁM QUỐC TẾ EXSON - TP. Hồ Chí Minh (*)"
+        },
+        { "title":{"lat":10.785540,"lng": 106.698505}, "id": 56, 
+          "address": "2 – 2 Bis Trần Cao Vân, Phường Đakao, Quận 1,TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM ĐA KHOA VINMEC SÀI GÒN - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.799838,"lng": 106.667502}, "id": 57, 
+          "address": "243-243A- 243B Hoàng Văn Thụ-Phường 1, Quận Tân Bình, TP. Hồ Chí Minh", 
+          "name":"BV PHỤ SẢN MÊKONG - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.786593,"lng": 106.691406}, "id": 58, 
+          "address": "chi nhánh 1: 71 Phạm Ngọc Thạch, phường 6, quận 3,  TP. Hồ Chí Minh", 
+          "name":"NHA KHOA VIỆT GIAO CS 1 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.762141,"lng": 106.664887}, "id": 59, 
+          "address": "chi nhánh 2: 120 Ngô Quyền, phường 5, quận 10, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA VIỆT GIAO CS 2 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.782973,"lng": 106.696261}, "id": 60, 
+          "address": "2 Bis , Công Trường Quốc tế, Phường 6, Quận 3, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA STARLIGHT - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.773880,"lng": 106.678031}, "id": 61, 
+          "address": "51, Đường 3/2, Quận 10, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA NO.1 - TP. Hồ Chí Minh"  
+        },
+        { "title":{"lat":10.969025,"lng": 106.484029}, "id": 62, 
+          "address": "741-743 Quốc lộ 22, Khu phố 5, Thị trấn Củ chi, Huyện Củ Chi, TP. Hồ Chí Minh", 
+          "name":"CÔNG TY TNHH Y KHOA QUỐC TẾ THIÊN PHÚC - TP. Hồ Chí Minh"
+        },
+        { "title":{"lat":10.749529,"lng": 106.661173}, "id": 63, 
+          "address": "1256-1258 Võ Văn Kiệt, Phường 10, Quận 5, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH CHĂM SÓC POLY - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.795645,"lng": 106.655709}, "id": 64, 
+          "address": "375 - 377 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA SKY - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.805712,"lng": 106.696633}, "id": 65, 
+          "address": "33 Nguyễn Huy Lượng, Phường 14, Quận Bình Thạnh, TP. Hồ Chí Minh.", 
+          "name": "CÔNG TY CP PHÒNG KHÁM OLYMPUS GIA MỸ - TP. Hồ Chí Minh (*)"
+        },
+        { "title":{"lat":10.751123,"lng": 106.696375}, "id": 66, 
+          "address": "871 Trần Xuân Soạn P.Tân Hưng, Quận 7, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN ĐA KHOA TÂN HƯNG - TP. Hồ Chí Minh(*)","statusread": false 
+        },
+        { "title":{"lat":10.789348,"lng": 106.710305}, "id": 67, 
+          "address": "CS1 :19V Nguyễn Hữu Cảnh, Phường 19, Quận Bình Thạnh, TP. Hồ Chí Minh", 
+          "name":"CÔNG TY TNHH NHA KHOA I-DENT CS1 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.760679,"lng": 106.674181}, "id": 68, 
+          "address": "CS2 : 193A - 195 Hùng Vương, Phường 9, Quận 5, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH NHA KHOA I-DENT - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.726959,"lng": 106.720361}, "id": 69, 
+          "address": "Tầng 2 Tòa nhà Crescent Plaza Building, 105 Tôn Dật Tiên, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh.", 
+          "name":"TRUNG TÂM Y KHOA SAINT LUKE - TP. Hồ Chí Minh(*)"  
+        },
+        { "title":{"lat":10.770611,"lng": 106.689734}, "id": 70, 
+          "address": "Số 125, Đường  Lê Thị Riêng, Phường  Bến Thành, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH NHA VIỆT - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.779273,"lng": 106.698758}, "id": 71, 
+          "address": "Số 01, Đường Hàn Thuyên, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"TRUNG TÂM Y TẾ QUỐC TẾ (CMI) - TP. Hồ Chí Minh(*)"
+        },
+        { "title":{"lat":10.797729,"lng": 106.658711}, "id": 72, 
+          "address": "04A Hoàng Việt, Phường 4, Quận Tân Bình, TP. Hồ Chí Minh", 
+          "name":"PHÒNG KHÁM ĐA KHOA HOÀN MỸ SÀI GÒN - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.794543,"lng": 106.720258}, "id": 73, 
+          "address": "720A Điện Biên Phủ, Bình Thạnh, TP. Hồ Chí Minh", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ VINMEC CENTRAL PARK - TP. Hồ Chí Minh (*)","statusread": false 
+        },
+        { "title":{"lat":10.790519,"lng": 106.697257}, "id": 74, 
+          "address": "113-115 Đinh Tiên Hoàng, Phường Đakao, Quận 1, TP. Hồ Chí Minh", 
+          "name":" NHA KHOA KỸ THUẬT CAO ÂU MỸ - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.795711,"lng": 106.655779}, "id": 75, 
+          "address": "438 Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP. Hồ Chí Minh.", 
+          "name": "NHA KHOA VINH AN - TP. Hồ Chí Minh"
+        },
+        { "title":{"lat":10.777259,"lng": 106.678946}, "id": 76, 
+          "address": "31 Trần Khắc Chân,Quận 1, TP. Hồ Chí Minh", 
+          "name":"CÔNG TY TNHH NHA KHOA AVA - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.756990,"lng": 106.685883}, "id": 77, 
+          "address": "563-565 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh", 
+          "name": "NHA KHOA BÌNH AN - TP. Hồ Chí Minh"
+        },
+        { "title":{"lat":10.768419,"lng": 106.695088}, "id": 78, 
+          "address": "173-175, Str Nguyễn Thái Học, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA XINH - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.756687,"lng": 106.676788}, "id": 79, 
+          "address": "218 Nguyễn Trãi, Phường 3, Quận 5, TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM ĐA KHOA BẢO NGỌC - TP. Hồ Chí Minh"    
+        },
+        { "title":{"lat":10.802616,"lng": 106.638424}, "id": 80, 
+          "address": "107 Tân Hải, Phường 13, Quận Tân Bình, TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM ĐA KHOA CAREPLUS - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.769712,"lng": 106.688450}, "id": 81, 
+          "address": "Số 63, Đường  Bùi Thị Xuân, Quận 1, TP. Hồ Chí Minh.", 
+          "name": "BỆNH VIỆN PHỤ SẢN QUỐC TẾ SÀI GÒN - TP. Hồ Chí Minh"
+        },
+        { "title":{"lat":10.770853,"lng": 106.687907}, "id": 82, 
+          "address": "Số 101 Sương Nguyệt Ánh, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH BỆNH VIỆN RHM QUỐC TẾ SÀI GÒN - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.769414,"lng": 106.696468}, "id": 83, 
+          "address": "Số 4B, Đường Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA CẨM TÚ - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.764079,"lng": 106.675621}, "id": 84, 
+          "address": "403-405-407 Lê Hồng Phong, Phường 2, Quận 10, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA HỢP NHẤT (CHI NHÁNH 3) - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.786815,"lng": 106.694260}, "id": 85, 
+          "address": "Số 181A Điện Biên Phủ, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"NHA KHOA YAKURI - TP. Hồ Chí Minh"  
+        },
+        { "title":{"lat":10.780606,"lng": 106.660526}, "id": 86, 
+          "address": "Số B9, Đường Thành Thái, Quận 10, TP. Hồ Chí Minh.", 
+          "name":"BỆNH VIỆN ĐA KHOA BƯU ĐIỆN - TP. Hồ Chí Minh"
+        },
+        { "title":{"lat":10.771465,"lng": 106.677846}, "id": 87, 
+          "address": "Số 493 Điện Biên Phủ, Phường 3, Quận 3, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH MONACO HEALTHCARE - TP. Hồ Chí Minh"     
+        },
+        { "title":{"lat":10.780709,"lng": 106.698378}, "id": 88, 
+          "address": "Cơ sở 1 : Dimond Plaza, Số 34, Đường Lê Duẩn, Quận 1, TP. Hồ Chí Minh.", 
+          "name": "CÔNG TY TNHH PHÒNG KHÁM BÁC SĨ GIA ĐÌNH HCM 1","statusread": false 
+        },
+        { "title":{"lat":10.807674,"lng": 106.733799}, "id": 89, 
+          "address": "Cơ sở 2 : Số 95, Đường Thảo Điền, Phường An Phú, Quận 2, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH PHÒNG KHÁM BÁC SĨ GIA ĐÌNH HCM 2","statusread": false 
+        },
+        { "title":{"lat":10.793723,"lng": 106.717938}, "id": 90, 
+          "address": "Cơ sở 3 (Phòng khám Care 1) : Tòa nhà The Manor, Số 91 , Đường Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh.", 
+          "name":"CÔNG TY TNHH PHÒNG KHÁM BÁC SĨ GIA ĐÌNH HCM 3","statusread": false 
+        },
+        { "title":{"lat":10.783680,"lng": 106.690352}, "id": 91, 
+          "address": "167A-Nam Kỳ Khởi Nghĩa, P7, Q3, TP. Hồ Chí Minh ", 
+          "name":" PHÒNG KHÁM ĐA KHOA RAFFLES MEDICAL TAI TP. Hồ Chí Minh ","statusread": false 
+        },
+        { "title":{"lat":10.787634,"lng": 106.696781}, "id": 92, 
+          "address": "Số 166, Đường Nguyễn Văn Thủ, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM ĐA KHOA VIỆT GIA - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.789781,"lng": 106.697032}, "id": 93, 
+          "address": "CS1 : Số 20-20Bis-22 Đinh Tiên Hoàng, Phường Ddakao, Quận 1, TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM VICTORIA HEALTCARE 1 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.729782,"lng": 106.720889}, "id": 94, 
+          "address": "CS 2 : Broadway D, 152 Nguyễn Lương Bằng, Quận 7, TP. Hồ Chí Minh.", 
+          "name":"PHÒNG KHÁM VICTORIA HEALTCARE 2 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.794858,"lng": 106.695861}, "id": 95, 
+          "address": "Cơ Sở 1 : 33-35 Đinh Tiên Hoàng, Bình Thạnh, TP. Hồ Chí Minh", 
+          "name": "NHA KHOA KIM 1 - TP. Hồ Chí Minh"
+        },
+        { "title":{"lat":10.768336,"lng": 106.667910}, "id": 96, 
+          "address": "Cơ Sở 2 : 396-398 Đường 3/2, Quận 10, TP. Hồ Chí Minh", 
+          "name":"NHA KHOA KIM 2 - TP. Hồ Chí Minh","statusread": false 
+        },
+        { "title":{"lat":10.494541,"lng": 107.168052}, "id": 97, 
+          "address": "CS1 : 75 Bạch Đằng, Phường Phước Trung, Bà Rịa-Vũng Tàu", 
+          "name":"NHA KHOA VẠN THÀNH SÀI GÒN - VŨNG TÀU 1"
+        },
+        { "title":{"lat":10.492277,"lng": 107.182827}, "id": 98, 
+          "address": "CS2 : 487 CMT8, Phường Phước Nguyên, TP Bà Rịa, tỉnh Bà Rịa-Vũng Tàu", 
+          "name":"NHA KHOA VẠN THÀNH SÀI GÒN  VŨNG TÀU 2"
+        },
+        { "title":{"lat":10.348137,"lng": 107.077247}, "id": 99, 
+          "address": "CS3 : 55 Lý Thường Kiệt, Phường 1, Bà Rịa-Vũng Tàu", 
+          "name": "NHA KHOA VẠN THÀNH SÀI GÒN  VŨNG TÀU 3"
+        },
+        { "title":{"lat":10.593225,"lng": 107.054390}, "id": 100,
+          "address": "Số 304 Độc Lập, Phường Phú Mỹ, Quận Tân Thành, Tỉnh Bà Rịa-Vũng Tàu.", 
+          "name":"PHÒNG KHÁM ĐA KHOA VẠN THÀNH SÀI GÒN ","statusread": false 
+        },
+        { "title":{"lat":10.351390,"lng": 107.089189}, "id": 101, 
+          "address": "408 Lê Hồng Phong, TP Vũng Tàu, Tỉnh Bà Rịa-Vũng Tàu", 
+          "name":"PHÒNG KHÁM ĐA KHOA VŨNG TÀU","statusread": false 
+        },
+        { "title":{"lat":10.352717,"lng": 107.072748}, "id": 102, 
+          "address": "Khu A, số 1-lê Ngọc Hân, P1, Bà Rịa-Vũng Tàu ", 
+          "name":" PHÒNG KHÁM ĐA KHOA RAFFLES MEDICAL TAI TP Vũng Tàu  ","statusread": false 
+        },
+        { "title":{"lat":10.958158,"lng": 106.847211}, "id": 103, 
+          "address": "1048A Phạm Văn Thuận, Phường Tân Mai, TP Biên Hòa, Đồng Nai", 
+          "name":"BỆNH VIỆN QUỐC TẾ ĐỒNG NAI (*)"     
+        },
+        { "title":{"lat":10.952218,"lng": 106.810283}, "id": 104, 
+          "address": "CS1 :269 CMT8, Phường Hòa Bình, TP Biên Hòa , Đồng Nai", 
+          "name": "NHA KHOA VẠN THÀNH SÀI GÒN - ĐỒNG NAI 1"
+        },
+        { "title":{"lat":11.036301,"lng": 107.173606}, "id": 105, 
+          "address": "CS2 : 14D Phúc Nhạc, Xã Gia Tân 3, Huyện Thống Nhất, Đồng Nai", 
+          "name":"NHA KHOA VẠN THÀNH SÀI GÒN - ĐỒNG NAI 2"  
+        },
+        { "title":{"lat":11.193772,"lng": 107.343493}, "id": 106, 
+          "address": "CS4 : 129 Ấp 114, thị trấn Định Quán, Huyện Định Quán, Đồng Nai", 
+          "name":"NHA KHOA VẠN THÀNH SÀI GÒN - ĐỒNG NAI 3"
+        },
+        { "title":{"lat":10.962641,"lng": 106.887074}, "id": 107, 
+          "address": "47/19A Điểu Xiển, Khu phố 5B, Phường Tân Biên, TP Biên Hòa, Tỉnh Đồng Nai.", 
+          "name": "BỆNH VIỆN PHỤ SẢN ÂU CƠ (*) "
+        },
+        { "title":{"lat":10.959904,"lng": 106.832186}, "id": 108, 
+          "address": "8-8B Nguyễn Ái Quốc, Biên Hòa, Đồng Nai", 
+          "name":"CÔNG TY TNHH NHA KHOA SÀI GÒN B.H","statusread": false 
+        },
+        { "title":{"lat":10.952683,"lng": 106.867861}, "id": 109, 
+          "address": "2 Đồng Khởi, Phường Tam Hòa, TP Biên Hòa, Tỉnh Đồng Nai.", 
+          "name":"BỆNH VIỆN ĐA KHOA ĐỒNG NAI","statusread": false 
+        },
+        { "title":{"lat":10.868306,"lng": 106.714332}, "id": 110, 
+          "address": "Đại lộ Bình Dương, Thuận An , Bình Dương", 
+          "name":"BỆNH VIỆN HẠNH PHÚC (*)"
+        },
+        { "title":{"lat":11.140963,"lng": 106.606331}, "id": 111, 
+          "address": "Đường TC3, TX  My Phuoc, Bến Cát , Bình Dương", 
+          "name":"BỆNH VIỆN MỸ PHƯỚC"  
+        },
+        { "title":{"lat":10.951128,"lng": 106.707238}, "id": 112, 
+          "address": "Lot 178 Thôn Hoa Lan,Thuận  Giao, Thuận An,Bình Dương", 
+          "name":"BỆNH VIỆN COLUMBIA ASIA BÌNH DUONG (*)","statusread": false 
+        },
+        { "title":{"lat":10.899899,"lng": 106.716172}, "id": 113, 
+          "address": "22/2, Tỉnh lộ 43, Đồng An, Phường Bình Hòa, TX Thuận An, Bình Dương", 
+          "name":"PHÒNG KHÁM ĐỒNG AN (*)"
+        },
+        { "title":{"lat":10.989464,"lng": 106.664045}, "id": 114, 
+          "address": "494-496 Đại lộ Bình Dương,Phường Hiệp Thành, Thị xã Thủ Dầu Một, Bình Dương", 
+          "name":"NHA KHOA BÌNH DƯƠNG (*)","statusread": false 
+        },
+        { "title":{"lat":11.004786,"lng": 106.642319}, "id": 115, 
+          "address": "39 Hồ Văn Cống, Khu phố 4, Phường Tương Bình Hiệp, TP Thủ Dầu Một, Tỉnh Bình Dương.", 
+          "name":"BỆNH VIÊN ĐA KHOA SÀI GÒN BÌNH DƯƠNG (*)","statusread": false 
+        },
+        { "title":{"lat":10.005275,"lng": 105.799147}, "id": 116, 
+          "address": "Lot 20, Quang Trung,Phường Phú Thứd, Cái Răng, Cần Thơ", 
+          "name":"BỆNH VIỆN HOÀN MỸ CỬU LONG(*)","statusread": false 
+        },
+        { "title":{"lat":10.029898,"lng": 105.750598}, "id": 117, 
+          "address": "300 Nguyễn Văn Cừ, Phường An Khánh, TP Cần Thơ", 
+          "name": "BỆNH VIỆN PHỤ SẢN QUỐC TẾ PHƯƠNG CHÂU(*)"
+        },
+        { "title":{"lat":9.174262,"lng": 105.1513430}, "id": 118, 
+          "address": "09 Lạc Long Quân, Phường 7, TP Cà Mau", 
+          "name":"BỆNH VIỆN ĐA KHOA HOÀN MỸ MINH HẢI (*)","statusread": false 
+        },
+        { "title":{"lat":10.345961,"lng": 103.854390}, "id": 119, 
+          "address": "Khu Bãi Dài, Xã Gành Dầu, Huyện Phú Quốc, Tỉnh Kiên Giang.", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ VINMEC PHÚ QUỐC (*)","statusread": false 
+        },
+        { "title":{"lat":16.057106,"lng": 108.217789}, "id": 120, 
+          "address": "26C Chu Văn An, Đà Nẵng", 
+          "name":"BỆNH VIỆN PHỤ NỮ ĐÀ NẴNG","statusread": false 
+        },
+        { "title":{"lat":16.059527,"lng": 108.209950}, "id": 121, 
+          "address": "161 Nguyễn Văn Linh Linh,Quận Thanh Khê, Đà Nẵng", 
+          "name":"BỆNH VIỆN HOÀN MỸ ĐÀ NẴNG(*) - KHOA QUỐC TẾ","statusread": false 
+        },
+        { "title":{"lat":16.022907,"lng": 108.214215}, "id": 122, 
+          "address": "64 CMT8, Phường Khuê Trung, Quận Cẩm Lệ, Đà Nẵng", 
+          "name": "BỆNH VIỆN TÂM TRÍ ĐÀ NẴNG (*)"
+        },
+        { "title":{"lat":16.053967,"lng": 108.209158}, "id": 123, 
+          "address": "73 Nguyễn Hữu Thọ, Hải Châu, Đà Nẵng", 
+          "name": "BỆNH VIỆN ĐA KHOA GIA ĐÌNH ĐÀ NẴNG (*)","statusread": false 
+        },
+        { "title":{"lat":16.071261,"lng": 108.200111}, "id": 124, 
+          "address": "Số 376, Đường Trần Cao Vân, Quận Thanh Khê, TP Đà Nẵng.", 
+          "name":"BỆNH VIỆN ĐA KHOA BÌNH DÂN - ĐÀ NẴNG"
+        },
+        { "title":{"lat":16.060604,"lng": 108.215029}, "id": 125, 
+          "address": "Số 96-98, Nguyễn Văn Linh, Quận Hải Châu, TP Đà Nẵng.", 
+          "name": "CÔNG TY TNHH PHÒNG KHÁM BÁC SĨ GIA ĐÌNH ĐÀ NẴNG"
+        },
+        { "title":{"lat":15.884364,"lng": 108.328229}, "id": 126, 
+          "address": "Xuân Quang, Phường Tân An, Tp Hội An, Quảng Nam", 
+          "name":"BỆNH VIỆN THÁI BÌNH DƯƠNG (*)"  
+        },
+        { "title":{"lat":15.910007,"lng": 108.239440}, "id": 127, 
+          "address": "Thôn 8A, Điện Nam Trung, Điện Bàn, Quảng Nam.", 
+          "name":"BỆNH VIỆN ĐA KHOA VĨNH ĐỨC (*)"  
+        },
+        { "title":{"lat":12.252292,"lng": 109.188242}, "id": 128, 
+          "address": "39 Trần Qúy Cáp, Vạn Thắng, Nha Trang - Khánh Hòa", 
+          "name":"PHÒNG KHÁM ĐA KHOA TÍN ĐỨC (*)"
+        },
+        { "title":{"lat":12.212731,"lng": 109.195205}, "id": 129, 
+          "address": "57-59 Cao Thắng, Phước Long, TP Nha Trang - Khánh Hòa", 
+          "name": "BỆNH VIỆN ĐA KHOA TÂM TRÍ NHA TRANG (*)"
+        },
+        { "title":{"lat":12.236143,"lng": 109.192875}, "id": 130, 
+          "address": "34/4 Nguyễn Thiện Thuật - Phường Tân Lập - TP Nha Trang - Khánh Hòa", 
+          "name":"BỆNH VIỆN 22/12 NHA TRANG (*)","statusread": false 
+        },
+        { "title":{"lat":12.236913,"lng": 109.181055}, "id": 131, 
+          "address": "92 Lê Hồng Phong, Phường Phước Hải, TP Nha Trang, Tỉnh Khánh Hòa.", 
+          "name":"PHÒNG KHÁM ĐA KHOA LUCKY","statusread": false 
+        },
+        { "title":{"lat":12.212935,"lng": 109.210926}, "id": 132, 
+          "address": "Đường Trần Phú, Tổ dân phố 1 Tây Sơn, Phường Vĩnh Nguyên, TP Nha Trang, Tỉnh Khánh Hòa.", 
+          "name": "BỆNH VIỆN ĐA KHOA QUỐC TẾ VINMEC NHA TRANG (*)"
+        },
+        { "title":{"lat":11.923709,"lng": 108.458255}, "id": 133, 
+          "address": "Tiểu khu 156, Mimosa,Phường 10, Đà Lạt", 
+          "name":"BỆNH VIỆN HOÀN MỸ - Đà Lạt","statusread": false 
+        },
+        { "title":{"lat":16.460922,"lng": 107.597094}, "id": 134, 
+          "address": "66 Hùng Vương, Phường Phú Nhuận, TP Thừa Thiên Huế", 
+          "name":"NHA KHOA SÀI GÒN HUẾ (*)","statusread": false 
+        },
+        { "title":{"lat":16.448040,"lng": 107.581646}, "id": 135, 
+          "address": "187 Điện Biên Phủ, Phường Trường An, TP Thừa Thiên Huế", 
+          "name":"BỆNH VIỆN HOÀNG VIẾT THẮNG (*)"  
+        },
+        { "title":{"lat":19.827832,"lng": 105.778668}, "id": 136, 
+          "address": "595 Nguyễn Chí Thanh, Phường Đông Thọ, TP Thanh Hóa", 
+          "name":"CÔNG TY NTHH MTV BỆNH VIỆN ĐA KHOA HỢP LỰC (*)"
+        },
+        { "title":{"lat":18.698453,"lng": 105.688856}, "id": 137, 
+          "address": "99 Phạm Đình Toái, Xóm 23, Xã Nghi Phú, Vinh, Nghệ An", 
+          "name":"BỆNH VIỆN QUỐC TẾ VINH (*)","statusread": false 
+        },
+        { "title":{"lat":20.421543,"lng": 106.173785}, "id": 138, 
+          "address": "102 Tô Hiệu, Phường Ngô Quyền, TP Nam Định, Tỉnh Nam Định", 
+          "name":"PHÒNG KHÁM ĐA KHOA CAO CẤP SÔNG HỒNG (*)","statusread": false 
+        },
+        { "title":{"lat":21.003896,"lng": 105.840311}, "id": 139, 
+          "address": "01 Phương Mai, Đống Đa, Hà Nội", 
+          "name":"BỆNH VIỆN VIỆT PHÁP(*)","statusread": false 
+        },
+        { "title":{"lat":21.018420,"lng": 105.841470}, "id": 140, 
+          "address": "219 Lê Duẩn, Quận Hai Bà Trưng, Ba Đình , Hà Nội", 
+          "name":"BỆNH VIỆN TRÍ ĐỨC(*)","statusread": false 
+        },
+        { "title":{"lat":20.996344,"lng": 105.866965}, "id": 141, 
+          "address": "458 Minh Khai, Phường Vĩnh Tuy, quận Hai Bà Trưng, Hà Nội", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ VINMEC (*)","statusread": false 
+        },
+        { "title":{"lat":21.024731,"lng": 105.805830}, "id": 142, 
+          "address": "18/879, La Thành, Đống Đa, Hà Nội", 
+          "name":"BỆNH VIỆN NHI TRUNG ƯƠNG - KHOA ĐIỀU TRỊ TỰ NGUYÊN A","statusread": false 
+        },
+        { "title":{"lat":20.997326,"lng": 105.850004}, "id": 143, 
+          "address": "496 Bạch Mai, Quận Hai Bà Trưng, Hà Nội", 
+          "name":"BỆNH VIỆN PHỤ SẢN AN THỊNH","statusread": false 
+        },
+        { "title":{"lat":21.008609,"lng": 105.848388}, "id": 144, 
+          "address": "34 Đại Cồ Việt, Quận Hai Bà Trưng, Hà Nội", 
+          "name":"BỆNH VIỆN UNG BƯỚU HƯNG VIỆT","statusread": false 
+        },
+        { "title":{"lat":21.042453,"lng": 105.844135}, "id": 145, 
+          "address": "55 Yên Ninh, Ba Đình, Hà Nội", 
+          "name":"BỆNH VIỆN HỒNG NGỌC (*)","statusread": false 
+        },
+        { "title":{"lat":21.002233,"lng": 105.838754}, "id": 146, 
+          "address": "78 Đường Giai Phóng, Hà Nội", 
+          "name":"BỆNH VIỆN NHIỆT ĐỚI TRUNG ƯƠNG","statusread": false 
+        },
+        { "title":{"lat":21.029829,"lng": 105.847654}, "id": 147, 
+          "address": "40 Phố Tràng Thi - Hà Nội", 
+          "name":"BỆNH VIỆN HỮU NGHỊ VIỆT ĐỨC - KHOA ĐIỀU TRỊ THEO YÊU CẦU 1C","statusread": false 
+        },
+        { "title":{"lat":21.045113,"lng": 105.814337}, "id": 148, 
+          "address": "286 Thụy Khê, Tây Hồ , Hà Nội", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ THU CÚC (*)","statusread": false 
+        },
+        { "title":{"lat":21.016818,"lng": 105.828767}, "id": 149, 
+          "address": "86-88 Nguyễn Lương Bằng, Quận Đống Đa, Hà Nội", 
+          "name":"PHÒNG KHÁM MEDELAB(*)","statusread": false 
+        },
+        { "title":{"lat":21.001024,"lng": 105.841615}, "id": 150, 
+          "address": "221 Phố Vọng, Hai Bà Trưng, Hà Nội", 
+          "name":"PHÒNG KHÁM YECXANH(*)","statusread": false 
+        },
+        { "title":{"lat":21.018322,"lng": 105.851526}, "id": 151, 
+          "address": "2-4,Nguyễn Du, Hàng Bài, Quận Hoàn Kiếm , Hà Nội", 
+          "name":"NHA KHOA NGUYỄN DU(*)","statusread": false 
+        },
+        { "title":{"lat":21.018281,"lng": 105.851221}, "id": 152, 
+          "address": "03 Nguyễn Du, Hai Bà Trưng, Hà Nội", 
+          "name":"NHA KHOA ÚC CHÂU (*)","statusread": false 
+        },
+        { "title":{"lat":21.077698,"lng": 105.817570}, "id": 153, 
+          "address": "65 Trịnh Công Sơn, Phường Nhật Tân, Quận Tây Hồ, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM SAKURA - CÔNG TY TNHH LIÊN KẾT Y TẾ NHẬT VIỆT (*)","statusread": false 
+        },
+        { "title":{"lat":21.022357,"lng": 105.825593}, "id": 154, 
+          "address": "Tầng 2, 214 Nguyễn Lương Bằng, Đống Đa , Hà Nội", 
+          "name":"NHA KHOA LÊ HƯNG (*)","statusread": false 
+        },
+        { "title":{"lat":21.015728,"lng": 105.815913}, "id": 155, 
+          "address": "29-31 Ngõ Thái Hà,Phố Thái Hà, Phường Láng Hạ, Đống Đa, Hà Nội", 
+          "name":"PHÒNG KHÁM RĂNG HÀM MẶT TERASA (*)","statusread": false 
+        },
+        { "title":{"lat":21.019511,"lng": 105.816628}, "id": 156, 
+          "address": "6B & 2D , Trần Hưng Đạo, Quận Hoàn Kiếm, Hà Nội", 
+          "name":"PHÒNG KHÁM NHA KHOA 108 THÀNH CÔNG (*)","statusread": false 
+        },
+        { "title":{"lat":20.992083,"lng": 105.792588}, "id": 157, 
+          "address": "75 Mễ Trì, Trung Văn, Nam Từ Liêm, Hà Nội", 
+          "name":"TRUNG TÂM BÁC SỸ GIA ĐÌNH HÀ NỘI (*)","statusread": false 
+        },
+        { "title":{"lat":21.016938,"lng": 105.777748}, "id": 158, 
+          "address": "Chi nhánh 1 : Villa 05-TT4, Khu đô thị Sông Đà - Mỹ Đình, Huyện Từ Liêm, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM ĐA KHOA VIETLIFE 1","statusread": false 
+        },
+        { "title":{"lat":21.020914,"lng": 105.844668}, "id": 159, 
+          "address": "Chi nhánh 2 : 14 Trần Bình Trọng, Hoàn Kiếm, Hà Nội", 
+          "name":"PHÒNG KHÁM ĐA KHOA VIETLIFE 2","statusread": false 
+        },
+        { "title":{"lat":21.017665,"lng": 105.783373}, "id": 160, 
+          "address": "Khu B1 và Tầng 10, Keangnam Landmark 72, Phạm Hùng,Hà Nội", 
+          "name":"PHÒNG KHÁM ĐA KHOA QUỐC TẾ HỒNG NGỌC - KEANGNAM (*)","statusread": false 
+        },
+        { "title":{"lat":21.025257,"lng": 105.843595}, "id": 161, 
+          "address": "83B Lý Thường Kiệt, Quận Hoàn Kiếm, Hà Nội", 
+          "name":"PHÒNG KHÁM ĐA KHOA QUỐC TẾ VIETSING (*)","statusread": false 
+        },
+        { "title":{"lat":20.996344,"lng": 105.866965}, "id": 162, 
+          "address": " 72A Nguyễn Trãi, TP Hà Nội", 
+          "name":"PHÒNG KHÁM ĐA KHOA VINMEC ROYAL CITY (*)","statusread": false 
+        },
+        { "title":{"lat":21.034885,"lng": 105.845129}, "id": 163, 
+          "address": "Số 42 Cửa Đông - Hoàn Kiếm - Hà Nội", 
+          "name":"CÔNG TY CỔ PHẦN NHA KHOA NAM VIỆT (*)","statusread": false 
+        },
+        { "title":{"lat":21.013654,"lng": 105.802723}, "id": 164, 
+          "address": "Trụ sở chính :Số 24 Trần Duy Hưng - Cầu Giấy - Hà Nội", 
+          "name":"CÔNG TY CỔ PHẦN QUỐC TẾ NHA KHOA VIỆT PHÁP 1","statusread": false 
+        },
+        { "title":{"lat":21.009809,"lng": 105.823434}, "id": 165, 
+          "address": "Cơ sở 2 : Số 6 Thái Hà - Đống Đa - Hà Nội", 
+          "name":"CÔNG TY CỔ PHẦN QUỐC TẾ NHA KHOA VIỆT PHÁP 2","statusread": false 
+        },
+        { "title":{"lat":21.018136,"lng": 105.806818}, "id": 166, 
+          "address": "70 Nguyễn Chí Thanh, Láng Thượng, Đống Đa, Hà Nội", 
+         "name":"PHÒNG KHÁM ĐA KHOA VIỆT DOCTOR (*)","statusread": false 
+        },
+        { "title":{"lat":21.042453,"lng": 105.844135}, "id": 167, 
+          "address": "Tầng 3, Tòa nhà B, Savico Megamall, 07 - 09 Nguyễn Văn Linh, Quận Long Biên, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM SAVICO (BỆNH VIỆN ĐA KHOA HỒNG NGỌC) (*)","statusread": false 
+        },
+        { "title":{"lat":21.009258,"lng": 105.802312}, "id": 168, 
+          "address": "Số 24T1, Khu Đô Thị Mới Trung Hoà Nhân Chính, Quận Hà Đông, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM H - CLINIC - BỆNH VIỆN VIỆT PHÁP(*)","statusread": false 
+        },
+        { "title":{"lat":21.021861,"lng": 105.855535}, "id": 169, 
+          "address": "Tầng 10 Tòa nhà HaNoi Tourist, 18 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội", 
+          "name":"TOKYO INTERNATIONAL CLINIC","statusread": false 
+        },
+        { "title":{"lat":21.013118,"lng": 105.849837}, "id": 170, 
+          "address": "Số 128, Đường Bùi Thị Xuân, Quận Hai Bà Trưng, TP Hà Nội.", 
+          "name":"BỆNH VIỆN MẮT QUỐC TẾ DND (*)","statusread": false 
+        },
+        { "title":{"lat":21.026589,"lng": 105.826474}, "id": 171, 
+          "address": "Số 61, Đường Vũ Thạnh, Phường Ô Chợ Dừa, Quận Đống Đa, TP Hà Nội.", 
+          "name":"BỆNH VIỆN ĐA KHOA TƯ NHÂN HÀ THÀNH(*)","statusread": false 
+        },
+        { "title":{"lat":21.024549,"lng": 105.810320}, "id": 172, 
+          "address": "Số 52,  Đường Nguyễn Chí Thanh, Quận Đống Đa, TP Hà Nội.", 
+          "name":"BỆNH VIỆN ĐA KHOA BẢO SƠN(*)","statusread": false 
+        },
+        { "title":{"lat":21.009211,"lng": 105.838182}, "id": 173, 
+          "address": "5 Xã Đàn, Quận Đống Đa, TP Hà Nội.", 
+          "name":"BỆNH VIỆN ĐÔNG ĐÔ (*)","statusread": false 
+        },
+        { "title":{"lat":21.016751,"lng": 105.810790}, "id": 174, 
+          "address": "30 Nguyên Hồng, Phường Láng Hạ,Quận Đống Đa,TP Hà Nội.", 
+          "name":"NHA KHOA SMILE CARE (*)","statusread": false 
+        },
+        { "title":{"lat":21.025743,"lng": 105.809260}, "id": 175, 
+          "address": "18/879 La Thành, Đống Đa, Hà Nội", 
+          "name":"KHOA QUỐC TẾ BỆNH VIỆN NHI TRUNG ƯƠNG (*)","statusread": false 
+        },
+        { "title":{"lat":21.007696,"lng": 105.803468}, "id": 176, 
+          "address": "6 Nguyễn Thị Thập, KĐT Trung Hòa Nhân Chính, Quận Cầu Giấy, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM ĐA KHOA QUỐC TẾ THANH CHÂN"  
+        },
+        { "title":{"lat":21.008689,"lng": 105.807761}, "id": 177, 
+          "address": "Số 92 Hoàng Ngân, Phường Trung Hòa, Quận Cầu Giấy, TP Hà Nội.", 
+          "name":"NHA KHOA MINH THU","statusread": false 
+        },
+        { "title":{"lat":21.017046,"lng": 105.854911}, "id": 178, 
+          "address": "11-13-15 Trần Xuân Soạn, Quận Hai Bà Trưng, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM ĐA KHOA DR.BINH TELE_CLINIC","statusread": false 
+        },
+        { "title":{"lat":21.032168,"lng": 105.812427}, "id": 179, 
+          "address": "Tòa Tây 8001, Tầng 8, Lotte Center, 54 Liễu Giai, Phường Cống Vị, Quận Ba Đình, TP Hà Nội.", 
+          "name":"NHA KHOA MIKUNI","statusread": false 
+        },
+        { "title":{"lat":21.048420,"lng": 105.846088}, "id": 180, 
+          "address": "Số 42-44, Đường Nghĩa Dũng, Quận Ba Đình, TP Hà Nội.", 
+          "name":"BỆNH VIỆN ĐA KHOA MEDLATEC (*)","statusread": false 
+        },
+        { "title":{"lat":21.047297,"lng": 105.814275}, "id": 181, 
+          "address": "Số 99, Đường Trích Sài, Phường Bưởi, Quận Tây Hồ, TP Hà Nội.", 
+          "name":"PHÒNG KHÁM ĐA KHOA MEDLATEC","statusread": false 
+        },
+        { "title":{"lat":21.026146,"lng": 105.822161}, "id": 182, 
+          "address": "Lô 1-2, Tòa nhà D2 Giảng Võ, Phường Giảng Võ, Quận Ba Đình, Tp. Hà Nội.", 
+          "name":"PHÒNG KHÁM ĐA KHOA HOA SEN (CHI NHÁNH HÀ NỘI)","statusread": false 
+        },
+        { "title":{"lat":21.040803,"lng": 105.876736}, "id": 183, 
+          "address": "Số 108 Hoàng Như Tiếp, Phường Bồ Đề, Quận Long Biên, Tp. Hà Nội.", 
+          "name":"BỆNH VIỆN ĐA KHOA TÂM ANH","statusread": false 
+        },
+        { "title":{"lat":21.031104,"lng": 105.818295}, "id": 184, 
+          "address": "Số 298I, Đường Kim Mã, Quận Ba Đình, TP Hà Nội.", 
+          "name":"CÔNG TY TNHH PHÒNG KHÁM BÁC SĨ GIA ĐÌNH HÀ NỘI ","statusread": false 
+        },
+        { "title":{"lat":21.063772,"lng": 105.827350}, "id": 185, 
+          "address": "51-Xuan Dieu- P. Quang An, Q.Tây Hồ -Hà Nội ", 
+          "name":" PHÒNG KHÁM INTERNATIONAL SOS HANOI","statusread": false 
+        },
+        { "title":{"lat":20.997242,"lng": 105.842332}, "id": 186, 
+          "address": "Số 1E Trường Chinh, Phương Liệt, Thanh Xuân, Hà Nội", 
+          "name":"BỆNH VIỆN ĐA KHOA AN VIỆT","statusread": false 
+        },
+        { "title":{"lat":20.842836,"lng": 106.698034}, "id": 187, 
+          "address": "225C Lạch Tray, Ngô Quyền, Hải Phòng", 
+          "name":"ĐẠI HỌC Y HẢI PHÒNG (*)","statusread": false 
+        },
+        { "title":{"lat":20.853439,"lng": 106.672831}, "id": 188, 
+          "address": "124 Nguyễn Đức Cảnh, Lê Chân, Hải Phòng", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ HẢI PHÒNG (*)","statusread": false 
+        },
+        { "title":{"lat":20.956365,"lng": 107.094512}, "id": 189, 
+          "address": "Số 29, Đường Nguyễn Văn Cừ, Phường Hồng Hải, TP Hạ Long, Tỉnh Quảng Ninh.", 
+          "name":"CÔNG TY TNHH CHĂM SÓC SỨC KHỎE HOÀNG ANH (*)","statusread": false 
+        },
+        { "title":{"lat":20.438682,"lng": 106.341363}, "id": 190, 
+          "address": "Đường Ngô Quyền, Tổ 47, Phường Kỳ Bá, TP Thái Bình, Tỉnh Thái Bình.", 
+          "name":"BỆNH VIỆN ĐA KHOA TƯ NHÂN LÂM HOA(*)","statusread": false 
+        },
+        { "title":{"lat":20.434769,"lng": 106.342582}, "id": 191, 
+          "address": "Số 786, Đường Lý Bôn, TP Thái Bình, Tỉnh Thái Bình.", 
+          "name":"BỆNH VIỆN ĐA KHOA TƯ NHÂN HOÀNG AN(*)","statusread": false 
+        },
+        { "title":{"lat":21.658574,"lng": 105.208493}, "id": 192, 
+          "address": "Thôn Phượng Hùng 1, Xã Chi Đám, Huyện Đoan Hùng, Tỉnh Phú Thọ.", 
+          "name":"BỆNH VIỆN ĐA KHOA HÙNG VƯƠNG (*)","statusread": false 
+        },
+        { "title":{"lat":21.321598,"lng": 105.590888}, "id": 193, 
+          "address": "Nguyễn Tất Thành, Xã Định Trung, TP Vĩnh Yên, Tỉnh Vĩnh Phúc.", 
+          "name":"BỆNH VIỆN HỮU NGHỊ LẠC VIỆT(*)","statusread": false 
+        },
+        { "title":{"lat":21.176902,"lng": 106.073563}, "id": 194, 
+          "address": "Số 310, Đường Trần Hưng Đạo, Phường Đại Phúc, TP Bắc Ninh, Tỉnh Bắc Ninh.", 
+          "name":"BỆNH VIỆN ĐA KHOA TƯ NHÂN KINH BẮC","statusread": false 
+        },
+        { "title":{"lat":21.825170,"lng": 105.202150}, "id": 195, 
+          "address": "Tổ 36, Phố Hoa Lư, Phường Phan Thiết, TP Tuyên Quang, Tỉnh Tuyên Quang.", 
+          "name":"CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ Y TẾ AN SINH (*)","statusread": false 
+        },
+        { "title":{"lat":22.822484,"lng": 104.985497}, "id": 196, 
+          "address": "8A Nguyễn Thái Học, TP Hà Giang, Tỉnh Hà Giang.", 
+          "name":"PHÒNG KHÁM CÔNG TY CỔ PHẦN ĐỨC MINH (*)","statusread": false 
+        },
+        { "title":{"lat":21.587447,"lng": 105.829529}, "id": 197, 
+          "address": "328 Lương Ngọc Quyến, TP Thái Nguyên, Tỉnh Thái Nguyên.", 
+          "name":"BỆNH VIỆN QUỐC TẾ THÁI NGUYÊN(*)","statusread": false 
+        },
+        { "title":{"lat":21.586055,"lng": 105.832597}, "id": 198, 
+          "address": "501 Đường Lương Ngọc Quyến, Phường Phan Đình Phùng, TP Thái Nguyên, Tỉnh Thái Nguyên.", 
+          "name":"BỆNH VIỆN ĐA KHOA TRUNG TÂM THÁI NGUYÊN(*)","statusread": false 
+        },
+        { "title":{"lat":20.956365,"lng": 107.094512}, "id": 199, 
+          "address": "Số 29, Đường Nguyễn Văn Cừ, Phường Hồng Hải, TP Hạ Long, Tỉnh Quảng Ninh.", 
+          "name":"CÔNG TY TNHH CHĂM SÓC SỨC KHỎE HOÀNG ANH (*)","statusread": false 
+        },
+        { "title":{"lat":20.951939,"lng": 107.072000}, "id": 200, 
+          "address": "Số 10A Đường Lê Thánh Tông, Phường Hồng Gai, Tp. Hạ Long, Tỉnh Quảng Ninh.", 
+          "name":"BỆNH VIỆN ĐA KHOA QUỐC TẾ VINMEC HẠ LONG","statusread": false 
+        },
+        { "title":{"lat":21.699083,"lng": 104.873954}, "id": 201, 
+          "address": "Đường Hòa Bình, Tổ 44, Phường Nguyễn Phúc, TP Yên Bái, Tỉnh Yên Bái.", 
+          "name":"BỆNH VIỆN ĐA KHOA HỮU NGHỊ 103","statusread": false 
+        }]

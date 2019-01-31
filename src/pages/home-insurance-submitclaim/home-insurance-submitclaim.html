@@ -1,0 +1,155 @@
+<!--
+  Generated template for the HomeInsuranceSubmitclaimPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_INSURANCE.SUBMITCLAIM.NAME' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <div style="width:100%;text-align: center;" class="inline-block">
+    <img class="inline" src="assets/imgs/LogoUIC.png" style="width: 15%;float: left;">
+    <h6 class="inline">CLAIM FORM</h6>
+    <img class="inline" src="assets/imgs/LogoInsmart.png" style="width: 15%;float: right;">
+  </div>
+  <p style="font-style: italic;margin-top: 5%;">Please Submit</p>
+  <form (ngSubmit)="requestClaim()">
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Policyholder:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.policyholder" name="policyholder">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Policy No:</label>
+      <input type="number" id="txtSubmitClaim" [(ngModel)]="submitClaim.policyno" name="policyno">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <b>A.Personal information</b>
+    </div>
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Name of the Inpatient:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.nameofthepatient" name="nameofthepatient">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">D.O.B of Insured:</label>
+      <input type="date" id="txtSubmitClaim" [(ngModel)]="submitClaim.dobofinsured" name="dobofinsured">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">claim Level:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.claimlevel" name="claimlevel">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Relevant Employee:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.relevantemployee" name="relevantemployee">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Employee No:</label>
+      <input type="number" id="txtSubmitClaim" [(ngModel)]="submitClaim.employeeno" name="employeeno">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Job Title:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.jobtitle" name="jobtitle">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Email:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.email" name="email">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Tel No:</label>
+      <input type="number" id="txtSubmitClaim" [(ngModel)]="submitClaim.telno" name="telno">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <b>B.Payment</b>
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Total amount claimed:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.totalamountclaimed" name="totalamountclaimed">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Number of Days off-work :</label>
+      <input type="number" id="txtSubmitClaim" [(ngModel)]="submitClaim.numberofdaysoffwork" name="numberofdaysoffwork">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <div class="inline-block" id="txtSubmitClaim">
+        <div class="inline-block" style="margin-left: 2%; ">
+            <input type="radio" name="transfer" id="rbbanktransfer" [(ngModel)]="submitClaim.mdGender" value="banktransfer" />
+            <label for="rbtransfer">Bank transfer</label>
+        </div>
+        <div class="inline-block" style="float: right;margin-right: 2%;">
+            <input type="radio" name="transfer" id="rbcash" [(ngModel)]="submitClaim.mdGender" value="cash" />
+            <label for="rbcash">Cash</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Account No:</label>
+      <input type="number" id="txtSubmitClaim" [(ngModel)]="submitClaim.accountno" name="accountno">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Bank Address:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.bankaddress" name="bankaddress">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Benefitciary:</label>
+      <input type="number" id="txtSubmitClaim" [(ngModel)]="submitClaim.benefitciary" name="benefitciary">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <b>C.Treatment information</b>
+  </div>
+
+  <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Date of visit or Date of accident:</label>
+      <input type="date" id="txtSubmitClaim" [(ngModel)]="submitClaim.fdateofaccident" name="fdateofaccident">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Medical conditions or Diagnosis:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.diagnosis" name="diagnosis">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Name of Hospital or clinic:</label>
+      <input type="text" id="txtSubmitClaim" [(ngModel)]="submitClaim.clinic" name="clinic">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Date of admission:</label>
+      <input type="date" id="txtSubmitClaim" [(ngModel)]="submitClaim.dateofadmission" name="dateofadmission">
+    </div>
+
+    <div id="panelSubmitClaim">
+      <label id="lblSubmitClaim">Date of dischange:</label>
+      <input type="date" id="txtSubmitClaim" [(ngModel)]="submitClaim.dateofdischange" name="dateofdischange">
+    </div>
+
+    <div style="width: 100%;height: 10%;text-align: center;margin-top: 10%;margin-bottom: 10%;">
+      <button ion-button type="submit" block>Submit Claim</button>
+      
+    </div>
+	</form>
+</ion-content>

@@ -1,0 +1,100 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+    ::-webkit-scrollbar,*::-webkit-scrollbar {
+        display: none;
+    }
+
+    #infoUser{
+        background-color: #157eb2;
+        background-size: 100% 100%;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px white solid;
+    }
+    .frameAvatar{
+        margin-top: 3%;
+        display:inline-block;
+        width:40%;
+    }
+    .avatar {
+        vertical-align: middle;
+        width: 100%;
+        border-radius: 50%;
+    }
+    #userName{
+        color: white;
+    }
+    .btnItemSideMenu{
+        background-color: rgba(255, 255, 255, 0.226);
+        margin-bottom: 1%;
+        border-color: rgba(80, 80, 80, 0.6);
+        border-radius: 5px;
+    }
+
+
+    .action-sheet-container{
+        padding: 0 10px;
+    }
+    .action-sheet-md .action-sheet-group:first-child {
+        margin-top: 10px;
+        border-radius: 13px;
+        margin-bottom: 8px;
+        padding:0;
+    }
+    .action-sheet-md .action-sheet-title {
+        text-align: center;
+        font-size: 1.6rem;
+        border-radius: 0;
+        border-bottom: 0.55px solid #d6d6da;
+        color: #757575;
+        padding: 1.5rem;
+    }
+    .action-sheet-md .action-sheet-button{
+        padding: 0 10px 0 10px;
+        min-height: unset;
+        height: 50px;
+        font-size: 14px;
+        color: #007aff;
+        border-bottom: 0.55px solid #d6d6da;
+        background: transparent;
+        line-height: 1.5;
+        text-align: left;
+        .button-inner{
+            justify-content: unset;
+        }
+    }
+    .action-sheet-md .action-sheet-group:last-child {
+        margin-bottom: 10px;
+        padding:0;
+    }
+    .action-sheet-md .action-sheet-group {
+        border-radius: 13px;
+    }
+    .action-sheet-ios .action-sheet-button{
+        padding: 0 10px 0 10px;
+        min-height: unset;
+        height: 50px;
+        font-size: 14px;
+        color: #007aff;
+        background: transparent;
+        line-height: 1.5;
+        text-align: left;
+        .button-inner{
+            justify-content: unset;
+        }
+    }

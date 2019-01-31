@@ -1,0 +1,42 @@
+<!--
+  Generated template for the HomeHealthcareMedicalassistancePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'HOME_HEALTHCARE.MEDICALASSISTANCE.NAME' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content style="background-image:url(./assets/imgs/background-blue.jpg);background-size: 100% 100%;height: 100%">
+  <div style="margin-top:15%;height:100%;margin-left:5%;margin-right: 5%">
+    <div id="searchPanelConcierge">
+      <font color="white">Enquring Tape :</font>
+      <select id="txtSearch" [(ngModel)]="selectMedicalAssistance">
+        <option *ngFor="let medicalassistance of medicalassistances">{{medicalassistance}}</option>
+      </select>
+    </div>
+
+    <div id="searchPanelConcierge">
+      <font color="white">Contactable Number :</font>
+      <input type="tel" id="txtSearch">
+    </div>
+
+    <div style="height: 20%;margin-top: 10%;">
+      <font color="white">Note :</font>
+      <textarea id="txtSearch" name="comment" style="height: 100%;width: 100%;border:solid 1px gray" placeholder="Note..." ng-model="noteMedicalAssistance"></textarea>
+    </div>
+    
+    <div style="height: 5%;margin-top: 20%;">
+      <button class="col" ion-button style="color: white" (click)="btnSubmitRequest()">Submit Request</button>
+    </div>
+
+  </div>
+</ion-content>
+<ion-footer style="height: 100px" no-border>
+  <img (click)="callHotline()" style="height: 100%;padding:5%;" src="./assets/imgs/phone-icon.png">
+</ion-footer>

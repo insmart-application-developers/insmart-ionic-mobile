@@ -1,0 +1,66 @@
+page-home-insurance-submitclaim-documentdifference {
+    .scroll-content{
+        padding: 0 15px 0 15px !important;
+    }
+    .grid:first-child{
+        padding:0;
+    }
+    .childDocument{
+        margin: 10px 20px 0 0;
+        .col{
+            .row{
+                color:#333333;
+                ion-icon{
+                    display: inline-block;
+                    margin-right:5px;
+                }
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .showImage{
+        padding: 0 15px 0 0;
+        .row{
+            padding: 5px 5px 0 0 !important;
+            .col{
+                padding: 5px 0 0 5px !important;
+                text-align: center;
+                .square {
+                    float:left;
+                    border:1px solid #154897;
+                    position: relative;
+                    width: 100%;
+                    padding-bottom : 100%; /* = width for a 1:1 aspect ratio */
+                    background-position:center center;
+                    background-repeat:no-repeat;
+                    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+                    .icon-camera{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        margin:auto;
+                        color:#154897;
+                        font-size: 50px;
+                        height: 50px;
+                    };
+                }
+            }
+        }
+    }
+    .rowNext{
+        text-align: center;
+        margin:10% 0 10% 0;
+        .btnNext{
+            background: #154897;
+            font-size: 16px;
+            padding: 10px;
+            width: 50%;
+            color: white;
+            border-radius: 24px;
+        }
+    }
+}

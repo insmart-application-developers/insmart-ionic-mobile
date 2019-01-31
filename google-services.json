@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "998849687471",
+    "firebase_url": "https://insmartapp-notification.firebaseio.com",
+    "project_id": "insmartapp-notification",
+    "storage_bucket": "insmartapp-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998849687471:android:a51b6a9615659f15",
+        "android_client_info": {
+          "package_name": "com.ionicframework.insmartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998849687471-g173l8gha8g98eh32gffgee6dus9u2pg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvUrBBRyItFtgYELPjBNXtvzMrZ8tJTD0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998849687471:android:0ba2ed752a926795",
+        "android_client_info": {
+          "package_name": "com.ionicframework.insmartapp251"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998849687471-g173l8gha8g98eh32gffgee6dus9u2pg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvUrBBRyItFtgYELPjBNXtvzMrZ8tJTD0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

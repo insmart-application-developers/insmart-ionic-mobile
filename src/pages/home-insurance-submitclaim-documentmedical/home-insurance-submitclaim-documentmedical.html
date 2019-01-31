@@ -1,0 +1,69 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>MEDICAL DOCUMENTS</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content no-padding >
+    <ion-grid>
+      <ion-row align-items-center class="childDocument">
+        <ion-col>
+          <span>dental treatment records</span>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center class="childDocument">
+        <ion-col col-11>
+          <ion-icon name="checkmark-circle"></ion-icon>
+          <span>
+            Examination book/ examination card/ dental treatment card.
+          </span>
+        </ion-col>
+        <ion-col align-self-end col-1 (click)="showGuideCTYTR(1)">
+          <button class="detail">
+            <ion-icon name="help"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center class="childDocument">
+        <ion-col col-11>
+          <ion-icon name="checkmark-circle"></ion-icon>
+          <span>
+            Prescription after dental treatment.
+          </span>
+        </ion-col>
+        <ion-col align-self-end col-1 (click)="showGuideCTYTR(2)">
+          <button class="detail">
+            <ion-icon name="help"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="showImage">
+      <ion-row align-items-center *ngIf="userSelect">
+        <ion-col align-self-center col-3 *ngFor="let imag of userSelect;let i=index">
+          <div class="square"
+          [ngStyle]="{
+            'background-image':'url(' + imag.url + ')'
+          }">
+          </div>
+        </ion-col>
+        <ion-col align-self-center col-3 (click)="goCapture()">
+          <div class="square">
+            <ion-icon class="icon-camera" name="image"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-row *ngIf="userSelect.length>0" align-items-center class="rowNext">
+      <ion-col align-self-center>
+        <button class="btnNext" (click)="btnNext()">
+          NEXT
+        </button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-content>
+  

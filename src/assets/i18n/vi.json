@@ -1,0 +1,44 @@
+{   
+    "SIDE_MENU":{
+        "HOME":"Trang chủ",
+        "NOTIFICATION":"Thông báo",
+        "INFORMATIOM":"Thông tin",
+        "SCANQRCODE":"Scan QRcode",
+        "HEALTHTIPS":"Bản tin sức khỏe",
+        "LOGOUT":"Đăng xuất"
+    },
+    "HOME_INSURANCE":{
+        "NAME":"BẢO HIỂM",
+        "CLAIM":{
+            "NAME":"HỒ SƠ CỦA TÔI",
+            "CASENAME":"Hồ sơ số",
+            "THEINSUREDPERSON":"Người được bảo hiểm",
+            "IDCARD":"CMND(người đuợc bảo hiểm)",
+            "HEALTHFACILITIES":"Cơ sở y tế",
+            "DIAGNOSIS":"Chuẩn đoán bệnh",
+            "THEAMOUNTINCURRED":"Số tiền phát sinh",
+            "PAYMENTAMOUNT":"Số tiền thanh toán",
+            "DENIALAMOUNT":"Số tiền từ chối",
+            "THEREASONFORNOTCOMPENSATING":"Lý do không bồi thường",
+            "DATEOFRECEIPT":"Ngày nhận hồ sơ",
+            "NOTICEDATE":"Ngày thông báo"
+        },
+        "BENEFIT":{
+            "NAME":"QUYỀN LỢI CỦA TÔI"
+        },
+        "TODOLIST":{"NAME":"GHI CHÚ"},
+        "DIRECTBILLING":{
+            "NAME":"BẢO LÃNH VIỆN PHÍ",
+            "DIRECTBILLING_DETAIL":{"NAME":"CHI TIẾT"}
+        },
+        "SUBMITCLAIM":{"NAME":"NỘP HỒ SƠ"}
+    }
+    ,"HOME_HEALTHCARE":{
+        "MEDICALHISTORY":{"NAME":"LỊCH SỬ Y TẾ"},
+        "HEALTHSCREENING":{"NAME":"HS KHÁM SỨC KHỎE"},
+        "MEDICALSECONDOPINION":{"NAME":"Ý KIẾN Y TẾ THỨ HAI"},
+        "FINDINGMEDICALPROVIDERS":{"NAME":"CƠ SỞ Y TẾ"},
+        "MEDICALCONCIERGE":{"NAME":"TIỆN ÍCH Y TẾ"},
+        "MEDICALASSISTANCE":{"NAME":"HỖ TRỢ Y TẾ"}
+    }
+}

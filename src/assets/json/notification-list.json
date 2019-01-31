@@ -1,0 +1,16 @@
+[
+      { "id": 1,
+        "title": "Thông báo bồi thường",
+        "date": "25/12/2017",
+        "content":"",
+        "link": "https://drive.google.com/file/d/1Ucpct5IXgvP6c6tUPm_M6Cp7R7JfDDMN/view?usp=sharing",
+        "statusread": false 
+      },
+      { "id": 2,
+        "title": "Thông báo bổ sung chứng từ",
+        "date": "17/12/2015",
+        "content":"",
+        "link": "https://drive.google.com/file/d/15CcZYnjPFyz2qZZv5aRKyEFJsZWJ9wba/view?usp=sharing",
+        "statusread": false 
+      }
+]

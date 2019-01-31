@@ -1,0 +1,53 @@
+<!--
+  Generated template for the HomeInsuranceSubmitclaimDocumentCapturePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Select Image</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div style="height:100%">
+    <ion-grid class="showImage">
+      <ion-row align-items-center *ngIf="listImage">
+        <ion-col align-self-center col-4 (click)="openCamera()">
+          <div class="square" [style.backgroundColor]="'#154897'">
+            <ion-icon class="icon-camera" name="camera"></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col align-self-center col-4 *ngFor="let imag of listImage;let i=index">
+          <div (click)="selectImage(imag.checked,i);" class="square" [ngStyle]="{'background-image':'url(' + imag.url + ')'}">
+            <ion-checkbox (click)="selectImage(imag.checked,i);" [(ngModel)]="imag.checked"></ion-checkbox>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-row align-items-center>
+    <ion-col align-self-center>
+      <span>Selected {{countSelected}}</span>
+    </ion-col>
+    <ion-col align-self-center style="text-align:right;">
+      <button *ngIf="countSelected == 0 || !countSelected" (click)="btnSelect()">
+        <ion-icon name="close" class="iconClose"></ion-icon>
+      </button>
+      <button *ngIf="countSelected > 0" (click)="btnSelect()">
+        <ion-icon name="send" class="iconSend"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+
