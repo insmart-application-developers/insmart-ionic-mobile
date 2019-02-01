@@ -13,7 +13,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-tabs #tabBooking mode="md" (ionChange)="transition($event)">
+  <ion-tabs selectedIndex="2" #tabBooking mode="md" (ionChange)="transition($event)">
     <ion-tab tabTitle="Các cuộc hẹn" tabIcon="checkbox" [root]="appointments"></ion-tab>
     <ion-tab tabTitle="Đặt Mới" tabIcon="heart" [root]="booknew" [rootParams]="paramsId"></ion-tab>
     <ion-tab tabTitle="Giới Thiệu" tabIcon="people" [root]="about" tabBadge="2" tabBadgeStyle="danger"></ion-tab>
