@@ -1,5 +1,6 @@
-import { Component, ViewChild, Renderer2, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, Searchbar } from 'ionic-angular';
+import { Calendar } from'./../../providers/calendar-service/calendar';
 import { LocalJsonServiceProvider } from '../../providers/localjson-service/localjson-service'
 import { GeolocationProvider } from '../../providers/geolocation/geolocation';
 
@@ -7,7 +8,7 @@ import { GeolocationProvider } from '../../providers/geolocation/geolocation';
 @Component({
   selector: 'page-home-healthcare-medicalconcierge-booknew',
   templateUrl: 'home-healthcare-medicalconcierge-booknew.html',
-  providers : [LocalJsonServiceProvider,GeolocationProvider]
+  providers : [LocalJsonServiceProvider,GeolocationProvider,Calendar]
 })
 export class HomeHealthcareMedicalconciergeBooknewPage {
   @ViewChild('searchSymptom') searchSymtom:Searchbar;
@@ -32,21 +33,12 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
     dateTime:"",
   };
 
-  currentUser;
-  eventSource;
-  viewTitle;
-
-  isToday:boolean;
-  calendar = {
-      mode: 'month',
-      currentDate: new Date()
-  };
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private renderer: Renderer2,
     private service : LocalJsonServiceProvider,
-    private serviceCurrentPostion:GeolocationProvider
+    private serviceCurrentPostion:GeolocationProvider,
+    private serviceCalendar:Calendar
   ) {
     this.getAllList();
   }

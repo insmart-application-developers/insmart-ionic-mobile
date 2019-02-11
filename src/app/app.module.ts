@@ -71,6 +71,7 @@ import { StorageServiceProvider } from '../providers/storage-service/storage-ser
 import { MemberServiceProvider } from '../providers/member-service/member-service';
 import { MedproviderServiceProvider } from '../providers/medprovider-service/medprovider-service';
 import { ClaimServiceProvider } from '../providers/claim-service/claim-service';
+import { Calendar } from '../providers/calendar-service/calendar';
 
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { ModalScaleUpEnterTransition } from '../animations/scale-up-enter.transition';
@@ -210,7 +211,8 @@ export function createTranslateLoader(http: HttpClient) {
     StorageServiceProvider,
     MemberServiceProvider,
     MedproviderServiceProvider,
-    ClaimServiceProvider
+    ClaimServiceProvider,
+    Calendar
   ]
 })
 export class AppModule {
