@@ -9,8 +9,12 @@ page-findingmedicalproviders {
         background-color: transparent;
         margin-right: 5%;
         margin-bottom: 10%;
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
+        img{
+            width: 45px;
+            height: 45px;
+        }
     }
 
     #btnBooking{
@@ -22,10 +26,7 @@ page-findingmedicalproviders {
         text-align: center;
         border-radius: 5px;
     }
-    .gm-style-iw .gm-style-iw-c{
-        padding-right: none;
-        padding-bottom: none;
-    }
+
     //Disable click Logo
     .gm-style a[href^="https://maps.google.com/maps"] {
         pointer-events: none;

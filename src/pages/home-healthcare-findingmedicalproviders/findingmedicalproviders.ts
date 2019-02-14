@@ -30,7 +30,7 @@ export class FindingmedicalprovidersPage {
   marker:any;
   loadingSpinner:Loading;
   geocoder = new google.maps.Geocoder;
-
+  lockDrag:boolean;
   constructor(
     public navCtrl: NavController,
     public platform: Platform,
@@ -62,10 +62,24 @@ export class FindingmedicalprovidersPage {
     });
   }
 
+  setLookDrag(checkDrag:number){
+    if(checkDrag == 0){
+      this.lockDrag = true;
+      console.log("Bắt đầu mở");
+      
+    }else{
+      this.lockDrag = false;
+      console.log("Đóng lại");
+    }
+    console.log("....Check Lieen tuc"+this.lockDrag);
+    
+  }
+
   addMap(currentPos){
     let mapOptions = {
       center: currentPos,
       zoom: 13,
+      draggable: this.lockDrag,
       fullscreenControlOptions: {
         position: google.maps.ControlPosition.LEFT_TOP
       },

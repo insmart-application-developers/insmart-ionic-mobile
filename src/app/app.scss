@@ -19,7 +19,7 @@
         display: none;
     }
 
-    .toolbar-ios ion-title{
+    .toolbar-title{
         padding:0;
     }
 
@@ -101,4 +101,12 @@
         .button-inner{
             justify-content: unset;
         }
+    }
+    .gm-style .gm-style-iw-c{
+        padding: 22px 12px 12px 12px !important;
+        max-width: 250px !important;
+        width: 250px !important;
+    }
+    .gm-style .gm-style-iw-d{
+        max-width: none !important;
     }

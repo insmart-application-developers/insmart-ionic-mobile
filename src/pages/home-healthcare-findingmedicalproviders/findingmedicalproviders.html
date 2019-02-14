@@ -12,7 +12,16 @@
 
 </ion-header>
 
-<ion-content>
-  <ion-img id="btnGetCurrent" src="./assets/imgs/current-location-icon.png"></ion-img>
+<ion-menu [swipeEnabled]="true" side="right" [content]="subContent" (ionDrag)="setLookDrag(1)" (ionClose)="setLookDrag(0)">
+  <div style="background:red;margin-top:44px">Thử xem được không ?</div>
+  <ion-list>
+    <ion-item *ngFor="let hospital of hospitallists">
+      {{hospital.name}}
+    </ion-item>
+  </ion-list>
+</ion-menu>
+
+<ion-content #subContent>
+  <ion-img *ngIf="map" id="btnGetCurrent" src="./assets/imgs/current-location-icon.png"></ion-img>
   <div #map id="map"></div>
 </ion-content>
