@@ -5,10 +5,9 @@
       <ion-input autocapitalize="none" type="text" [(ngModel)]="loginData.username" name="username" placeholder="User Name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="{{!showPassword?'password':'text'}}" [(ngModel)]="loginData.password" name="password" placeholder="Password"></ion-input>
-      <button ion-button item-right type="button" class="btnShowPassword" (click)="showPassword =! showPassword">
-        <ion-icon *ngIf="!showPassword" name="eye"></ion-icon>
-        <span *ngIf="showPassword">hide</span>
+      <ion-input #inputPassword clearOnEdit="false" type="{{!showPassword?'password':'text'}}" [(ngModel)]="loginData.password" name="password" placeholder="Password"></ion-input>
+      <button ion-button item-end class="btnShowPassword" (touchstart)="$event.preventDefault();inputPassword.setFocus();btnShowPassword($event);" (touchend)="$event.preventDefault();inputPassword.setFocus();btnHidePassword($event);">
+        <ion-icon name="eye"></ion-icon>
       </button>
     </ion-item>
 

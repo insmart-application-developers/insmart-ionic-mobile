@@ -25,6 +25,7 @@ import { File } from '@ionic-native/file';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { NgCalendarModule  } from 'ionic2-calendar';
+import { DatePicker } from '@ionic-native/date-picker';
 
 import { LoginPage } from '../pages/login/login';
 import { MyApp } from './app.component';
@@ -72,6 +73,7 @@ import { MemberServiceProvider } from '../providers/member-service/member-servic
 import { MedproviderServiceProvider } from '../providers/medprovider-service/medprovider-service';
 import { ClaimServiceProvider } from '../providers/claim-service/claim-service';
 import { Calendar } from '../providers/calendar-service/calendar';
+import { NetworkProvider } from '../providers/network-service/network-service';
 
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { ModalScaleUpEnterTransition } from '../animations/scale-up-enter.transition';
@@ -201,6 +203,7 @@ export function createTranslateLoader(http: HttpClient) {
     File,
     ScreenOrientation,
     NativePageTransitions,
+    DatePicker,
     PhotoLibrary,
     Crop,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -212,7 +215,8 @@ export function createTranslateLoader(http: HttpClient) {
     MemberServiceProvider,
     MedproviderServiceProvider,
     ClaimServiceProvider,
-    Calendar
+    Calendar,
+    NetworkProvider
   ]
 })
 export class AppModule {

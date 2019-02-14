@@ -1,8 +1,17 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, Searchbar } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Searchbar, DateTime } from 'ionic-angular';
 import { Calendar } from'./../../providers/calendar-service/calendar';
 import { LocalJsonServiceProvider } from '../../providers/localjson-service/localjson-service'
 import { GeolocationProvider } from '../../providers/geolocation/geolocation';
+
+interface BookNew {
+  searchSymptom:string,
+  mdReasonSymptom:string,
+  selectHosAuto:boolean,
+  cityName:string,
+  hospitalName:string,
+  dateTime:Date
+}
 
 @IonicPage()
 @Component({
@@ -24,13 +33,14 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
   currentCity:string;
   showListSymptom:boolean=false;
   showDifference:boolean=false;
-  booknew = {
+  showCal:boolean=false;
+  booknew:BookNew = {
     searchSymptom:"",
     mdReasonSymptom:"",
     selectHosAuto:false,
     cityName:"",
     hospitalName:"",
-    dateTime:"",
+    dateTime: new Date()
   };
 
   constructor(
@@ -45,15 +55,16 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeHealthcareMedicalconciergeBooknewPage');
-    setTimeout(() => {
-      this.searchSymtom.setFocus();
-    }, 1000);
     this.selectAuto={
       city: "Hà Nội",
       hosital:"Bệnh viện Việt Đức",
       address:" 40 Tràng Thi, Hàng Bông, Hoàn Kiếm, Hà Nội",
       distance:"7.3km"
     };
+  }
+
+  ionViewDidEnter(){
+    this.searchSymtom.setFocus();
   }
 
   getAllList(){
@@ -119,7 +130,6 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
   }
   changeSelectHosAuto(){
     console.log("Trạng thái: "+this.booknew.selectHosAuto);
-    console.log("Thời gian: "+this.booknew.dateTime.length);
   }
   frmConcierge(){
     this.navCtrl.parent.select(0);
@@ -154,7 +164,14 @@ export class HomeHealthcareMedicalconciergeBooknewPage {
   cityChange() {
     this.hospitalLists = this.hospitalList.filter(hos => hos.idcity===this.booknew.cityName);
   }
+
   hosChange(hos){
     console.log('Change: '+hos);
+  }
+  selectDate(){
+    this.serviceCalendar.showCalendar().then((date) => {
+      this.booknew.dateTime = date;
+      this.showCal = true;
+    }, err => console.log('Error occurred while getting date: ', err));
   }
 }

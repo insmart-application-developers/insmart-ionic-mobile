@@ -18,7 +18,7 @@ export class HomeHealthcareMedicalconciergePage {
   booknew = HomeHealthcareMedicalconciergeBooknewPage;
   about = HomeHealthcareMedicalconciergeAboutPage;
   paramsId:any;
-  loaded:   boolean = false;
+  loaded:   boolean = false; 
   tabIndex: number  = 0;
   constructor(
     public navCtrl: NavController,

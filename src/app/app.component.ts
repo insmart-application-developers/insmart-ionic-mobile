@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { App, Nav, Platform, ToastController } from 'ionic-angular';
+import { App, Nav, Platform, ToastController,Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
@@ -17,6 +17,7 @@ import { MenuHealthtipsPage } from '../pages/menu-healthtips/menu-healthtips';
 
 import { LocalJsonServiceProvider } from './../providers/localjson-service/localjson-service';
 import { StorageServiceProvider } from './../providers/storage-service/storage-service';
+import { NetworkProvider } from './../providers/network-service/network-service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -34,6 +35,7 @@ export class MyApp {
   constructor(
     private app: App,
     public platform: Platform,
+    public events: Events,
     private toastCtrl: ToastController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
@@ -42,7 +44,8 @@ export class MyApp {
     private push: Push,
     public translate: TranslateService,
     private androidFullScreen: AndroidFullScreen,
-    private screenOrientation: ScreenOrientation
+    private screenOrientation: ScreenOrientation,
+    public networkProvider: NetworkProvider
   ) {
     this.initializeApp();
     // used for an example of ngFor and navigation
@@ -87,7 +90,34 @@ export class MyApp {
       this.pushNoti();
       this.Authen();
       this.confirmExitApp();
+      this.checkNetwork();
+    });
+  }
+
+  checkNetwork(){
+    this.networkProvider.initializeNetworkEvents();
+	  // Offline event
+    this.events.subscribe('network:offline', () => {
+      console.log("There is no network connection");
       
+      this.toastCtrl.create({
+        message:"There is no network connection",
+        duration:2000,
+        position:"bottom",
+        dismissOnPageChange:true
+      }).present();
+    });
+
+    // Online event
+    this.events.subscribe('network:online', () => {
+      console.log("The network connected");
+      
+      this.toastCtrl.create({
+        message:"The network connected",
+        duration:2000,
+        position:"bottom",
+        dismissOnPageChange:true
+      }).present();
     });
   }
 

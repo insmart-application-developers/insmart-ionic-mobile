@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, LoadingController, Loading  } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { StorageServiceProvider } from './../../providers/storage-service/storage-service';
@@ -19,6 +19,7 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
   providers:[StorageServiceProvider,AuthService]
 })
 export class LoginPage {
+  @ViewChild('password') inputPassword;
   formGroup : FormGroup;
   loading: Loading;
   loginData = { username:"", password:"" };
@@ -71,32 +72,33 @@ export class LoginPage {
             
             console.log("get storage data : " + profileacct); 
             if(profileacct != null){
-              console.log("profile account : " + profileacct);
-              console.log( "profile account detail : " + profileacct.EmailAdr + " " + profileacct.CardNo + " " + profileacct.UsrStat + " " + profileacct.ClientCode); 
+              // console.log("profile account : " + profileacct);
+              // console.log( "profile account detail : " + profileacct.EmailAdr + " " + profileacct.CardNo + " " + profileacct.UsrStat + " " + profileacct.ClientCode); 
 
               this.oUsrMemberInfo = profileacct.UsrMemberInfo;
               // console.log("card member : " + this.oUsrMemberInfo);
               // console.log("card member detail : " + this.oUsrMemberInfo.CardNo + " " + this.oUsrMemberInfo.PlanCode + " " + this.oUsrMemberInfo.ContractNo); 
               // console.log("card member detail : " + this.oUsrMemberInfo.CardNo + " " + this.oUsrMemberInfo.PlanCode + " " + this.oUsrMemberInfo.CurrentID1 + " " + this.oUsrMemberInfo.OrgCode);
 
-              this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
               this.loading.dismiss();
+              this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
             }
             else {
               var obj = JSON.parse(data);
               await this.storageService.setLocalStorage("profileacct", obj);
-              this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
-              console.log("get storage data : " + obj);
               this.loading.dismiss();
+              setTimeout(() => {
+                this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
+              }, 200);
+              console.log("get storage data : " + obj);
             }
           })
         }
-        else 
-        {
-              this.loginData.username = "";
-              this.loginData.password = "";
-              this.showToast('Invalid user login and password!',3000,'bottom').present();
-              this.loading.dismiss();
+        else{
+          this.loginData.username = "";
+          this.loginData.password = "";
+          this.showToast('Invalid user login and password!',3000,'bottom').present();
+          this.loading.dismiss();
         };
       });  
 
@@ -136,4 +138,13 @@ export class LoginPage {
     });
   }
 
+  btnShowPassword(){
+    console.log("Bat dau chay");
+    this.showPassword = true;
+  }
+  
+  btnHidePassword(){
+    console.log("Ket thuc chay");
+    this.showPassword = false;
+  }
 }

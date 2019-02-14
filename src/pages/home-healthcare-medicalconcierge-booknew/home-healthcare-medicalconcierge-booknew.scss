@@ -83,7 +83,45 @@ page-home-healthcare-medicalconcierge-booknew {
             }
         }
     }
-    
+    .btnSelectCalendar{
+        margin-top: 8px;
+        padding: 5px 0 5px 0;
+        background: none;
+        border-radius: 20px;
+        border: 1px solid silver;
+        width: 50%;
+    }
+    .calendar{
+        width: 150px;
+        height: 130px;
+        margin-top:5%;
+        margin-left: 50%;
+        border-radius: 10px;
+        border: 1px solid rgba(0,0,0,0.5);
+        box-shadow: 5px 5px rgba(0,0,0,0.5);
+        .weekdayRow{
+            font-size:24px;
+            font-weight: 500;
+            color:white;
+            background: #154897;
+            border-radius: 8px 8px 0 0;
+            .weekdayCol{
+                padding:10px;
+                text-align: center;
+            }
+        }
+        .detailRow{
+            .detailCol{
+                p{
+                    text-align:center;
+                    .daySpan{
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
     .btnBooking{
         width:100%;
         padding:15px;

@@ -114,6 +114,7 @@
     <allow-navigation href="http://192.168.0.104:8100" />
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="0.6.5" />
     <plugin name="cordova-plugin-screen-orientation" spec="3.0.1" />
+    <plugin name="cordova-plugin-datepicker" spec="0.9.3" />
     <engine name="browser" spec="^5.0.4" />
     <engine name="android" spec="7.1.1" />
 </widget>

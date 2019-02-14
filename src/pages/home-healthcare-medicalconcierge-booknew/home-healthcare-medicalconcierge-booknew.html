@@ -61,25 +61,31 @@
         
       </div>
 
-      <ion-item>
-        <!-- <ion-label floating color="primary">Date/Time</ion-label>
-        <ion-datetime pickerFormat="DD-MM-YYYY" displayFormat="DD-MM-YYYY" name="dateTime" [(ngModel)]="booknew.mdDateTime"></ion-datetime> -->
-        
-      </ion-item>
+        <button class="btnSelectCalendar" type="button" (click)="selectDate()" style="text-transform: unset;">
+          <ion-icon name="calendar"> Ngày Khám</ion-icon>
+        </button>
+
+        <div class="calendar" *ngIf="showCal">
+          <ion-row align-items-center class="weekdayRow">
+            <ion-col class="weekdayCol">
+              <span>
+                {{booknew.dateTime | date : 'EEEE'}}
+              </span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="detailRow">
+            <ion-col class="detailCol">
+              <p>
+                <span class="daySpan">
+                  {{booknew.dateTime | date : 'd'}}
+                </span>
+                <span>{{booknew.dateTime | date : 'MMMM y'}}</span>
+              </p>
+            </ion-col>
+          </ion-row>
+        </div>
     </ion-list>
   </form>
-  <calendar
-          [monthviewEventDetailTemplate]="template"
-          [eventSource]="serviceCalendar.eventSource"
-          [markDisabled]="markDisabled"
-          [calendarMode]="serviceCalendar.calendar.mode"
-          [currentDate]="serviceCalendar.calendar.currentDate"
-          (onCurrentDateChanged)="serviceCalendar.onCurrentDateChanged($event)"
-          (onEventSelected)="serviceCalendar.onEventSelected($event)"
-          (onTitleChanged)="serviceCalendar.onViewTitleChanged($event)"
-          (onTimeSelected)="serviceCalendar.onTimeSelected($event)"
-          step="30">
-        </calendar>
 </ion-content>
 <ion-footer>
   <button class="btnBooking" (click)="loginForm.ngSubmit.emit()">Đặt ngay!</button>
