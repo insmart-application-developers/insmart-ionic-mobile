@@ -1,5 +1,5 @@
 import { Component, ViewChild ,ElementRef } from '@angular/core';
-import { NavController,Platform,LoadingController, Loading } from 'ionic-angular';
+import { NavController,Platform,LoadingController, Loading, MenuController } from 'ionic-angular';
 
 import { HomeHealthcareMedicalconciergePage } from '../home-healthcare-medicalconcierge/home-healthcare-medicalconcierge';
 
@@ -20,33 +20,32 @@ declare var google;
 })
 
 export class FindingmedicalprovidersPage {
-  currentPos : any;
-  hospitallists:any;
-  directionsService = new google.maps.DirectionsService;
-  directionsDisplay = new google.maps.DirectionsRenderer;
-  infoWindow = new google.maps.InfoWindow;
   @ViewChild('map') mapElement: ElementRef;
   map: any;
-  marker:any;
+  currentPos : any;
+  hospitallists:any;
+  newHospitallists:any=[];
+  markers:any=[];
   loadingSpinner:Loading;
+  
+  infoWindow = new google.maps.InfoWindow;
+  directionsService = new google.maps.DirectionsService;
+  directionsDisplay = new google.maps.DirectionsRenderer;
   geocoder = new google.maps.Geocoder;
-  lockDrag:boolean;
   constructor(
     public navCtrl: NavController,
     public platform: Platform,
     private service:LocalJsonServiceProvider,
     private serviceCurrentPostion:GeolocationProvider,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private menuCtrl: MenuController
   ) {
     this.service.getHospitalList().subscribe((res) => {
-      console.log('get hospital list is done !');
       this.hospitallists = res;
-      console.log(this.hospitallists);
     });
 
     this.serviceCurrentPostion.initUserPosition().then((pos) => {
       this.currentPos = pos;
-      console.log(this.currentPos);
       this.addMap(this.currentPos);
     });
 
@@ -61,31 +60,17 @@ export class FindingmedicalprovidersPage {
       this.loadingSpinner.present();
     });
   }
-
-  setLookDrag(checkDrag:number){
-    if(checkDrag == 0){
-      this.lockDrag = true;
-      console.log("Bắt đầu mở");
-      
-    }else{
-      this.lockDrag = false;
-      console.log("Đóng lại");
-    }
-    console.log("....Check Lieen tuc"+this.lockDrag);
-    
-  }
-
   addMap(currentPos){
     let mapOptions = {
       center: currentPos,
       zoom: 13,
-      draggable: this.lockDrag,
       fullscreenControlOptions: {
         position: google.maps.ControlPosition.LEFT_TOP
       },
       mapTypeControl: false,
       streetViewControl: false,
       zoomControl: false,
+      fullscreenControl:false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: [
         {
@@ -99,11 +84,17 @@ export class FindingmedicalprovidersPage {
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('btnGetCurrent'));
+    this.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('btnListHos'));
     //event Button find me.
     document.getElementById('btnGetCurrent').addEventListener('click',()=>{
       this.map.setCenter(this.currentPos);
       this.map.setZoom(16);
     });
+
+    document.getElementById('btnListHos').addEventListener('click',()=>{
+      this.menuCtrl.toggle('right');
+    });
+
     this.directionsDisplay.setMap(this.map);
     
     let currentMarker = new google.maps.Marker({
@@ -114,11 +105,11 @@ export class FindingmedicalprovidersPage {
     google.maps.event.addListener(currentMarker, 'click', () => {
       this.serviceCurrentPostion.geocodeLatLng(currentPos).then( city =>{
         let content = 
-              '<div><strong>'+'Your current address: ' +'</strong></br>'+'<p class>'+city+'</p>';
+          '<div><strong>'+'Your current address: ' +'</strong></br>'+'<p class>'+city+'</p>';
 
-              this.infoWindow.setContent(content);
-              this.infoWindow.setOptions({maxWidth:200});
-              this.infoWindow.open(this.map, currentMarker);
+          this.infoWindow.setContent(content);
+          this.infoWindow.setOptions({maxWidth:200});
+          this.infoWindow.open(this.map, currentMarker);
       });
     });
     setTimeout(() => {
@@ -137,7 +128,6 @@ export class FindingmedicalprovidersPage {
         let addHospital = this.hospitallists[i].address;
         let idHospital = this.hospitallists[i].id;
         
-
         let userPosition={
           lat:this.currentPos.lat(),
           lng:this.currentPos.lng(),
@@ -148,20 +138,28 @@ export class FindingmedicalprovidersPage {
           lng:lng1,
         };
 
-        let listDistance = this.getDistanceBetweenPoints(
+        let listDistance = parseFloat(this.getDistanceBetweenPoints(
           userPosition,
           placeLocation
-        );
+        ));
 
         if(listDistance < 5){
+          this.newHospitallists.push(Object.assign(this.hospitallists[i],{distance:listDistance}));
+          this.newHospitallists.sort((obj1, obj2)=>{
+            // Ascending: first age less than the previous
+            return obj1.distance - obj2.distance
+          });
+          
           let marker = await new google.maps.Marker({
             map: this.map,
             icon: 'assets/imgs/icon-findingmedicalproviders.png',
-            position: placeLocation
+            position: placeLocation,
+            id:idHospital
           });
-
+          this.markers.push(marker);
+          
           google.maps.event.addListener(marker, 'click', () => {
-            this.getDirectionDisplay(this.currentPos,placeLocation).then(async(data) => {
+            this.getDirectionDisplay(this.currentPos, placeLocation).then(async(data) => {
 
               let content = 
               '<div><strong>'+nameHospital +'</strong></br>'+addHospital +'</br>'+
@@ -174,7 +172,6 @@ export class FindingmedicalprovidersPage {
               await this.infoWindow.open(this.map, marker);
               
               google.maps.event.addListener(this.infoWindow, 'closeclick', () => {
-                console.log("event closing the infowindow");
                 this.directionsDisplay.set('directions', null);
               });
 
@@ -190,6 +187,16 @@ export class FindingmedicalprovidersPage {
         }
       }
     }
+  }
+
+  eventClickMarker(hospitalList){
+    this.menuCtrl.toggle('right');
+    this.markers.forEach(element => {
+      if(element.id == hospitalList.id){
+        google.maps.event.trigger(element, 'click');
+      }
+    });
+    
   }
 
   getDirectionDisplay(origin,destination) {
@@ -234,7 +241,7 @@ export class FindingmedicalprovidersPage {
     Math.sin(dLng / 2);
     let c = 2 * Math.atan2(Math.sqrt(a),Math.sqrt(1 - a));
     let d = R * c;
-    return d;
+    return d.toFixed(2);
   }
 
   toRad(x){
@@ -242,6 +249,7 @@ export class FindingmedicalprovidersPage {
   }
 
   ionViewWillLeave() {
+    this.menuCtrl.close('right');
     this.loadingSpinner.dismissAll();
   }
 }
