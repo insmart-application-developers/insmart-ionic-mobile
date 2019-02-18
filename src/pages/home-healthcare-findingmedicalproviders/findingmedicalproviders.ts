@@ -2,7 +2,7 @@ import { Component, ViewChild ,ElementRef } from '@angular/core';
 import { NavController,Platform,LoadingController, Loading, MenuController } from 'ionic-angular';
 
 import { HomeHealthcareMedicalconciergePage } from '../home-healthcare-medicalconcierge/home-healthcare-medicalconcierge';
-
+import { TranslateService } from '@ngx-translate/core';
 import { LocalJsonServiceProvider } from '../../providers/localjson-service/localjson-service';
 import { GeolocationProvider } from '../../providers/geolocation/geolocation';
 
@@ -32,11 +32,20 @@ export class FindingmedicalprovidersPage {
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
   geocoder = new google.maps.Geocoder;
+  draggable:boolean=true;
+  infoWindowTrans={
+    name:"",
+    address:"",
+    duration:"",
+    distance:"",
+    booking:""
+  }
   constructor(
     public navCtrl: NavController,
     public platform: Platform,
     private service:LocalJsonServiceProvider,
     private serviceCurrentPostion:GeolocationProvider,
+    private translate: TranslateService,
     private loadingCtrl: LoadingController,
     private menuCtrl: MenuController
   ) {
@@ -48,7 +57,7 @@ export class FindingmedicalprovidersPage {
       this.currentPos = pos;
       this.addMap(this.currentPos);
     });
-
+    this.translateLang();
   }
 
   ionViewDidLoad() {
@@ -70,7 +79,7 @@ export class FindingmedicalprovidersPage {
       mapTypeControl: false,
       streetViewControl: false,
       zoomControl: false,
-      fullscreenControl:false,
+      fullscreenControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: [
         {
@@ -83,16 +92,18 @@ export class FindingmedicalprovidersPage {
     }
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('btnListHos'));
     this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('btnGetCurrent'));
-    this.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('btnListHos'));
+    
     //event Button find me.
     document.getElementById('btnGetCurrent').addEventListener('click',()=>{
       this.map.setCenter(this.currentPos);
-      this.map.setZoom(16);
+      this.map.setZoom(15);
     });
 
     document.getElementById('btnListHos').addEventListener('click',()=>{
-      this.menuCtrl.toggle('right');
+      this.draggable = false;
+      this.menuCtrl.open('right');
     });
 
     this.directionsDisplay.setMap(this.map);
@@ -159,21 +170,24 @@ export class FindingmedicalprovidersPage {
           this.markers.push(marker);
           
           google.maps.event.addListener(marker, 'click', () => {
+            this.markers.filter((element)=>{
+              element.setMap(null);
+              google.maps.event.addListener(this.infoWindow, 'closeclick', () => {
+                this.directionsDisplay.set('directions', null);
+                element.setMap(this.map);
+              });
+            });
             this.getDirectionDisplay(this.currentPos, placeLocation).then(async(data) => {
-
+              marker.setMap(this.map);
               let content = 
-              '<div><strong>'+nameHospital +'</strong></br>'+addHospital +'</br>'+
-              'Thời gian dự kiến : '+data[1]+' minutes'+'</br>'+
-              'Khoảng cách : '+data[0]+' meters'+'</br>'+'</br>'+
-              '<button id="btnBooking">Booking</button></div>';
+              '<div><strong>'+nameHospital +'</strong><p>'+addHospital +'</p>'+
+              this.infoWindowTrans.duration+': '+data[1]+' minutes'+'</br>'+
+              this.infoWindowTrans.duration+': '+data[0]+' meters'+'</br>'+'</br>'+
+              '<button id="btnBooking">'+this.infoWindowTrans.booking+'</button></div>';
 
               this.infoWindow.setContent(content);
               this.infoWindow.setOptions({maxWidth:200});
               await this.infoWindow.open(this.map, marker);
-              
-              google.maps.event.addListener(this.infoWindow, 'closeclick', () => {
-                this.directionsDisplay.set('directions', null);
-              });
 
               document.getElementById("btnBooking").addEventListener('click', () => {
                 this.navCtrl.push(HomeHealthcareMedicalconciergePage,
@@ -246,6 +260,34 @@ export class FindingmedicalprovidersPage {
 
   toRad(x){
     return x * Math.PI / 180;
+  }
+
+  touchContent(){
+    this.menuCtrl.close('right').then(()=>this.draggable = true);
+  }
+
+  translateLang(){
+    this.translate.get(
+      ['HOME_HEALTHCARE.FINDINGMEDICALPROVIDERS.INFOWINDOW.NAME',
+      'HOME_HEALTHCARE.FINDINGMEDICALPROVIDERS.INFOWINDOW.ADDRESS',
+      'HOME_HEALTHCARE.FINDINGMEDICALPROVIDERS.INFOWINDOW.DURATION',
+      'HOME_HEALTHCARE.FINDINGMEDICALPROVIDERS.INFOWINDOW.DISTANCE',
+      'HOME_HEALTHCARE.FINDINGMEDICALPROVIDERS.INFOWINDOW.BOOKING'
+      ]
+      ).subscribe(
+      value => {
+        // value is our translated string
+        let alertTitle = value;
+        this.infoWindowTrans={
+          name:alertTitle[Object.keys(alertTitle)[0]],
+          address:alertTitle[Object.keys(alertTitle)[1]],
+          duration:alertTitle[Object.keys(alertTitle)[2]],
+          distance:alertTitle[Object.keys(alertTitle)[3]],
+          booking:alertTitle[Object.keys(alertTitle)[4]],
+        }
+        console.log(this.infoWindowTrans);
+      }
+    )
   }
 
   ionViewWillLeave() {

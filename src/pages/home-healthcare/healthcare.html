@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title><span>HEALTHCARE</span></ion-title>
+    <ion-title><span>{{'HOME_HEALTHCARE.NAME' | translate}}</span></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -39,12 +39,12 @@
         </div>
 
         <div class="rowHome">
-            <div class="animated bounceInUp halfrowHome">
+            <div class="animated bounceInUp halfrowHome" *ngIf="false">
                 <img class="iconInsurance" (click)="doMedicalConcierge()" src="./assets/imgs/icon/medicalconcierge.png">
                 <h6 class="textHomeName">{{ 'HOME_HEALTHCARE.MEDICALCONCIERGE.NAME' | translate}}</h6>
             </div>
-            <div class="animated bounceInUp halfrowHome">
-                <img class="iconInsurance" (click)="doMedicalAssistance()" src="./assets/imgs/icon/healcareMedicalAssistance.png">
+            <div class="animated bounceInUp fullRowHome">
+                <img class="iconMedicalconcierge" (click)="doMedicalAssistance()" src="./assets/imgs/icon/healcareMedicalAssistance.png">
                 <h6 class="textHomeName">{{ 'HOME_HEALTHCARE.MEDICALASSISTANCE.NAME' | translate}}</h6>
             </div>
         </div>

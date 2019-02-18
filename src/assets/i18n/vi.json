@@ -1,5 +1,34 @@
-{   
+{   "LOGIN":{
+        "USERNAME":"Tên đăng nhập",
+        "PASSWORD":"Mật khẩu",
+        "BUTTON":"Đăng nhập"
+    },
     "SIDE_MENU":{
+        "USERINFO":{
+            "NAME":"THÔNG TIN NGƯỜI DÙNG",
+            "CARD":{
+                "NAME":"Tên",
+                "POLICYNO":"Số Hợp Đồng",
+                "IDENTITYID":"ID",
+                "INSPERIOD":"Hiệu Lực"
+            },
+            "INFO":{
+                "AVATAR":{
+                    "LIBRARY":"Chọn từ Thư Viện",
+                    "PICTURE":"Chụp ảnh mới"
+                },
+                "NAME":"Tên",
+                "ADDRESS":"Địa chỉ",
+                "PHOMENO":"Số điện thoại",
+                "BIRTHDAY":"Ngày sinh",
+                "GENDER":{
+                    "NAME":"Giới tính",
+                    "MALE":"Nam",
+                    "FEMALE":"Nữ"
+                }
+            },
+            "BUTTONUPDATE":"Cập nhật"
+        },
         "HOME":"Trang chủ",
         "NOTIFICATION":"Thông báo",
         "INFORMATIOM":"Thông tin",
@@ -24,20 +53,44 @@
             "NOTICEDATE":"Ngày thông báo"
         },
         "BENEFIT":{
-            "NAME":"QUYỀN LỢI CỦA TÔI"
+            "NAME":"QUYỀN LỢI CỦA TÔI",
+            "OPTION":"Chọn Hiển Thị",
+            "SELECT":{
+                "0":"Sum Assured",
+                "1":"Accumulated claim amount",
+                "2":"Remaining Benefit"
+            }
         },
-        "TODOLIST":{"NAME":"GHI CHÚ"},
+        "TODOLIST":{"NAME":"GHI CHÚ",
+            "TASK":"Công việc",
+            "REASON":"Nguyên do",
+            "DATE":"Ngày yêu cầu bổ sung"},
         "DIRECTBILLING":{
             "NAME":"BẢO LÃNH VIỆN PHÍ",
-            "DIRECTBILLING_DETAIL":{"NAME":"CHI TIẾT"}
+            "DIRECTBILLING_DETAIL":{
+                "NAME":"CHI TIẾT",
+                "ADDRESS":"Địa chỉ",
+                "DISTANCE":"Quãng đường",
+                "DURATION":"Thời gian dự kiến"
+            }
         },
         "SUBMITCLAIM":{"NAME":"NỘP HỒ SƠ"}
     }
     ,"HOME_HEALTHCARE":{
+        "NAME":"SỨC KHỎE",
         "MEDICALHISTORY":{"NAME":"LỊCH SỬ Y TẾ"},
         "HEALTHSCREENING":{"NAME":"HS KHÁM SỨC KHỎE"},
         "MEDICALSECONDOPINION":{"NAME":"Ý KIẾN Y TẾ THỨ HAI"},
-        "FINDINGMEDICALPROVIDERS":{"NAME":"CƠ SỞ Y TẾ"},
+        "FINDINGMEDICALPROVIDERS":{
+            "NAME":"CƠ SỞ Y TẾ",
+            "INFOWINDOW":{
+                "NAME":"Tên",
+                "ADDRESS":"Địa chỉ",
+                "DURATION":"Thời gian dự kiến",
+                "DISTANCE":"Khoảng cách",
+                "BOOKING":"Đặt ngay"
+            }
+        },
         "MEDICALCONCIERGE":{"NAME":"TIỆN ÍCH Y TẾ"},
         "MEDICALASSISTANCE":{"NAME":"HỖ TRỢ Y TẾ"}
     }

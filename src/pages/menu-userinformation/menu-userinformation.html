@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>USER INFORMATION</ion-title>
+    <ion-title>{{'SIDE_MENU.USERINFO.NAME' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -24,23 +24,23 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <p>Name: {{userName}}</p>
-        <p>Policy No: {{userCardNo}}</p>
-        <p>Identity ID: {{MbrIdentityId}}</p>
+      <ion-col>
+        <p>{{'SIDE_MENU.USERINFO.CARD.NAME' | translate}}: {{userName}}</p>
+        <p>{{'SIDE_MENU.USERINFO.CARD.POLICYNO' | translate}}: {{userCardNo}}</p>
+        <p>{{'SIDE_MENU.USERINFO.CARD.IDENTITYID' | translate}}: {{MbrIdentityId}}</p>
         <div class="inline-block">
-          <font>Insurance Period: </font>
+          <font>{{'SIDE_MENU.USERINFO.CARD.INSPERIOD' | translate}}: </font>
           <p style="margin:0">{{userExpiryDate | date:'dd/MM/yyyy HH:mm a'}}</p>
         </div>
         <p>{{MbrProductName}}</p>
         <p>{{MbrPayorName}}</p>
-      </div>
-      <div class="col">
+      </ion-col>
+      <ion-col>
         <div style="float: right;background-color: white;height: 110px;width:110px">
           <ngx-qrcode [qrc-value]="createCode" style="height: 100px;width:100px;margin: auto;">
           </ngx-qrcode>
         </div>
-      </div>
+      </ion-col>
     </div>
   </div>
   <div id="earth"></div>
@@ -53,42 +53,44 @@
       </div>
 
       <div style="float:right">
-        <p id="lblUserInformation">ID :</p>
+        <p id="lblUserInformation">{{'SIDE_MENU.USERINFO.CARD.POLICYNO' | translate}}:</p>
         <input type="text" id="txtSearch" value={{userCardNo}} formControlName="id" disabled>
-        <p id="lblUserInformation">Name :</p>
+        <p id="lblUserInformation">{{'SIDE_MENU.USERINFO.INFO.NAME' | translate}}:</p>
         <input type="text" id="txtSearch" value={{userName}} formControlName="name">
       </div>
     </div>
 
     <div>
-      <p id="lblUserInformation">Address :</p>
+      <p id="lblUserInformation">{{'SIDE_MENU.USERINFO.INFO.ADDRESS' | translate}}:</p>
       <input type="text" id="txtSearch" value={{MbrAddr}} formControlName="address">
     </div>
     <div>
-      <p id="lblUserInformation">Phone Number :</p>
+      <p id="lblUserInformation">{{'SIDE_MENU.USERINFO.INFO.PHOMENO' | translate}}:</p>
       <input type="text" id="txtSearch" value={{MbrContactNo}} formControlName="phonenumber">
     </div>
     <div>
-      <p id="lblUserInformation">Birth Date :</p>
+      <p id="lblUserInformation">{{'SIDE_MENU.USERINFO.INFO.BIRTHDAY' | translate}}:</p>
       <input type="date" id="txtSearch" value={{MbrBirthDate}} formControlName="birthday">
     </div>
 
     <div id="panelInformationUser">
-      <p id="lblUserInformation">Gender :</p>
+      <p id="lblUserInformation">{{'SIDE_MENU.USERINFO.INFO.GENDER.NAME' | translate}}:</p>
       <div class="flex" id="txtSearch">
         <div class="flex">
             <input type="radio" formControlName="gender" value="M" />
-            <label for="rbmale">Male</label>
+            <label for="rbmale">{{'SIDE_MENU.USERINFO.INFO.GENDER.MALE' | translate}}</label>
         </div>
         <div class="flex rbfemale">
             <input type="radio" formControlName="gender" value="F" />
-            <label for="rbfemale">Female</label>
+            <label for="rbfemale">{{'SIDE_MENU.USERINFO.INFO.GENDER.FEMALE' | translate}}</label>
         </div>
       </div>
     </div>
 
     <div class="row" style="height: 5%;margin-top: 53px;">
-        <button type="submit" ion-button style="color: white" [disabled]="!formGroup.valid">Update</button>
+      <button type="submit" ion-button style="color: white" [disabled]="!formGroup.valid">
+        {{'SIDE_MENU.USERINFO.BUTTONUPDATE' | translate}}
+      </button>
     </div>
 
   </form>

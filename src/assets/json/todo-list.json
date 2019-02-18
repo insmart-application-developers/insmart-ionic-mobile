@@ -1,14 +1,14 @@
 [
       { "id": 1,
-        "ld": "Hóa đơn thiếu dấu hay gì đó tương tự",
+        "ld": "Hóa đơn thiếu dấu",
         "nycbs": "25/12/2017"
       },
       { "id": 2,
-        "ld": "Chữ ký sai",
+        "ld": "Thiếu đơn thuốc",
         "nycbs": "17/12/2015" 
       },
       { "id": 3,
-        "ld": "Thông tin sai",
+        "ld": "Thiếu chỉ định các xét nghiệm và chuẩn đoán lâm sàng",
         "nycbs": "15/12/2017"
       }
 ]

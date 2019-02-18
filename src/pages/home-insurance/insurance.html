@@ -37,9 +37,9 @@
             </div>
         </div>
 
-        <div class="animated bounceInUp fullRowHome" (click)="doSubmitClaim()">
+        <div class="animated bounceInUp fullRowHome" (click)="doSubmitClaim()" *ngIf="false">
             <img class="iconMedicalconcierge" src="./assets/imgs/icon/submitclaim.png">
-                <h6 class="textMedicalconcierge">{{ 'HOME_INSURANCE.SUBMITCLAIM.NAME' | translate}}</h6>
+            <h6 class="textMedicalconcierge">{{ 'HOME_INSURANCE.SUBMITCLAIM.NAME' | translate}}</h6>
         </div>
     </div>
 </ion-content>

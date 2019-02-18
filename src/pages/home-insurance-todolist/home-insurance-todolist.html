@@ -16,11 +16,15 @@
 <ion-content padding style="background-image:url(./assets/imgs/background-blue.jpg);background-size: 100% 100%;height: 100%;">
   <div *ngFor="let todo of todolist">
     <div class="headerTodolist">
-      Task &nbsp; {{todo.id}}
+      {{ 'HOME_INSURANCE.TODOLIST.TASK' | translate}} &nbsp; {{todo.id}}
     </div>
     <div padding class="contentTodolist">
-      <div>Lý do: {{todo.ld}}</div>
-      <div style="margin-right:0; font-style: italic">Ngày yêu cầu Bổ Sung: {{todo.nycbs}}</div>
+      <div>{{ 'HOME_INSURANCE.TODOLIST.REASON' | translate}}: {{todo.ld}}</div>
+      <div class="dateTodolist">
+        <p>
+          {{ 'HOME_INSURANCE.TODOLIST.DATE' | translate}}: {{todo.nycbs}}
+        </p>
+      </div>
     </div>
   </div>
 </ion-content>

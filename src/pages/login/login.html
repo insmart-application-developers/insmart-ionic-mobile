@@ -2,16 +2,18 @@
   <img src="assets/imgs/login.png" style="width: 100%">
   <form (ngSubmit)="doLogin()">
     <ion-item>
-      <ion-input autocapitalize="none" type="text" [(ngModel)]="loginData.username" name="username" placeholder="User Name"></ion-input>
+      <ion-input autocapitalize="none" type="text" [(ngModel)]="loginData.username" name="username" placeholder="{{'LOGIN.USERNAME' | translate}}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input #inputPassword clearOnEdit="false" type="{{!showPassword?'password':'text'}}" [(ngModel)]="loginData.password" name="password" placeholder="Password"></ion-input>
+      <ion-input #inputPassword clearOnEdit="false" type="{{!showPassword?'password':'text'}}" [(ngModel)]="loginData.password" name="password" placeholder="{{'LOGIN.PASSWORD' | translate}}"></ion-input>
       <button ion-button item-end class="btnShowPassword" (touchstart)="$event.preventDefault();inputPassword.setFocus();btnShowPassword($event);" (touchend)="$event.preventDefault();inputPassword.setFocus();btnHidePassword($event);">
         <ion-icon name="eye"></ion-icon>
       </button>
     </ion-item>
 
-    <button [disabled]="checkDisabled()" style="text-transform: none;" ion-button block type="submit">Login</button>
+    <button [disabled]="checkDisabled()" style="text-transform: none;" ion-button block type="submit">
+      {{'LOGIN.BUTTON' | translate}}
+    </button>
     
   </form>      
 </ion-content>

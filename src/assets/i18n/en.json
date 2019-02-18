@@ -1,5 +1,34 @@
-{   
+{   "LOGIN":{
+        "USERNAME":"User Name",
+        "PASSWORD":"Password",
+        "BUTTON":"Login"
+    },
     "SIDE_MENU":{
+        "USERINFO":{
+            "NAME":"USER INFORMATION",
+            "CARD":{
+                "NAME":"Name",
+                "POLICYNO":"Policy No",
+                "IDENTITYID":"Identity ID",
+                "INSPERIOD":"Insurance Period"
+            },
+            "INFO":{
+                "AVATAR":{
+                    "LIBRARY":"Choose in Library",
+                    "PICTURE":" Take a Picture"
+                },
+                "NAME":"Name",
+                "ADDRESS":"Address",
+                "PHOMENO":"Phone Number",
+                "BIRTHDAY":"Birth of Date",
+                "GENDER":{
+                    "NAME":"Gender",
+                    "MALE":"Male",
+                    "FEMALE":"Female"
+                }
+            },
+            "BUTTONUPDATE":"Update"
+        },
         "HOME":"Home",
         "NOTIFICATION":"Notification",
         "INFORMATIOM":"Info",
@@ -24,20 +53,46 @@
             "NOTICEDATE":"Notice date"
         },
         "BENEFIT":{
-            "NAME":"BENEFIT"
+            "NAME":"BENEFIT",
+            "OPTION":"Display Option",
+            "SELECT":{
+                "0":"Sum Assured",
+                "1":"Accumulated claim amount",
+                "2":"Remaining Benefit"
+            }
         },
-        "TODOLIST":{"NAME":"TO DO LIST"},
+        "TODOLIST":{
+            "NAME":"TO DO LIST",
+            "TASK":"Task",
+            "REASON":"Reason",
+            "DATE":"Additional request date"
+        },
         "DIRECTBILLING":{
             "NAME":"DIRECT BILLING",
-            "DIRECTBILLING_DETAIL":{"NAME":"DETAIL"}
+            "DIRECTBILLING_DETAIL":{
+                "NAME":"DETAIL",
+                "ADDRESS":"Address",
+                "DISTANCE":"Distance",
+                "DURATION":"Duration"
+            }
         },
         "SUBMITCLAIM":{"NAME":"SUBMIT CLAIM"}
     }
     ,"HOME_HEALTHCARE":{
+        "NAME":"HEALTH CARE",
         "MEDICALHISTORY":{"NAME":"MEDICAL HISTORY"},
         "HEALTHSCREENING":{"NAME":"HEALTH SCREENING"},
         "MEDICALSECONDOPINION":{"NAME":"MEDICAL SECOND OPINION"},
-        "FINDINGMEDICALPROVIDERS":{"NAME":"FINDING MEDICAL PROVIDERS"},
+        "FINDINGMEDICALPROVIDERS":{
+            "NAME":"FINDING MEDICAL PROVIDERS",
+            "INFOWINDOW":{
+                "NAME":"Name",
+                "ADDRESS":"Address",
+                "DURATION":"Duration",
+                "DISTANCE":"Distance",
+                "BOOKING":"Book now"
+            }
+        },
         "MEDICALCONCIERGE":{"NAME":"MEDICAL CONCIERGE"},
         "MEDICALASSISTANCE":{"NAME":"MEDICAL ASSISTANCE"}
     }

@@ -12,24 +12,33 @@
 
 </ion-header>
 
-<ion-menu type="push" [swipeEnabled]="true" side="right" [content]="subContent">
+<ion-menu type="push" [swipeEnabled]="false" side="right" [content]="subContent">
   <ion-scroll scrollY="true" [style.height.%]="100">
-    <div class="alertList">Đây là danh sách cơ sở y tế xung quanh bạn trong bán kính 5km</div>
+    <div showWhen="android" [style.margin-top.px]="56"></div>
+    <div showWhen="ios" [style.margin-top.px]="44"></div>
     <ion-list>
+      <div class="alertList">
+        Đây là danh sách cơ sở y tế xung quanh bạn trong bán kính 5km
+      </div>
       <ion-item *ngFor="let hospital of newHospitallists" (click)="eventClickMarker(hospital)">
-        <span>{{hospital.name}}</span><br>
-        <span>{{hospital.distance}}</span>
+        <ion-row class="itemList" align-items-center>
+          <img class="iconItem" src="assets/imgs/icon-findingmedicalproviders.png">
+          <ion-col class="contentItem" align-self-center col-10>
+            <h6>{{hospital.name}}</h6>
+            <p>{{hospital.distance}} km</p>
+          </ion-col>
+        </ion-row>
       </ion-item>
     </ion-list>
   </ion-scroll>
 </ion-menu>
 
-<ion-content #subContent>
+<ion-content #subContent (touchstart)="touchContent()">
   <button class="buttonControl" id="btnListHos">
     <ion-icon name="menu"></ion-icon>
   </button>
   <button class="buttonControl" id="btnGetCurrent">
     <ion-icon name="locate"></ion-icon>
   </button>
-  <div #map id="map"></div>
+  <div #map id="map" [style.pointer-events]="draggable ? 'auto' : 'none'"></div>
 </ion-content>

@@ -25,7 +25,7 @@
     </div> -->
 
     <div class="row titleBenefit">
-      <div class="col titilBe">Display Option</div>
+      <div class="col titilBe">{{ 'HOME_INSURANCE.BENEFIT.OPTION' | translate }}</div>
       <div class="col">
         <select class="selectBenefit" [(ngModel)]="mdChangeColumn">
           <option *ngFor="let headerstable of headerstables" [ngValue]="headerstable.ResCode">

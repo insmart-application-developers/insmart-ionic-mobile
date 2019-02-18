@@ -49,23 +49,16 @@ export class MyApp {
   ) {
     this.initializeApp();
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage, icon:"home" },
-      { title: 'Notification', component: NotificationPage, icon:"notifications" },
-      { title: 'Info', component: MenuInfoPage, icon:"information-circle" },
-      { title: 'Scan QRcode', component: MenuScanqrcodePage, icon:"qr-scanner" },
-      { title: 'Health tips', component: MenuHealthtipsPage, icon:"medkit" },
-      { title: 'Logout', component: LoginPage, icon:"power" }
-    ];
+    
     this.service.getUserInfoList().subscribe( res => {
       this.userInformations = res;
       if(this.userInformations.avatar != null){
         this.userAvatar = this.userInformations.avatar;
       }
     });
+
     this.getUserInformation().subscribe((UsrName) => {
       this.userName = UsrName.toString();
-       
     });
   }
 
@@ -87,11 +80,47 @@ export class MyApp {
       }
       this.checkPlatform();
       this.initTranslate();
+      this.translateSideMenu();
       this.pushNoti();
       this.Authen();
       this.confirmExitApp();
       this.checkNetwork();
     });
+  }
+
+  translateSideMenu(){
+    let sideMenuTrans;
+    this.translate.get(
+      ['SIDE_MENU.HOME',
+      'SIDE_MENU.NOTIFICATION',
+      'SIDE_MENU.INFORMATIOM',
+      'SIDE_MENU.SCANQRCODE',
+      'SIDE_MENU.HEALTHTIPS',
+      'SIDE_MENU.LOGOUT'
+      ]
+      ).subscribe(
+      value => {
+        // value is our translated string
+        let alertTitle = value;
+        sideMenuTrans={
+          home: alertTitle[Object.keys(alertTitle)[0]],
+          notification: alertTitle[Object.keys(alertTitle)[1]],
+          information: alertTitle[Object.keys(alertTitle)[2]],
+          scanQrcode: alertTitle[Object.keys(alertTitle)[3]],
+          healthtips: alertTitle[Object.keys(alertTitle)[4]],
+          logout: alertTitle[Object.keys(alertTitle)[5]]
+        }
+        console.log(sideMenuTrans);
+        this.pages = [
+          { title: sideMenuTrans.home, component: HomePage, icon:"home" },
+          { title: sideMenuTrans.notification, component: NotificationPage, icon:"notifications" },
+          { title: sideMenuTrans.information, component: MenuInfoPage, icon:"information-circle" },
+          { title: sideMenuTrans.scanQrcode, component: MenuScanqrcodePage, icon:"qr-scanner" },
+          { title: sideMenuTrans.healthtips, component: MenuHealthtipsPage, icon:"medkit" },
+          { title: sideMenuTrans.logout, component: LoginPage, icon:"power" }
+        ];
+      });
+    
   }
 
   checkNetwork(){

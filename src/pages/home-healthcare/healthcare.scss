@@ -27,6 +27,14 @@ page-healthcare {
       margin:1%;
       text-align: center;
   }
+  .fullRowHome{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    border: none;
+}
   .iconInsurance{
     width: 50%;
     margin-left:auto;
@@ -35,6 +43,11 @@ page-healthcare {
   .textHomeName{
     color: white;
     width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .iconMedicalconcierge{
+    width: 25%;
     margin-left:auto;
     margin-right:auto;
   }

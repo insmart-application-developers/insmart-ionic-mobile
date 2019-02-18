@@ -26,7 +26,7 @@ export class MenuUserinformationPage {
   createCode = null;
   userprofile:any;
   oUsrMemberInfo:any;
-  userAvatar:any="assets/imgs/personal-avatar-default.jpg";
+  userAvatar:any="assets/imgs/avatar-default.jpg";
   userName:String="";
   userCardNo:String="";
   userExpiryDate:String="";
