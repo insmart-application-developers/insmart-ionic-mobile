@@ -21,11 +21,11 @@
 
 <ion-content>
   <ion-list>
-    <div *ngFor="let claim of claims">
+    <div *ngFor="let claim of claims; let i = index">
 
       <ion-item (click)="toggleGroup(claim)" [ngClass]="{ active: isGroupShown(claim) }">
         <ion-icon item-right [name]="isGroupShown(claim) ? 'arrow-up' : 'arrow-down'"></ion-icon>
-        &nbsp; Case Number {{claim.claimnumber}}
+        &nbsp; Case Number {{i+1}}
       </ion-item>
   
       <ion-item text-wrap class="item-accordion" *ngIf="isGroupShown(claim)">
@@ -64,11 +64,11 @@
         </div>
         <div class="form-group">
           <h6 id="control-label">{{ 'HOME_INSURANCE.CLAIM.DATEOFRECEIPT' | translate}}:</h6>
-          <h6>{{claim.nnhs}}</h6>
+          <h6>{{claim.nnhs | date : 'd MMM, y'}}</h6>
         </div>
         <div class="form-group">
           <h6 id="control-label">{{ 'HOME_INSURANCE.CLAIM.NOTICEDATE' | translate}}:</h6>
-          <h6>{{claim.ntb}}</h6>
+          <h6>{{claim.ntb | date : 'd MMM, y'}}</h6>
         </div>
       </ion-item>
     </div>

@@ -69,16 +69,21 @@ export class HomeHealthcareMedicalhistoryPage {
         console.log("invalid account");
         this.loadingSpinner.dismiss();
       };
-    }); 
+    });
   
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeHealthcareMedicalhistoryPage');
     this.loadingSpinner = this.loadingCtrl.create({
-      content: 'Finding health facilities near your location'
+      content: 'Loading medical history list...'
     });
     this.loadingSpinner.present();
+    setTimeout(() => {
+      if(this.loadingSpinner){
+        this.loadingSpinner.dismiss();
+      }
+    }, 15000);
   }
 
   toggleGroup(group) {
@@ -91,5 +96,7 @@ export class HomeHealthcareMedicalhistoryPage {
   isGroupShown(group) {
     return this.shownGroup === group;
   };
-  
+  ionViewWillLeave() {
+    this.loadingSpinner.dismissAll();
+  }
 }

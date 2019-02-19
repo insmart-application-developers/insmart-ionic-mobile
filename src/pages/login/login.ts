@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, LoadingController, Loading  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, LoadingController, Loading, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { StorageServiceProvider } from './../../providers/storage-service/storage-service';
 import { AuthService } from './../../providers/auth-service/auth-service';
@@ -31,7 +31,8 @@ export class LoginPage {
     private auth: AuthService,
     private storageService: StorageServiceProvider,
     private loadingCtrl: LoadingController,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private events: Events
 
   ) {
 
@@ -71,6 +72,7 @@ export class LoginPage {
           var obj = JSON.parse(data);
           await this.storageService.setLocalStorage("profileacct", obj);
           this.loading.dismiss();
+          this.events.publish('login:logging');
           setTimeout(() => {
             this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
           }, 200);

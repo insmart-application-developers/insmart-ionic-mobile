@@ -23,11 +23,11 @@
         </div>
         <div class="child-item">
           <h5 id="control-label">Ngày vào:</h5>
-          <h5>{{medicalhistory.CaseStartDate}}</h5>
+          <h5>{{medicalhistory.CaseStartDate | date : 'd MMM, y'}}</h5>
         </div>
         <div class="child-item">
           <h5 id="control-label">Ngày ra:</h5>
-          <h5>{{medicalhistory.DischargeDate}}</h5>
+          <h5>{{medicalhistory.DischargeDate | date : 'd MMM, y'}}</h5>
         </div>
         <div class="child-item">
           <h5 id="control-label">Chuẩn đoán bệnh:</h5>

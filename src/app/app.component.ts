@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { App, Nav, Platform, ToastController,Events } from 'ionic-angular';
+import { App, Nav, Platform, ToastController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
@@ -18,7 +18,7 @@ import { MenuHealthtipsPage } from '../pages/menu-healthtips/menu-healthtips';
 import { LocalJsonServiceProvider } from './../providers/localjson-service/localjson-service';
 import { StorageServiceProvider } from './../providers/storage-service/storage-service';
 import { NetworkProvider } from './../providers/network-service/network-service';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +29,7 @@ export class MyApp {
   rootPage: any;
   pages: Array<{title: string, component: any,icon:String}>;
   userAvatar:String="assets/imgs/personal-avatar-default.jpg";
-  userName:String="";
+  userName:any="";
   showAlert:boolean = false;
   userInformations:any;
   constructor(
@@ -57,11 +57,13 @@ export class MyApp {
       }
     });
 
-    this.getUserInformation().subscribe((UsrName) => {
-      this.userName = UsrName.toString();
+    this.events.subscribe('login:logging', () => {
+      this.storageService.getLocalStorage("profileacct").then((profiledata) => {
+        this.userName = profiledata;
+        console.log("Thu xem ra gi khong ",this.userName.UsrName);
+      });
     });
   }
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -110,7 +112,6 @@ export class MyApp {
           healthtips: alertTitle[Object.keys(alertTitle)[4]],
           logout: alertTitle[Object.keys(alertTitle)[5]]
         }
-        console.log(sideMenuTrans);
         this.pages = [
           { title: sideMenuTrans.home, component: HomePage, icon:"home" },
           { title: sideMenuTrans.notification, component: NotificationPage, icon:"notifications" },
@@ -120,7 +121,6 @@ export class MyApp {
           { title: sideMenuTrans.logout, component: LoginPage, icon:"power" }
         ];
       });
-    
   }
 
   checkNetwork(){
@@ -173,18 +173,6 @@ export class MyApp {
       this.rootPage = LoginPage;
       console.error("Lỗi "+error)
     });
-  }
-
-  getUserInformation(){
-    let observable = new Observable(observer =>{ 
-      this.storageService.getLocalStorage("profileacct").then((profiledata) => {
-        if(profiledata != null){
-          console.log(profiledata.UsrName);
-          observer.next(profiledata.UsrName);
-        };
-      });
-    })
-    return observable;
   }
 
   userInfomation(){

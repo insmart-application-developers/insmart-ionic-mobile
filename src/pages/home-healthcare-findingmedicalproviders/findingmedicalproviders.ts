@@ -65,6 +65,7 @@ export class FindingmedicalprovidersPage {
     this.platform.ready().then(() => {
       this.loadingSpinner = this.loadingCtrl.create({
         content: 'Finding health facilities near your location',
+        dismissOnPageChange:true
       });
       this.loadingSpinner.present();
       

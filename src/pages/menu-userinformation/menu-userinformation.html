@@ -30,7 +30,7 @@
         <p>{{'SIDE_MENU.USERINFO.CARD.IDENTITYID' | translate}}: {{MbrIdentityId}}</p>
         <div class="inline-block">
           <font>{{'SIDE_MENU.USERINFO.CARD.INSPERIOD' | translate}}: </font>
-          <p style="margin:0">{{userExpiryDate | date:'dd/MM/yyyy HH:mm a'}}</p>
+          <p style="margin:0">{{userExpiryDate | date : 'd MMM, y'}}</p>
         </div>
         <p>{{MbrProductName}}</p>
         <p>{{MbrPayorName}}</p>

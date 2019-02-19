@@ -53,7 +53,7 @@ export class MenuUserinformationPage {
         
       console.log("return storage data");
       this.userprofile = profiledata;
-      console.log("get storage data : " + this.userprofile); 
+      console.log("get storage data : " + this.userprofile);
       if(this.userprofile != null){
         console.log("profile account : " + this.userprofile);
         console.log("profile account detail : " + this.userprofile.UsrName + ' '+ this.userprofile.CardNo);
