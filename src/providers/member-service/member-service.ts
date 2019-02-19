@@ -4,7 +4,6 @@ import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
-import { ReturnStatement } from '@angular/compiler';
 
 /*
   Generated class for the MemberServiceProvider provider.

@@ -89,7 +89,8 @@
                 "DURATION":"Thời gian dự kiến",
                 "DISTANCE":"Khoảng cách",
                 "BOOKING":"Đặt ngay"
-            }
+            },
+            "LIST":"Danh sách cơ sở y tế xung quanh bạn trong bán kính 5km"
         },
         "MEDICALCONCIERGE":{"NAME":"TIỆN ÍCH Y TẾ"},
         "MEDICALASSISTANCE":{"NAME":"HỖ TRỢ Y TẾ"}

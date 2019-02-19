@@ -91,7 +91,8 @@
                 "DURATION":"Duration",
                 "DISTANCE":"Distance",
                 "BOOKING":"Book now"
-            }
+            },
+            "LIST":"List of Medical Facility around you in radius is 5km"
         },
         "MEDICALCONCIERGE":{"NAME":"MEDICAL CONCIERGE"},
         "MEDICALASSISTANCE":{"NAME":"MEDICAL ASSISTANCE"}

@@ -6,7 +6,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { PhotoLibrary } from '@ionic-native/photo-library';
 import { File } from '@ionic-native/file';
 import { StorageServiceProvider } from './../../providers/storage-service/storage-service';
-import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 interface MyListImage{
   url:string,
@@ -49,7 +48,6 @@ export class HomeInsuranceSubmitclaimDocumentCapturePage {
     private localStorge: StorageServiceProvider,
     private photoLibrary: PhotoLibrary,
     private loadingCtrl: LoadingController,
-    private nativePageTransitions: NativePageTransitions
     ) {
       
   }

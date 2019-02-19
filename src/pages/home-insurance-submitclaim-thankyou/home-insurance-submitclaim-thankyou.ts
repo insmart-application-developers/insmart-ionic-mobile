@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the HomeInsuranceSubmitclaimThankyouPage page.
@@ -17,8 +17,7 @@ export class HomeInsuranceSubmitclaimThankyouPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
-    private viewCtrl:ViewController
+    public navParams: NavParams
     ) {
   }
 

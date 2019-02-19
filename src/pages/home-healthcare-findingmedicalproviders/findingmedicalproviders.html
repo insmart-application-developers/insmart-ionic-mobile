@@ -18,7 +18,7 @@
     <div showWhen="ios" [style.margin-top.px]="44"></div>
     <ion-list>
       <div class="alertList">
-        Đây là danh sách cơ sở y tế xung quanh bạn trong bán kính 5km
+        {{ 'HOME_HEALTHCARE.FINDINGMEDICALPROVIDERS.LIST' | translate}}
       </div>
       <ion-item *ngFor="let hospital of newHospitallists" (click)="eventClickMarker(hospital)">
         <ion-row class="itemList" align-items-center>

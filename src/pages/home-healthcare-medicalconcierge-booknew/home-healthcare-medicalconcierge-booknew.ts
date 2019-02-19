@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, Searchbar, DateTime } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Searchbar } from 'ionic-angular';
 import { Calendar } from'./../../providers/calendar-service/calendar';
 import { LocalJsonServiceProvider } from '../../providers/localjson-service/localjson-service'
 import { GeolocationProvider } from '../../providers/geolocation/geolocation';

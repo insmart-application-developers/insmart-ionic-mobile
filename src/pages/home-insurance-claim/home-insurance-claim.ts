@@ -25,11 +25,12 @@ export class HomeInsuranceClaimPage {
   userprofile:any;
   cardno:String;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private service:LocalJsonServiceProvider, 
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams, 
     private alertCtrl: AlertController, 
     private mbrService: MemberServiceProvider,
     public storageService: StorageServiceProvider) {
-
 
       console.log("call storage data"); 
 

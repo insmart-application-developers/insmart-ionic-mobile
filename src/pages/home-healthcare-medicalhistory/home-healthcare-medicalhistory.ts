@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,LoadingController, Loading } from 'ionic-angular';
 import { LocalJsonServiceProvider } from '../../providers/localjson-service/localjson-service';
 import { MemberServiceProvider } from '../../providers/member-service/member-service';
 import { StorageServiceProvider } from './../../providers/storage-service/storage-service';
@@ -21,12 +21,16 @@ export class HomeHealthcareMedicalhistoryPage {
   shownGroup = null;
   userprofile:any;
   cardno:String;
+  loadingSpinner:Loading;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private service:LocalJsonServiceProvider, 
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private loadingCtrl: LoadingController,
     private mbrService: MemberServiceProvider,
-    public storageService: StorageServiceProvider) {
-    
-    
+    public storageService: StorageServiceProvider
+    ) {
+
       console.log("call storage data"); 
 
       this.storageService.getLocalStorage("profileacct").then( (profiledata) => {
@@ -40,18 +44,8 @@ export class HomeHealthcareMedicalhistoryPage {
           console.log("card no from local storage : " + this.cardno);
  
           this.getMedicalHistoryList(this.cardno);
-         
-          //console.log( "profile account detail : " + this.userprofile.EmailAdr + " " + this.userprofile.CardNo + " " + this.userprofile.UsrStat + " " + profileacct.ClientCode); 
-  
-          
         };
-      })      
-    
-    
-    //   this.service.getMedicalHistoryList().subscribe(res => {
-    //   this.medicalhistorys = res;
-    // })
-
+      });
 
   }
   
@@ -68,10 +62,12 @@ export class HomeHealthcareMedicalhistoryPage {
       if( data && data !== "null" && data !== "undefined" ) {
         var obj = JSON.parse(data);
         this.medicalhistorys = obj;
+        this.loadingSpinner.dismiss();
       }
       else 
       {
-             console.log("invalid account");
+        console.log("invalid account");
+        this.loadingSpinner.dismiss();
       };
     }); 
   
@@ -79,6 +75,10 @@ export class HomeHealthcareMedicalhistoryPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeHealthcareMedicalhistoryPage');
+    this.loadingSpinner = this.loadingCtrl.create({
+      content: 'Finding health facilities near your location'
+    });
+    this.loadingSpinner.present();
   }
 
   toggleGroup(group) {

@@ -64,9 +64,10 @@ export class FindingmedicalprovidersPage {
     console.log('ionViewDidLoad FindingmedicalprovidersPage');
     this.platform.ready().then(() => {
       this.loadingSpinner = this.loadingCtrl.create({
-        content: 'Finding health facilities near your location'
+        content: 'Finding health facilities near your location',
       });
       this.loadingSpinner.present();
+      
     });
   }
   addMap(currentPos){

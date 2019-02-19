@@ -63,36 +63,18 @@ export class LoginPage {
 
       console.log("start auth call!!!");
       this.showLoading();
-      this.auth.login(this.loginData).subscribe( (data) =>{ 
+      this.auth.login(this.loginData).subscribe(async (data) =>{ 
         //console.log(data); 
         console.log("subscribe return"); 
         
         if( data && data !== "null" && data !== "undefined" ) {
-          this.storageService.getLocalStorage("profileacct").then( async(profileacct) => {
-            
-            console.log("get storage data : " + profileacct); 
-            if(profileacct != null){
-              // console.log("profile account : " + profileacct);
-              // console.log( "profile account detail : " + profileacct.EmailAdr + " " + profileacct.CardNo + " " + profileacct.UsrStat + " " + profileacct.ClientCode); 
-
-              this.oUsrMemberInfo = profileacct.UsrMemberInfo;
-              // console.log("card member : " + this.oUsrMemberInfo);
-              // console.log("card member detail : " + this.oUsrMemberInfo.CardNo + " " + this.oUsrMemberInfo.PlanCode + " " + this.oUsrMemberInfo.ContractNo); 
-              // console.log("card member detail : " + this.oUsrMemberInfo.CardNo + " " + this.oUsrMemberInfo.PlanCode + " " + this.oUsrMemberInfo.CurrentID1 + " " + this.oUsrMemberInfo.OrgCode);
-
-              this.loading.dismiss();
-              this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
-            }
-            else {
-              var obj = JSON.parse(data);
-              await this.storageService.setLocalStorage("profileacct", obj);
-              this.loading.dismiss();
-              setTimeout(() => {
-                this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
-              }, 200);
-              console.log("get storage data : " + obj);
-            }
-          })
+          var obj = JSON.parse(data);
+          await this.storageService.setLocalStorage("profileacct", obj);
+          this.loading.dismiss();
+          setTimeout(() => {
+            this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
+          }, 200);
+          console.log("get storage data : " + obj);
         }
         else{
           this.loginData.username = "";
