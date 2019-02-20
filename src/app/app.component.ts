@@ -115,7 +115,6 @@ export class MyApp {
         this.pages = [
           { title: sideMenuTrans.home, component: HomePage, icon:"home" },
           { title: sideMenuTrans.notification, component: NotificationPage, icon:"notifications" },
-          { title: sideMenuTrans.information, component: MenuInfoPage, icon:"information-circle" },
           { title: sideMenuTrans.scanQrcode, component: MenuScanqrcodePage, icon:"qr-scanner" },
           { title: sideMenuTrans.healthtips, component: MenuHealthtipsPage, icon:"medkit" },
           { title: sideMenuTrans.logout, component: LoginPage, icon:"power" }

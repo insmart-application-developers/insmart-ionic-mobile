@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="row">
-      <ion-col>
+      <ion-col col-7 style="padding-right:0">
         <p>{{'SIDE_MENU.USERINFO.CARD.NAME' | translate}}: {{userName}}</p>
         <p>{{'SIDE_MENU.USERINFO.CARD.POLICYNO' | translate}}: {{userCardNo}}</p>
         <p>{{'SIDE_MENU.USERINFO.CARD.IDENTITYID' | translate}}: {{MbrIdentityId}}</p>
@@ -35,7 +35,7 @@
         <p>{{MbrProductName}}</p>
         <p>{{MbrPayorName}}</p>
       </ion-col>
-      <ion-col>
+      <ion-col col-5 style="padding-left:0">
         <div style="float: right;background-color: white;height: 110px;width:110px">
           <ngx-qrcode [qrc-value]="createCode" style="height: 100px;width:100px;margin: auto;">
           </ngx-qrcode>
