@@ -28,8 +28,8 @@ export class StorageServiceProvider {
     return this.nativeStorage.remove(key);
   }
 
-  setLocalStorage(key, value) {
-    this.storage.set(key, value);
+  setLocalStorage(key, value): Promise<any> {
+    return this.storage.set(key, value);
   } 
 
   getLocalStorage(key): Promise<any> {

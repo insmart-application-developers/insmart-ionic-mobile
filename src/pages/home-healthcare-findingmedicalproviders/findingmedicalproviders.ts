@@ -65,6 +65,7 @@ export class FindingmedicalprovidersPage {
     this.platform.ready().then(() => {
       this.loadingSpinner = this.loadingCtrl.create({
         content: 'Finding health facilities near your location',
+        duration:15000,
         dismissOnPageChange:true
       });
       this.loadingSpinner.present();
@@ -96,7 +97,7 @@ export class FindingmedicalprovidersPage {
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('btnListHos'));
     this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('btnGetCurrent'));
-    
+
     //event Button find me.
     document.getElementById('btnGetCurrent').addEventListener('click',()=>{
       this.map.setCenter(this.currentPos);

@@ -64,16 +64,15 @@ export class LoginPage {
 
       console.log("start auth call!!!");
       this.showLoading();
-      this.auth.login(this.loginData).subscribe(async (data) =>{ 
+      this.auth.login(this.loginData).subscribe((data) =>{ 
         //console.log(data); 
         console.log("subscribe return"); 
         
         if( data && data !== "null" && data !== "undefined" ) {
           var obj = JSON.parse(data);
-          await this.storageService.setLocalStorage("profileacct", obj);
-          this.loading.dismiss();
-          this.events.publish('login:logging');
+          this.storageService.setLocalStorage("profileacct", obj).then(()=>this.events.publish('login:logging'));
           setTimeout(() => {
+            this.loading.dismiss();
             this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
           }, 200);
           console.log("get storage data : " + obj);
