@@ -8,7 +8,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
     <ion-list>
         <div *ngFor="let notification of notifications">
@@ -16,32 +16,19 @@
             [ngClass]="{ active: isGroupShown(notification) }">
             
             <ion-icon item-right [name]="isGroupShown(notification) ? 'arrow-up' : 'arrow-down'"></ion-icon>
-            &nbsp; {{notification.PubTtl}}
+            {{notification.PubTtl}}
           </ion-item>
        
           <ion-item text-wrap *ngIf="isGroupShown(notification)">
             <div class="child-item">
               <h5 id="control-label">Announcement:</h5>
-              <p>{{notification.PubInfo}} </p>
+              <div style="margin-bottom:5px;" [innerHtml]="notification.PubInfo"></div>
             </div>
             <div class="child-item">
-              <h5 id="control-label">Published Date:</h5>
-              <h5>{{notification.PubDt}}</h5>
+              <h5 style="text-align:right" id="control-label">Published Date: {{notification.PubDt | date: 'd MMM, y'}}</h5>
             </div>
           </ion-item>
       </div>
       </ion-list>
 
-  <!-- <ion-list>
-    <ion-item ng-model="notification.RscDsc" ng-repeat="notification in notifications" ng-click="getContent(notification)">
-      <div style="width: 100%;">
-        <div style="float: right;width: 90%;margin-left: 2%">
-          <b ng-style="set_color(notification)" class="item-text-wrap">
-            {{notification.PubInfo}}
-          </b>
-            <h4>{{notification.PubDt}}</h4>
-        </div>
-      </div>
-    </ion-item>
-  </ion-list> -->
 </ion-content>

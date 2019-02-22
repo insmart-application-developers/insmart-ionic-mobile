@@ -108,9 +108,6 @@ export class MemberServiceProvider {
 
   public GetMbrPastMedicalHistory(cardno) {
     
-
-
-    //let clmURL = 'http://localhost:55565/api/ClmSvs?CardNo=' + cardno + '&CardIdtId=sdf&Opt=MEDHIS&AuthID=0';
     let clmURL = 'http://210.245.8.8:5555/api/ClmSvs?CardNo=' + cardno + '&CardIdtId=sdf&Opt=MEDHIS&AuthID=0';
     
     console.log("server call" + cardno);
@@ -125,8 +122,6 @@ export class MemberServiceProvider {
 
   public GetMbrHthScnList(cardno) {
     
-
-
     //let clmURL = 'http://localhost:55565/api/ClmSvs?CardNo=' + cardno + '&CardIdtId=sdf&Opt=HTHSCN&AuthID=0';
     let clmURL = 'http://210.245.8.8:5555/api/ClmSvs?CardNo=' + cardno + '&CardIdtId=sdf&Opt=HTHSCN&AuthID=0';
     
@@ -142,8 +137,6 @@ export class MemberServiceProvider {
 
   public GetAnnouncementList(cardno, usrLgn) {
     
-
-
     //let clmURL = 'http://localhost:55565/api/ClmSvs?CardNo=' + cardno + '&CardIdtId=sdf&Opt=ANNNOM&AuthID='+ usrLgn;
     let clmURL = 'http://210.245.8.8:5555/api/ClmSvs?CardNo=' + cardno + '&CardIdtId=sdf&Opt=ANNNOM&AuthID='+ usrLgn;
     
@@ -152,7 +145,6 @@ export class MemberServiceProvider {
     return this.http.get(clmURL).map(res => res.json()).catch(this.handleError);
 
     //console.log("server response");
-
 
   }
 

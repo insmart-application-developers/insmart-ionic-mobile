@@ -1,3 +1,21 @@
 page-notification {
-
+    .itemHeader{
+        visibility: hidden;
+        h1{
+            visibility: visible;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        p{
+            display:none;
+        }
+        ul{
+            display: none;
+        }
+    }
+    .itemContent{
+        h1{
+            display:none;
+        }
+    }
 }
