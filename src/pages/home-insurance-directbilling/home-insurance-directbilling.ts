@@ -155,18 +155,16 @@ export class HomeInsuranceDirectbillingPage {
               
               if(this.hospitalFilterLists[i]){
                 hospitalLists.push(Object.assign(this.hospitalFilterLists[i], listdistance[i]));
-                if(i==0){
-                  
-                }
               }
             }
             this.hospitalLists = hospitalLists;
-            // this.hospitalLists.sort((obj1, obj2)=>{
-            //   // Ascending: first age less than the previous
-            //   return parseInt(obj1.distance) - parseInt(obj2.distance)
-            // });
-            this.loadingSpinner.dismiss();
           });
+        }).then(()=>{
+          this.hospitalLists.sort((obj1, obj2)=>{
+            // Ascending: first age less than the previous
+            return parseInt(obj1.distance) - parseInt(obj2.distance)
+          });
+          this.loadingSpinner.dismiss();
         });
       });
     });

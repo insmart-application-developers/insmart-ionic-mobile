@@ -28,25 +28,28 @@
       </div>
       
     </ion-list-header>
-
-    <ion-row align-items-center *ngFor="let hospitallist of hospitalLists" (click)="getItem(hospitallist)">
-      <ion-col class="itemIcon">
+    <ion-row class="itemContainer" align-items-center *ngFor="let hospitallist of hospitalLists" (click)="getItem(hospitallist)">
+      <ion-col class="itemContent">
         <ion-row>
-          <img width="24px" src="./assets/imgs/location-icon.png">
+          <span class="hosName">
+            {{hospitallist.name}}
+          </span>
         </ion-row>
         <ion-row>
+          <span class="hosAddress">
+            {{hospitallist.address}}
+          </span>
+        </ion-row>
+        <ion-row class="hosDistance">
+          <ion-icon name="pin"></ion-icon>
           <span>{{hospitallist.distance}}</span>
         </ion-row>
       </ion-col>
-      <ion-col class="itemContent">
-        <span style="color:red;font-weight: bold" text-wrap>
-          {{hospitallist.name}}
-        </span>
-        <span text-wrap>
-          {{hospitallist.address}}
-        </span>
+      <ion-col class="itemIcon">
+        <button class="logoMedical">INS</button>
       </ion-col>
     </ion-row>
+    
   </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
