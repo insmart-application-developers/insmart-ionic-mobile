@@ -6,7 +6,7 @@
     </ion-item>
     <ion-item>
       <ion-input #inputPassword clearOnEdit="false" type="{{!showPassword?'password':'text'}}" [(ngModel)]="loginData.password" name="password" placeholder="{{'LOGIN.PASSWORD' | translate}}"></ion-input>
-      <button ion-button item-end class="btnShowPassword" (touchstart)="inputPassword.setFocus();btnShowPassword();" (touchend)="inputPassword.setFocus();btnHidePassword();">
+      <button type="button" ion-button item-end class="btnShowPassword" (touchstart)="inputPassword.setFocus();btnShowPassword();" (touchend)="inputPassword.setFocus();btnHidePassword();">
         <ion-icon name="eye"></ion-icon>
       </button>
     </ion-item>

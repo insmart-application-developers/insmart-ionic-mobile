@@ -18,7 +18,7 @@ import { MenuHealthtipsPage } from '../pages/menu-healthtips/menu-healthtips';
 import { LocalJsonServiceProvider } from './../providers/localjson-service/localjson-service';
 import { StorageServiceProvider } from './../providers/storage-service/storage-service';
 import { NetworkProvider } from './../providers/network-service/network-service';
-import { Observable } from 'rxjs/Observable';
+import { GeolocationProvider } from './../providers/geolocation/geolocation';
 
 @Component({
   templateUrl: 'app.html'
@@ -45,7 +45,8 @@ export class MyApp {
     public translate: TranslateService,
     private androidFullScreen: AndroidFullScreen,
     private screenOrientation: ScreenOrientation,
-    public networkProvider: NetworkProvider
+    public networkProvider: NetworkProvider,
+    private currentGeolocation: GeolocationProvider
   ) {
     this.initializeApp();
     // used for an example of ngFor and navigation
@@ -87,6 +88,10 @@ export class MyApp {
       this.Authen();
       this.confirmExitApp();
       this.checkNetwork();
+      this.currentGeolocation.initUserPosition().then(currentPos=>{
+        console.log("Current Position ",currentPos)
+      },err=>alert("Không lấy được tọa độ "+err)
+      );
     });
   }
 

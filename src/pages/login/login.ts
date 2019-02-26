@@ -122,12 +122,10 @@ export class LoginPage {
   }
 
   btnShowPassword(){
-    console.log("Bat dau chay");
     this.showPassword = true;
   }
   
   btnHidePassword(){
-    console.log("Ket thuc chay");
     this.showPassword = false;
   }
 }

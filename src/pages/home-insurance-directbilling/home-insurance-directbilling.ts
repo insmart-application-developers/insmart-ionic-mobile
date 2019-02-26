@@ -1,5 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content ,Platform, LoadingController, Loading, InfiniteScroll } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content ,Platform, LoadingController, Loading, InfiniteScroll, AlertController } from 'ionic-angular';
 import { GeolocationOptions } from '@ionic-native/geolocation'; 
 
 import { HomeInsuranceDirectbillingDetailPage } from '../home-insurance-directbilling-detail/home-insurance-directbilling-detail';
@@ -38,6 +38,7 @@ export class HomeInsuranceDirectbillingPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public platform: Platform,
+    private alertCtrl: AlertController, 
     private service:LocalJsonServiceProvider,
     private loadingCtrl: LoadingController,
     private serviceCurrentPostion:GeolocationProvider
@@ -54,7 +55,9 @@ export class HomeInsuranceDirectbillingPage {
     console.log('ionViewDidLoad HomeInsuranceDirectbillingPage');
     this.platform.ready().then(() => {
       this.loadingSpinner = this.loadingCtrl.create({
-        content: 'Finding your city'
+        content: 'Finding your city',
+        duration:15000,
+        dismissOnPageChange:true
       });
       this.loadingSpinner.present();
       
@@ -81,7 +84,34 @@ export class HomeInsuranceDirectbillingPage {
     });
 
   }
+  changeCity(){
+    let alert = this.alertCtrl.create();
+    alert.setTitle('Filter Status Claim');
+    for(let i=0;i<this.filterHospitals.length;i++){
+      alert.addInput({
+        type: 'radio',
+        label: this.filterHospitals[i].city,
+        value: this.filterHospitals[i].city,
+        checked: false
+      });
+    }
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'Ok',
+      handler: (thgqbt: Observable<string>) => {
+        this.cityChange(thgqbt);
+        this.city = thgqbt;
+        this.loadingSpinner = this.loadingCtrl.create({
+          content: 'Changing your city',
+          duration:15000,
+          dismissOnPageChange:true
+        });
+        this.loadingSpinner.present();
+      }
+    });
 
+    alert.present();
+  }
   //Event when click item list
   getItem(itemHospital){
     this.navCtrl.push(HomeInsuranceDirectbillingDetailPage,
@@ -90,7 +120,7 @@ export class HomeInsuranceDirectbillingPage {
   }
 
   //Filter and Merge hospital list with list 25 distance
-  cityChange(city) {
+  cityChange(city:Observable<string>) {
     this.service.getHospitalList().subscribe(res => {
       this.getHospitals = res;
 
@@ -115,36 +145,57 @@ export class HomeInsuranceDirectbillingPage {
           });
           return this.poa;
         }).then(results=>{
-
           let hospitalLists = [];
-          this.getMatrixDistance(this.currentPos,results.slice(0,25)).subscribe(listdistance =>{
-            for(let i=0; i < 25; i++){
-              hospitalLists.push(Object.assign(this.hospitalFilterLists[i], listdistance[i]));
+          this.getMatrixDistance(this.currentPos,results.slice(0,23)).subscribe(listdistance =>{
+            console.log(results.slice(0,23));
+            console.log(listdistance);
+            
+            for(let i=0; i < 24; i++){
+              console.log(i);
+              
+              if(this.hospitalFilterLists[i]){
+                hospitalLists.push(Object.assign(this.hospitalFilterLists[i], listdistance[i]));
+                if(i==0){
+                  
+                }
+              }
             }
             this.hospitalLists = hospitalLists;
+            // this.hospitalLists.sort((obj1, obj2)=>{
+            //   // Ascending: first age less than the previous
+            //   return parseInt(obj1.distance) - parseInt(obj2.distance)
+            // });
             this.loadingSpinner.dismiss();
           });
         });
-
       });
-
     });
   }
 
   //Pull down for Loading more data
   doInfinite(infiniteScroll: InfiniteScroll){
     console.log('Begin async operation');
-
+    this.loadingSpinner = this.loadingCtrl.create({
+      content: 'Load more Facilities Medical',
+      duration:15000,
+      dismissOnPageChange:true
+    });
+    this.loadingSpinner.present();
     let start = this.hospitalLists.length;
-    this.getMatrixDistance(this.currentPos,this.poa.slice(start,start+25)).subscribe(listdistance =>{
+    this.getMatrixDistance(this.currentPos,this.poa.slice(start,start+24)).subscribe(listdistance =>{
+ 
       for(let i=start ; i < start+25; i++){
         if(this.hospitalFilterLists[i]){
           this.hospitalLists.push(Object.assign(this.hospitalFilterLists[i],listdistance[i-start]));
-          console.log("Tại vị trí: "+ i);
         }
       }
+      this.hospitalLists.sort((obj1, obj2)=>{
+        // Ascending: first age less than the previous
+        return parseInt(obj1.distance) - parseInt(obj2.distance)
+      });
       console.log('Async operation has ended');
       infiniteScroll.complete();
+      this.loadingSpinner.dismiss();
       if (this.hospitalLists.length === this.hospitalFilterLists.length) {
         infiniteScroll.enable(false);
       }
@@ -172,8 +223,10 @@ export class HomeInsuranceDirectbillingPage {
           let totalCal = [];
           for (let i = 0; i < originList.length; i++) {
             let results = response.rows[i].elements;
+            console.log(results);
+            
             for (let j = 0; j < results.length; j++) {
-              totalCal[i] = {distance:results[j].distance.text,time:results[j].duration.text};
+              totalCal[i] = { distance:results[j].distance.text, time:results[j].duration.text };
               totalCal.push(totalCal[i]);
             }
           }

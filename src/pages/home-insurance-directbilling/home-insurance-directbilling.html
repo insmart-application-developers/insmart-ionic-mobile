@@ -16,24 +16,37 @@
 <ion-content>
   <ion-list >
     <ion-list-header>
-      {{city}}
-    </ion-list-header>
-    <ion-item *ngFor="let hospitallist of hospitalLists" (click)="getItem(hospitallist)">
-      <div style="width: 100%;">
-        <div style="float: left;width: 25%">
-          <img  width= "60%" height="5%" src="./assets/imgs/location-icon.png">
-          <h5>{{hospitallist.distance}}</h5>
-        </div>
-        <div style="float: right;width: 73%;margin-left: 2%">
-          <h5 style="color:red;font-weight: bold" text-wrap>
-            {{hospitallist.name}}
-          </h5>
-          <h5 text-wrap>
-            {{hospitallist.address}}
-          </h5>
-        </div>
+      
+      <div (click)="changeCity()" class="btnChange">
+        <div class='divRadar' id='pulse1'><div></div></div>
+        <div class="divRadar" id='pulse2'><div></div></div>
+        <div class="cityName">
+            <span>
+              {{city}}
+            </span>
+          </div>
       </div>
-    </ion-item>
+      
+    </ion-list-header>
+
+    <ion-row align-items-center *ngFor="let hospitallist of hospitalLists" (click)="getItem(hospitallist)">
+      <ion-col class="itemIcon">
+        <ion-row>
+          <img width="24px" src="./assets/imgs/location-icon.png">
+        </ion-row>
+        <ion-row>
+          <span>{{hospitallist.distance}}</span>
+        </ion-row>
+      </ion-col>
+      <ion-col class="itemContent">
+        <span style="color:red;font-weight: bold" text-wrap>
+          {{hospitallist.name}}
+        </span>
+        <span text-wrap>
+          {{hospitallist.address}}
+        </span>
+      </ion-col>
+    </ion-row>
   </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
@@ -41,4 +54,9 @@
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
   
+  <!-- <ion-fab right bottom>
+    <button ion-fab color="light">
+      <ion-icon name="radio-button-on"></ion-icon>
+    </button>
+  </ion-fab> -->
 </ion-content>

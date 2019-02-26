@@ -19,12 +19,12 @@ export class GeolocationProvider {
       enableHighAccuracy : false
     };
 
-    return new Promise(resolve => {
+    return new Promise((resolve,reject) => {
       this.geolocation.getCurrentPosition(this.options).then((pos) => {
         this.currentPos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
         resolve(this.currentPos);
       },(err : PositionError)=>{
-        resolve(err);
+        reject(err);
       });
     })
   }
