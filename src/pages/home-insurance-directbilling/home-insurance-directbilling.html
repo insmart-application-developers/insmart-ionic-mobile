@@ -9,25 +9,24 @@
   <ion-navbar>
     <ion-title>{{ 'HOME_INSURANCE.DIRECTBILLING.NAME' | translate}}</ion-title>
   </ion-navbar>
-
+  <ion-list-header>
+    <ion-input placeholder="Tìm kiếm"></ion-input>
+  </ion-list-header>
+  <ion-list-header>
+    <div (click)="changeCity()" class="btnChange">
+      <div class='divRadar' id='pulse1'><div></div></div>
+      <div class="divRadar" id='pulse2'><div></div></div>
+      <div class="cityName">
+          <span>
+            {{city}}
+          </span>
+        </div>
+    </div>
+  </ion-list-header>
 </ion-header>
 
-
 <ion-content>
-  <ion-list >
-    <ion-list-header>
-      
-      <div (click)="changeCity()" class="btnChange">
-        <div class='divRadar' id='pulse1'><div></div></div>
-        <div class="divRadar" id='pulse2'><div></div></div>
-        <div class="cityName">
-            <span>
-              {{city}}
-            </span>
-          </div>
-      </div>
-      
-    </ion-list-header>
+  <ion-list>
     <ion-row class="itemContainer" align-items-center *ngFor="let hospitallist of hospitalLists" (click)="getItem(hospitallist)">
       <ion-col class="itemContent">
         <ion-row>

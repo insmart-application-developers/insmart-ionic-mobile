@@ -76,6 +76,11 @@ export class LoginPage {
             this.navCtrl.setRoot(HomePage, {}, {animate: true, direction: 'forward'});
           }, 200);
           console.log("get storage data : " + obj);
+          setTimeout(() => {
+            if(this.loading){
+              this.loading.dismissAll();
+            }
+          }, 15000);
         }
         else{
           this.loginData.username = "";

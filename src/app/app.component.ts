@@ -6,6 +6,7 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 import { LoginPage } from '../pages/login/login'
 import { MenuUserinformationPage } from '../pages/menu-userinformation/menu-userinformation'
@@ -39,6 +40,7 @@ export class MyApp {
     private toastCtrl: ToastController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
+    private diagnostic: Diagnostic,
     private service: LocalJsonServiceProvider,
     private storageService: StorageServiceProvider,
     private push: Push,
@@ -90,11 +92,14 @@ export class MyApp {
       this.checkNetwork();
       this.currentGeolocation.initUserPosition().then(currentPos=>{
         console.log("Current Position ",currentPos)
-      },err=>alert("Không lấy được tọa độ "+err)
-      );
+      }).catch(err =>console.log("Không lấy được tọa độ ",err));
     });
   }
-
+  checkPermission(){
+    this.diagnostic.getLocationAuthorizationStatus().then((status)=>{
+      console.log("Trạng thái quyền truy cập tọa độ ",status);
+    })
+  }
   translateSideMenu(){
     let sideMenuTrans;
     this.translate.get(

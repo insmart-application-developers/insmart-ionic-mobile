@@ -26,6 +26,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { NgCalendarModule  } from 'ionic2-calendar';
 import { DatePicker } from '@ionic-native/date-picker';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 import { LoginPage } from '../pages/login/login';
 import { MyApp } from './app.component';
@@ -204,6 +205,7 @@ export function createTranslateLoader(http: HttpClient) {
     ScreenOrientation,
     NativePageTransitions,
     DatePicker,
+    Diagnostic,
     PhotoLibrary,
     Crop,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

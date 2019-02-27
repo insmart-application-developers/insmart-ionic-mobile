@@ -1,15 +1,19 @@
 page-home-insurance-directbilling {
     .list-header-md{
+        padding-left:15px;
         border-bottom: 1px solid rgba(242, 243, 245, 1);
         margin-bottom:0;
     }
+    .itemContainer:first-child{
+        border-top: 10px solid rgba(242, 243, 245, 1);
+    }
     .itemContainer{
-        height: 90px;
+        height: 110px;
         padding:15px;
         border-bottom: 10px solid rgba(242, 243, 245, 1);
         .itemContent{
             width: 100%;
-            height:50px;
+            height:100%;
             padding-right: 65px;
             .hosName{
                 width: 100%;
@@ -23,9 +27,9 @@ page-home-insurance-directbilling {
             .hosAddress{
                 color: #999999;
                 font-size: 12px;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                // text-overflow: ellipsis;
+                // white-space: nowrap;
+                // overflow: hidden;
             }
             .hosDistance{
                 color: #999999;

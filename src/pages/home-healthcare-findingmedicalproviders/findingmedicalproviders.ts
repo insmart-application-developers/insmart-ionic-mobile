@@ -288,7 +288,6 @@ export class FindingmedicalprovidersPage {
           distance:alertTitle[Object.keys(alertTitle)[3]],
           booking:alertTitle[Object.keys(alertTitle)[4]],
         }
-        console.log(this.infoWindowTrans);
       }
     )
   }

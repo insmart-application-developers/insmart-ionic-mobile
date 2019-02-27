@@ -146,25 +146,25 @@ export class HomeInsuranceDirectbillingPage {
           return this.poa;
         }).then(results=>{
           let hospitalLists = [];
-          this.getMatrixDistance(this.currentPos,results.slice(0,23)).subscribe(listdistance =>{
-            console.log(results.slice(0,23));
+          this.getMatrixDistance(this.currentPos,results.slice(0,24)).subscribe(listdistance =>{
+            console.log(results.slice(0,24));
             console.log(listdistance);
             
             for(let i=0; i < 24; i++){
-              console.log(i);
-              
               if(this.hospitalFilterLists[i]){
                 hospitalLists.push(Object.assign(this.hospitalFilterLists[i], listdistance[i]));
               }
             }
             this.hospitalLists = hospitalLists;
+            this.hospitalLists.sort((obj1, obj2)=>{
+              // Ascending: first age less than the previous
+              return parseInt(obj1.distance) - parseInt(obj2.distance)
+            });
           });
         }).then(()=>{
-          this.hospitalLists.sort((obj1, obj2)=>{
-            // Ascending: first age less than the previous
-            return parseInt(obj1.distance) - parseInt(obj2.distance)
-          });
-          this.loadingSpinner.dismiss();
+          setTimeout(() => {
+            this.loadingSpinner.dismiss();
+          }, 100);
         });
       });
     });
@@ -221,11 +221,8 @@ export class HomeInsuranceDirectbillingPage {
           let totalCal = [];
           for (let i = 0; i < originList.length; i++) {
             let results = response.rows[i].elements;
-            console.log(results);
-            
             for (let j = 0; j < results.length; j++) {
-              totalCal[i] = { distance:results[j].distance.text, time:results[j].duration.text };
-              totalCal.push(totalCal[i]);
+              totalCal.push({ distance:results[j].distance.text, time:results[j].duration.text });
             }
           }
           observer.next(totalCal);
