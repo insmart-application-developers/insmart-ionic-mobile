@@ -1,6 +1,7 @@
 import { Component,ViewChild  } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, FabContainer } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CallNumber } from '@ionic-native/call-number';
 import { MenuChatPage } from '../menu-chat/menu-chat';
 
@@ -19,19 +20,35 @@ import { MenuChatPage } from '../menu-chat/menu-chat';
 export class MenuHealthtipsPage {
   @ViewChild(Slides) slides: Slides;
   urlImages:any;
+  listShowPdf=[
+    { id:1,url:'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/DrBinhPromo20181008.pdf&embedded=true' },
+    { id:2,url:'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/InsmartHealthTip052018ENG.pdf&embedded=true' },
+    { id:3,url:'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/InsmartHealthTip122017ENG.pdf&embedded=true' },
+    { id:4,url:'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/GammaKnifeIcon20171102.pdf&embedded=true' },
+    { id:5,url:'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/DrBinhPromo20171013.pdf&embedded=true' },
+    { id:6,url:'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/InsmartHealthTip102017ENG.pdf&embedded=true' }
+  ];
+  newShowPdf:any=[];
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private callNumber: CallNumber,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private sanitizer: DomSanitizer
   ) {
-    this.urlImages = [{"id":1,"url":"assets/imgs/promotion/2018.jpg"},
-                     {"id":2,"url":"assets/imgs/promotion/2018-2.jpg"},
-                     {"id":3,"url":"assets/imgs/promotion/2018-3.jpg"},
-                     {"id":4,"url":"assets/imgs/promotion/Healthtip - Gout overview - EN (1).jpg"},
-                     {"id":5,"url":"assets/imgs/promotion/Healthtip - Gout overview - EN (2).jpg"},
-                     {"id":6,"url":"assets/imgs/promotion/Healthtip - Gout overview - EN (3).jpg"}
-                    ];
+    this.urlImages = [
+      {url:"assets/imgs/promotion/2018.jpg"},
+      {url:"assets/imgs/promotion/2018-2.jpg"},
+      {url:"assets/imgs/promotion/2018-3.jpg"},
+      {url:"assets/imgs/promotion/Healthtip - Gout overview - EN (1).jpg"},
+      {url:"assets/imgs/promotion/Healthtip - Gout overview - EN (2).jpg"},
+      {url:"assets/imgs/promotion/Healthtip - Gout overview - EN (3).jpg"}
+    ];
+    for(let i =0;i< this.listShowPdf.length;i++){
+      this.newShowPdf.push(this.sanitizer.bypassSecurityTrustResourceUrl(this.listShowPdf[i].url));
+      console.log(this.newShowPdf);
+      
+    }
   }
 
   ionViewDidLoad() {

@@ -8,17 +8,12 @@
 
   <ion-navbar>
     <ion-title>
-      <!-- <span>{{ 'HOME_INSURANCE.DIRECTBILLING.NAME' | translate}}</span> -->
-      <ion-searchbar
-      (ionBlur)="blurSearch()"
-      (ionFocus)="focusSearch()"
-      [style.width]="propertySearch.width"
-      mode="ios" class="search"></ion-searchbar>
+      <span>{{ 'HOME_INSURANCE.DIRECTBILLING.NAME' | translate}}</span>
     </ion-title>
   </ion-navbar>
 
-  <ion-list-header>
-    <div (click)="changeCity()" class="btnChange">
+  <ion-list-header class="headerSetting" [style.background]="propertySearch.background">
+    <div (click)="changeCity()" class="btnChange" [style.left]="propertySearch.left">
       <div class='divRadar' id='pulse1'><div></div></div>
       <div class="divRadar" id='pulse2'><div></div></div>
       <div class="cityName">
@@ -27,6 +22,14 @@
           </span>
         </div>
     </div>
+
+    <ion-searchbar
+    #searchbar
+    (ionInput)="onInput($event)"
+    (click)="focusSearch()"
+    (ionBlur)="blurSearch()"
+    [style.width]="propertySearch.width"
+    mode="ios" class="search"></ion-searchbar>
   </ion-list-header>
 </ion-header>
 

@@ -9,11 +9,17 @@
 
 
 <ion-content style="background-image:url(./assets/imgs/background-blue.jpg);background-size: 100% 100%;height: 100%">
-  <ion-slides loop="true" autoplay="3000" speed="1500" effect="coverflow">
+  <div *ngFor="let showPdf of newShowPdf">
+      <iframe [src]="showPdf" style="width:100%;height:100px" frameborder="0"></iframe>
+  </div>
+  
+  <!-- <iframe src="{{'http://docs.google.com/gview?url=https://www.ihealthnet.com.vn/Application/Desktop/InsmartHealthTip102017ENG.pdf&embedded=true'}}" style="width:100%;height:100px" frameborder="0"></iframe> -->
+
+  <!-- <ion-slides loop="true" autoplay="3000" speed="1500" effect="coverflow">
     <ion-slide *ngFor="let url of urlImages">
       <img data-src = {{url.url}} >
     </ion-slide>
-  </ion-slides>
+  </ion-slides> -->
 
   <ion-fab left bottom #fab>
     <button ion-fab color="light"><ion-icon name="arrow-dropright"></ion-icon></button>

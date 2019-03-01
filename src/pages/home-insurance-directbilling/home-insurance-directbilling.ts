@@ -1,5 +1,5 @@
-import { Component, Renderer } from '@angular/core';
-import { IonicPage, NavController, NavParams ,Platform, LoadingController, Loading, InfiniteScroll, AlertController } from 'ionic-angular';
+import { Component, Renderer, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams ,Platform, LoadingController, Loading, InfiniteScroll, AlertController, Searchbar } from 'ionic-angular';
 import { GeolocationOptions } from '@ionic-native/geolocation'; 
 
 import { HomeInsuranceDirectbillingDetailPage } from '../home-insurance-directbilling-detail/home-insurance-directbilling-detail';
@@ -23,18 +23,21 @@ declare var google;
   providers:[GeolocationProvider,LocalJsonServiceProvider]
 })
 export class HomeInsuranceDirectbillingPage {
+  @ViewChild('searchbar') searchbar:Searchbar
   options : GeolocationOptions;
   city:any;
   currentPos : any;
   getHospitals:any;
+  hospitalListsSearch:any;
   hospitalLists:any;
   hospitalFilterLists:any;
   poa:any;
   filterHospitals : any;
   geocoder = new google.maps.Geocoder;
   propertySearch={
-    widthPX:30,
-    widthPercent:100
+    left:'15px',
+    width:'30px',
+    background:'white'
   }
   
   private loadingSpinner:Loading;
@@ -69,11 +72,34 @@ export class HomeInsuranceDirectbillingPage {
   }
 
   focusSearch(){
-    this.propertySearch.widthPercent = 100;
+    this.propertySearch.width = '100%';
+    setTimeout(() => {
+      this.searchbar.setFocus();
+    }, 150);
+    setTimeout(() => {
+      this.propertySearch.left = '-200px'
+      this.propertySearch.background = 'orange'
+    }, 250);
   }
 
   blurSearch(){
-    this.propertySearch.widthPX = 30;
+    this.hospitalLists = this.hospitalListsSearch;
+    this.propertySearch.width = '30px';
+    setTimeout(() => {
+      this.propertySearch.left= '15px';
+      this.propertySearch.background = 'white'
+    }, 250);
+  }
+
+  onInput(ev: any) {
+    this.hospitalLists = this.hospitalListsSearch;
+    let val = ev.target.value;
+
+    if (val && val.trim() !== '') {
+      this.hospitalLists = this.hospitalLists.filter((item)=>{
+        return item.name.toLowerCase().includes(val.toLowerCase());
+      });
+    }
   }
 
   geocodeLatLng(geocoder,currentPos) {
@@ -166,7 +192,9 @@ export class HomeInsuranceDirectbillingPage {
                 hospitalLists.push(Object.assign(this.hospitalFilterLists[i], listdistance[i]));
               }
             }
+            
             this.hospitalLists = hospitalLists;
+            this.hospitalListsSearch = this.hospitalLists;
             this.hospitalLists.sort((obj1, obj2)=>{
               // Ascending: first age less than the previous
               return parseInt(obj1.distance) - parseInt(obj2.distance)
