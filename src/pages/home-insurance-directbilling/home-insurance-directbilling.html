@@ -7,11 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'HOME_INSURANCE.DIRECTBILLING.NAME' | translate}}</ion-title>
+    <ion-title>
+      <!-- <span>{{ 'HOME_INSURANCE.DIRECTBILLING.NAME' | translate}}</span> -->
+      <ion-searchbar
+      (ionBlur)="blurSearch()"
+      (ionFocus)="focusSearch()"
+      [style.width]="propertySearch.width"
+      mode="ios" class="search"></ion-searchbar>
+    </ion-title>
   </ion-navbar>
-  <ion-list-header>
-    <ion-input placeholder="Tìm kiếm"></ion-input>
-  </ion-list-header>
+
   <ion-list-header>
     <div (click)="changeCity()" class="btnChange">
       <div class='divRadar' id='pulse1'><div></div></div>

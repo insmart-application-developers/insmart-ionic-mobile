@@ -1,4 +1,25 @@
 page-home-insurance-directbilling {
+    .search{
+        width: 30px;
+        padding-right: 15px;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        transition: all .5s ease;
+        float: right;
+        padding-left:0;
+    }
+    .searchbar-input{
+        padding-right:0 !important;
+    }
+    .iconSearch{
+        float:right;
+        font-size: 14px;
+        right: 9px;
+    }
+    .searchbar-ios .searchbar-search-icon{
+        left: none;
+        right: 9px;
+    }
     .list-header-md{
         padding-left:15px;
         border-bottom: 1px solid rgba(242, 243, 245, 1);

@@ -1,5 +1,5 @@
-import { Component,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content ,Platform, LoadingController, Loading, InfiniteScroll, AlertController } from 'ionic-angular';
+import { Component, Renderer } from '@angular/core';
+import { IonicPage, NavController, NavParams ,Platform, LoadingController, Loading, InfiniteScroll, AlertController } from 'ionic-angular';
 import { GeolocationOptions } from '@ionic-native/geolocation'; 
 
 import { HomeInsuranceDirectbillingDetailPage } from '../home-insurance-directbilling-detail/home-insurance-directbilling-detail';
@@ -23,7 +23,6 @@ declare var google;
   providers:[GeolocationProvider,LocalJsonServiceProvider]
 })
 export class HomeInsuranceDirectbillingPage {
-  @ViewChild(Content) content: Content;
   options : GeolocationOptions;
   city:any;
   currentPos : any;
@@ -33,7 +32,11 @@ export class HomeInsuranceDirectbillingPage {
   poa:any;
   filterHospitals : any;
   geocoder = new google.maps.Geocoder;
-  showButton = false;
+  propertySearch={
+    widthPX:30,
+    widthPercent:100
+  }
+  
   private loadingSpinner:Loading;
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -41,9 +44,9 @@ export class HomeInsuranceDirectbillingPage {
     private alertCtrl: AlertController, 
     private service:LocalJsonServiceProvider,
     private loadingCtrl: LoadingController,
-    private serviceCurrentPostion:GeolocationProvider
+    private serviceCurrentPostion:GeolocationProvider,
+    private renderer: Renderer
     ) {
-
     this.serviceCurrentPostion.initUserPosition().then((pos) => {
       this.currentPos = pos;
       this.geocodeLatLng(this.geocoder,this.currentPos);
@@ -65,6 +68,14 @@ export class HomeInsuranceDirectbillingPage {
     // this.showButtonScrollTop();
   }
 
+  focusSearch(){
+    this.propertySearch.widthPercent = 100;
+  }
+
+  blurSearch(){
+    this.propertySearch.widthPX = 30;
+  }
+
   geocodeLatLng(geocoder,currentPos) {
     // let positionThaiNguyen = new google.maps.LatLng(21.534689, 105.794152);
 
@@ -82,8 +93,8 @@ export class HomeInsuranceDirectbillingPage {
         alert('Geocoder failed due to: ' + status);
       }
     });
-
   }
+
   changeCity(){
     let alert = this.alertCtrl.create();
     alert.setTitle('Filter Status Claim');
